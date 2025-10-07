@@ -1,0 +1,2179 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️">
+      
+      
+        <meta name="author" content="Alba | @jalando.code">
+      
+      
+        <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module_2/">
+      
+      
+        <link rel="prev" href="../module_1/">
+      
+      
+        <link rel="next" href="../module_3/">
+      
+      
+      <link rel="icon" href="../../images/icons/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>📌 Module 2 - AWS Cloud Practitioner Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-2-cloud-economics-and-billing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AWS Cloud Practitioner Notes" class="md-header__button md-logo" aria-label="AWS Cloud Practitioner Notes" data-md-component="logo">
+      
+  <img src="../../images/icons/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Cloud Practitioner Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📌 Module 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../module_1/" class="md-tabs__link">
+          
+  
+  
+  ☁️ AWS Cloud Practitioner
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ai-practitioner/module_1/" class="md-tabs__link">
+          
+  
+  
+  🤖 AWS AI Practitioner
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AWS Cloud Practitioner Notes" class="md-nav__button md-logo" aria-label="AWS Cloud Practitioner Notes" data-md-component="logo">
+      
+  <img src="../../images/icons/favicon.png" alt="logo">
+
+    </a>
+    AWS Cloud Practitioner Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🏠 Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ☁️ AWS Cloud Practitioner
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ☁️ AWS Cloud Practitioner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 2
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 2
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-section-1-fundamentals-of-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Section 1: Fundamentals of pricing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Section 1: Fundamentals of pricing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-pricing-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS pricing model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-you-pay-for-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 How do you pay for AWS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-for-what-you-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Pay for what you use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-less-when-you-reserve" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Pay less when you reserve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-less-by-using-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Pay less by using more
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-even-less-as-aws-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Pay even less as AWS grows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Custom pricing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-free-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Free Tier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services-with-no-charge" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Services with no charge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-section-2-total-cost-of-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Section 2: Total Cost of Ownership
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Section 2: Total Cost of Ownership">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-premises-vs-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 On-premises vs. cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-total-cost-of-ownership-tco" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is Total cost of Ownership (TCO)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tco-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 TCO considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-premises-versus-all-in-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 On-premises versus all-in-cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-pricing-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Pricing Calculator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-an-estimate" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Reading an estimate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-benefit-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Additional benefit considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-section-3-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Section 3: AWS Organizations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Section 3: AWS Organizations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Introduction to AWS Organizations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-organizations-terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Organizations terminology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features-and-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Key features and benefits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-with-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Security with AWS Organizations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizations-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Organizations setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limits-of-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Limits of AWS Organizations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Accessing AWS Organizations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-section-4-aws-billing-and-cost-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Section 4: AWS Billing and Cost Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ Section 4: AWS Billing and Cost Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introducing-aws-billing-and-cost-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Introducing AWS Billing and Cost Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-billing-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Billing Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthly-bills" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Monthly Bills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Cost Explorer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forecast-and-track-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Forecast and track costs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-and-usage-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Cost and usage reporting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-section-5-technical-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Section 5: Technical support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5️⃣ Section 5: Technical support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-support-1-of-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS support (1 of 2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-support-2-of-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS support (2 of 2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Support plans
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-severity-and-response-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Case severity and response times
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    🤖 AWS AI Practitioner
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            🤖 AWS AI Practitioner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-practitioner/module_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-practitioner/module_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-practitioner/module_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-practitioner/module_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-practitioner/module_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-practitioner/module_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-practitioner/module_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-practitioner/module_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-section-1-fundamentals-of-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Section 1: Fundamentals of pricing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Section 1: Fundamentals of pricing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-pricing-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS pricing model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-you-pay-for-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 How do you pay for AWS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-for-what-you-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Pay for what you use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-less-when-you-reserve" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Pay less when you reserve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-less-by-using-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Pay less by using more
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-even-less-as-aws-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Pay even less as AWS grows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Custom pricing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-free-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Free Tier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services-with-no-charge" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Services with no charge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-section-2-total-cost-of-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Section 2: Total Cost of Ownership
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Section 2: Total Cost of Ownership">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-premises-vs-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 On-premises vs. cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-total-cost-of-ownership-tco" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is Total cost of Ownership (TCO)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tco-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 TCO considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-premises-versus-all-in-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 On-premises versus all-in-cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-pricing-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Pricing Calculator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-an-estimate" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Reading an estimate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-benefit-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Additional benefit considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-section-3-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Section 3: AWS Organizations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Section 3: AWS Organizations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Introduction to AWS Organizations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-organizations-terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Organizations terminology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features-and-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Key features and benefits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-with-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Security with AWS Organizations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizations-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Organizations setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limits-of-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Limits of AWS Organizations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-aws-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Accessing AWS Organizations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-section-4-aws-billing-and-cost-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Section 4: AWS Billing and Cost Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ Section 4: AWS Billing and Cost Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introducing-aws-billing-and-cost-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Introducing AWS Billing and Cost Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-billing-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Billing Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthly-bills" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Monthly Bills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Cost Explorer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forecast-and-track-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Forecast and track costs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-and-usage-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Cost and usage reporting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-section-5-technical-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Section 5: Technical support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5️⃣ Section 5: Technical support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-support-1-of-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS support (1 of 2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-support-2-of-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS support (2 of 2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Support plans
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-severity-and-response-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Case severity and response times
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="module-2-cloud-economics-and-billing">📊 Module 2 - Cloud Economics and Billing</h1>
+<h2 id="1-section-1-fundamentals-of-pricing">1️⃣ Section 1: Fundamentals of pricing</h2>
+<h3 id="aws-pricing-model">🟠 AWS pricing model</h3>
+<p>The <strong>three main cost drivers</strong> in AWS are:</p>
+<ul>
+<li><strong>Compute</strong> → charged per hour/second, varies by instance type.</li>
+<li><strong>Storage</strong> → typically charged per GB.</li>
+<li><strong>Data transfer</strong> → outbound is charged (aggregated across services), inbound is usually free within the same region (exceptions exist).</li>
+</ul>
+<p>👉 Outbound data transfer charges appear on the bill as <strong>Data Transfer Out</strong>.</p>
+<h3 id="how-do-you-pay-for-aws">🟠 How do you pay for AWS?</h3>
+<p>At the end of each month, you pay for what you use. You can start or stop using a product at any time. No long-term contracts are required.</p>
+<p>AWS follows a <strong>utility-style model</strong>: you pay only for what you use, with no long-term contracts.</p>
+<p>Key principles:</p>
+<ol>
+<li><strong>Pay for what you use</strong> – no upfront infrastructure costs.</li>
+<li><strong>Pay less when you reserve</strong> – discounts with Reserved Instances (EC2, RDS).</li>
+<li><strong>Pay less by using more</strong> – tiered pricing with volume discounts (e.g., Amazon S3).</li>
+<li><strong>Pay even less as AWS grows</strong> – AWS continuously lowers costs as it scales.</li>
+</ol>
+<h3 id="pay-for-what-you-use">🟠 Pay for what you use</h3>
+<p>With AWS, you pay only for the services that you consume with no large upfront expenses.</p>
+<p>You can lower variable costs, so you no longer need to dedicate valuable resources to building costly infrastructure, including purchasing servers, software licenses, or leasing facilities.</p>
+<p>Quickly adapt to changing business needs and redirect your focus on innovation and invention by paying only for what you use and for as long as you need it.</p>
+<p>All AWS services are available on demand, require no long-term contracts, and have no complex licensing dependencies</p>
+<h3 id="pay-less-when-you-reserve">🟠 Pay less when you reserve</h3>
+<p>For certain services like Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Relational Database Service (Amazon RDS), you can invest in reserved capacity.</p>
+<p>With Reserved Instances, you can save up to 75 percent over equivalent on-demand capacity.</p>
+<p>Reserved Instances are available in <strong>three options</strong>:</p>
+<ul>
+<li><strong>All Upfront Reserved Instance (AURI)</strong> → highest discount</li>
+<li><strong>Partial Upfront Reserved Instance (PURI</strong>) → smaller upfront payment, medium discount</li>
+<li><strong>No Upfront Payments Reserved Instance (NURI</strong>) → no initial payment, lowest discount</li>
+</ul>
+<p>When you buy Reserved Instances, you receive a greater discount when you make a larger upfront payment. To maximize your savings, you can pay all upfront and receive the largest discount. Partial Upfront RIs offer lower discounts, but they give you the option to spend less upfront.</p>
+<p>Lastly, you can choose to spend nothing upfront and receive a smaller discount, which enables you to free capital to spend on other projects.</p>
+<p>By using reserved capacity, your organization can minimize risks, more predictably manage budgets, and comply with policies that require longer-term commitments.</p>
+<h3 id="pay-less-by-using-more">🟠 Pay less by using more</h3>
+<p>For services like <strong>Amazon Simple StorageService (Amazon S3)</strong>, pricing is tiered, which means that you pay less per GB when you use more.</p>
+<p>In addition, data transfer inis always free.</p>
+<p>Multiple storage services deliver lower storage costs based on your needs.</p>
+<p>As a result, as your AWS usage needs increase, you benefit from the economies of scale that enable you to increase adoption and keep costs under control.</p>
+<h3 id="pay-even-less-as-aws-grows">🟠 Pay even less as AWS grows</h3>
+<p>As AWS grows:</p>
+<ul>
+<li>AWS focuses on lowering cost of doing business</li>
+<li>This practice results in AWS passing savings from economies of scale to you.</li>
+<li>Since 2006, AWS has reduced prices over <strong>75 times</strong>.</li>
+<li>Newer, higher-performing resources often replace older ones <strong>at no extra cost</strong>.</li>
+</ul>
+<h3 id="custom-pricing">🟠 Custom pricing</h3>
+<p>• For high-volume or unique projects, AWS provides <strong>custom pricing agreements</strong>.</p>
+<h3 id="aws-free-tier">🟠 AWS Free Tier</h3>
+<ul>
+<li>New customers get <strong>12 months of free usage</strong> for selected services (e.g., EC2 t2.micro, S3, EBS, Load Balancer, data transfer).</li>
+<li>Designed to let users explore AWS at no initial cost.</li>
+</ul>
+<h3 id="services-with-no-charge">🟠 Services with no charge</h3>
+<p>Some services are included at <strong>no additional cost</strong>, such as:</p>
+<ul>
+<li><strong>Amazon Virtual Private Cloud (Amazon VPC)</strong> → enables you to provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.</li>
+<li><strong>AWS Identity and Access Management (IAM)</strong> → controls your users’ access to AWS services and resources.</li>
+<li><strong>Consolidated Billing</strong> → is a billing feature in AWS Organizations to consolidate payment for multiple AWS accounts or multiple Amazon Internet Services Private Limited (AISPL) accounts*. Consolidated billing provides:•One bill for multiple accounts.</li>
+<li>The ability to <strong>easily track each account’s charges</strong>.</li>
+<li>The opportunity <strong>to decrease charges as a result of volume pricing discounts</strong> from combined usage.</li>
+<li><strong>Consolidate all of your accounts using Consolidated Billing and get tiered benefits.</strong></li>
+<li><strong>AWS Elastic Beanstalk</strong> → is an even easier way for you to quickly deploy and manage applications in the AWS Cloud.</li>
+<li><strong>AWS CloudFormation</strong> → gives developers and systems administrators an easy way to create a collection of related AWS resources and provision them in an orderly and predictable fashion.</li>
+<li><strong>Automatic Scalingautomatically</strong> → adds or removes resources according to conditions you define. The resources you are using increase seamlessly during demand spikes to maintain performance and decrease automatically during demand lulls to minimize costs.</li>
+<li><strong>AWS OpsWorks</strong> → is an application management service that makes it easy to deploy and operate applications of all shapes and sizes.</li>
+</ul>
+<p><strong>Note:</strong> The difference between <strong>AWS accounts</strong> and <strong>AISPL accounts</strong> (India) is the seller of record. AISPL bills in INR, while AWS Inc. bills in USD.</p>
+<h2 id="2-section-2-total-cost-of-ownership">2️⃣ Section 2: Total Cost of Ownership</h2>
+<h3 id="on-premises-vs-cloud">🟠 On-premises vs. cloud</h3>
+<ul>
+<li><strong>On-Premises Infrastructure</strong><ul>
+<li>Installed locally on company hardware.</li>
+<li>High <strong>capital expenses</strong>: facilities, hardware, licenses, IT staff.</li>
+<li><strong>Scaling up</strong> → expensive, time-consuming.</li>
+<li><strong>Scaling down</strong> → fixed costs remain.</li>
+</ul>
+</li>
+<li><strong>Cloud Infrastructure</strong><ul>
+<li>Provided and maintained by AWS.</li>
+<li>Pay only for what you use (<strong>consumption-based model</strong>).</li>
+<li>Easy to scale up or down.</li>
+<li>Costs are transparent and easier to estimate.</li>
+</ul>
+</li>
+</ul>
+<p>👉 On-premises focuses on <strong>CapEx</strong> (capital expenditure, long planning cycles).</p>
+<p>👉 Cloud focuses on <strong>OpEx</strong> (operational expenditure, agility, and flexibility).</p>
+<h3 id="what-is-total-cost-of-ownership-tco">🟠 What is Total cost of Ownership (TCO)?</h3>
+<p><strong>Total Cost of Ownership (TCO)</strong> is a financial estimate that is intended to help buyers and owners determine the direct and indirect costs of a product or system.</p>
+<p>TCO includes the cost of a service, plus all the costs that are associated with owning the service.</p>
+<p><strong>¿Why use TCO?</strong></p>
+<ul>
+<li>To compare the costs of running an <strong>entire infrastructure environment or a specific workload</strong> on-premises versus on AWS.</li>
+<li>To budget and <strong>build the business case</strong> for moving to the cloud</li>
+</ul>
+<p>In resume, it helps to decide the most cost-effective deployment model.</p>
+<h3 id="tco-considerations">🟠 TCO considerations</h3>
+<p>Some of the costs that are associated with data center management include:</p>
+<ul>
+<li><strong>Server costs for both hardware and software</strong>, and facilities costs to house the equipment.</li>
+<li><strong>Storage costs for the hardware</strong>, administration, and facilities.</li>
+<li><strong>Network costs for hardware</strong>, administration, and facilities.</li>
+<li><strong>IT labor costs that are required to administer the entire solution</strong>.</li>
+</ul>
+<p>When you compare an on-premises to cloud solution, it is important to accurately assess the true costs of both options.</p>
+<p>With the cloud, most costs are upfront and readily calculated. For example, cloud providers give transparent pricing based on different usage metrics, such as RAM, storage, and bandwidth, among others. Pricing is frequently fixed per unit of time.</p>
+<p><strong>Resume:</strong></p>
+<p>Key cost categories for data center management:</p>
+<ul>
+<li><strong>Servers</strong>: hardware, software, facilities.</li>
+<li><strong>Storage</strong>: hardware, administration, facilities.</li>
+<li><strong>Networking</strong>: hardware, administration, facilities.</li>
+<li><strong>IT Labor</strong>: ongoing operations and administration.</li>
+</ul>
+<p><strong>Cloud</strong>:</p>
+<ul>
+<li>Costs are upfront, transparent, based on metrics (RAM, storage, bandwidth).</li>
+<li>Easier to calculate and predict.</li>
+</ul>
+<p><strong>On-Premises</strong>:</p>
+<ul>
+<li>Costs are harder to determine, must include:<ul>
+<li><strong>Direct costs</strong>: power, space, storage, IT operations.</li>
+<li><strong>Indirect costs</strong>: network, storage infrastructure, security, software, facilities, taxes, upgrades, admin staff.</li>
+</ul>
+</li>
+</ul>
+<h3 id="on-premises-versus-all-in-cloud">🟠 On-premises versus all-in-cloud</h3>
+<ul>
+<li><strong>On-Premises Setup</strong>:<ul>
+<li>1 VM, 4 CPUs, 16 GB RAM, Linux.</li>
+<li>100% utilization, optimized by RAM.</li>
+<li><strong>3-year total cost</strong>: $167,422.</li>
+</ul>
+</li>
+<li><strong>AWS Setup</strong>:<ul>
+<li>1 m4.xlarge instance, 4 CPUs, 16 GB RAM.</li>
+<li>3-year <strong>Partial Upfront Reserved Instance</strong>.</li>
+<li><strong>3-year total cost</strong>: $7,509.</li>
+<li><strong>Savings</strong>: $159,913 (96% cheaper).</li>
+</ul>
+</li>
+</ul>
+<p>👉 <strong>On-premises →</strong> constant costs, even when unused.</p>
+<p>👉 <strong>AWS →</strong> resources only billed when used, then decommissioned.</p>
+<h3 id="aws-pricing-calculator">🟠 AWS Pricing Calculator</h3>
+<p><strong>AWS Pricing Calculator</strong> help you to estimate a monthly AWS bill. You can use this tool to explore AWS services and create an estimate for the cost of your use cases on AWS. </p>
+<p>The <strong>AWS Pricing Calculator</strong> helps you:</p>
+<ul>
+<li>Estimate monthly costs of AWS services</li>
+<li>Identify opportunities for cost reduction</li>
+<li>Model your solutions before building them</li>
+<li>Explore price points and calculations behind your estimate</li>
+<li>Find the available instance types and contract terms that meet your needs</li>
+</ul>
+<p>The AWS Pricing Calculator enables you to name your estimate and create and name groups of services. Groupsare containers that you add services to in order to organize and build your estimate. You can organize your groups and services by cost-center, department, product architecture, etc.</p>
+<h3 id="reading-an-estimate">🟠 Reading an estimate</h3>
+<p>AWS Pricing Calculator estimates are broken into:</p>
+<ul>
+<li><strong>The total for your first 12 months</strong> → The total estimate for your current group and all of the services and groups in your current group. It combines the upfront and monthly estimates.</li>
+<li><strong>Your total upfront</strong> → How much you are estimated to pay upfront as you set up your AWS stack.</li>
+<li><strong>Your total monthly</strong> → How much you're estimated to spend every month while you run your AWS stack.</li>
+</ul>
+<p>Within a group, you can see how much each service is estimated to cost. If you want to price out different ways to build your AWS setup, you can use different groups for each variation of your setup and compare the estimates for the different setups. </p>
+<h3 id="additional-benefit-considerations">🟠 Additional benefit considerations</h3>
+<p><strong>Hard benefits (direct, measurable):</strong></p>
+<ul>
+<li>Lower spending on compute, storage, networking, security.</li>
+<li>Reduced hardware/software purchases.</li>
+<li>Lower operational costs (backup, disaster recovery).</li>
+<li>Reduced need for operations personnel.</li>
+</ul>
+<p><strong>Soft benefits (indirect, harder to measure):</strong></p>
+<ul>
+<li>Service/application reuse with cloud tools.</li>
+<li>Higher developer productivity.</li>
+<li>Improved customer satisfaction.</li>
+<li>Agile processes → faster response to opportunities.</li>
+<li>Increased global reach.</li>
+</ul>
+<p>👉 A full <strong>ROI analysis</strong> should consider <strong>both hard and soft benefits</strong>.</p>
+<h2 id="3-section-3-aws-organizations">3️⃣ Section 3: AWS Organizations</h2>
+<h3 id="introduction-to-aws-organizations">🟠 Introduction to AWS Organizations</h3>
+<p><strong>AWS Organizations</strong> → account management service that enables you to consolidate multiple AWS accounts into anorganizationthat you create and centrally manage. AWS Organizations include consolidated billing and account management capabilities that help you to better meet the budgetary, security, and compliance needs of your business.</p>
+<p><strong>Key benefits</strong>:</p>
+<ul>
+<li>Centrally managed <strong>access policies</strong> across multiple AWS accounts.</li>
+<li><strong>Controlled access</strong> to AWS services.</li>
+<li>Automated AWS account creation and management.</li>
+<li><strong>Consolidated billing</strong> across multiple AWS accounts.</li>
+</ul>
+<h3 id="aws-organizations-terminology">🟠 AWS Organizations terminology</h3>
+<p>Hereis some terminology to understand the structure of AWS Organizations.</p>
+<ul>
+<li><strong>Root</strong>: the top-level container for the organization.</li>
+<li><strong>Organizational Unit (OU)</strong>:<ul>
+<li>A container for accounts within a root.</li>
+<li>OUs can contain other OUs (tree-like hierarchy).</li>
+<li>Policies attached to a node flow down to all children.</li>
+</ul>
+</li>
+<li><strong>Account</strong>: a standard AWS account holding resources.</li>
+<li><strong>Policies</strong>:<ul>
+<li>Can be attached at root, OU, or account level.</li>
+<li>Affect all IAM users, groups, and roles inside that account.</li>
+</ul>
+</li>
+<li>Rules:<ul>
+<li>An OU has only one parent.</li>
+<li>An account belongs to exactly one OU.</li>
+</ul>
+</li>
+</ul>
+<h3 id="key-features-and-benefits">🟠 Key features and benefits</h3>
+<p>AWS Organizations enables you to:</p>
+<ul>
+<li>Create <strong>Service Control Policies (SCPs)</strong> that centrally control AWS services across multiple AWS accounts.</li>
+<li>Create <strong>groups of accounts</strong> and then attach policies to a group to ensure that the correct policies are applied across the accounts.</li>
+<li>Simplify <strong>account management by using</strong> application programming interfaces <strong>(APIs)</strong> to automate the creation and management of new AWS accounts.</li>
+<li>Simplify billing with a <strong>single payment method</strong> for all accounts:<ul>
+<li>Combined view of charges.</li>
+<li>Access to <strong>volume discounts</strong> through aggregated usage.</li>
+</ul>
+</li>
+</ul>
+<p>With consolidated billing, you can see a combined view of charges that are incurred by all your accounts, and you can take advantage of pricing benefits from aggregated usage. Consolidated billing provides a central location to manage billing across all of your AWS accounts, and the ability to benefit from volume discounts.</p>
+<h3 id="security-with-aws-organizations">🟠 Security with AWS Organizations</h3>
+<ul>
+<li><strong>IAM Policies</strong>:<ul>
+<li>Allow/deny access to services, resources, or API actions.</li>
+<li>Apply to IAM users, groups, and roles.</li>
+<li><strong>Cannot restrict the root user</strong> of an account.</li>
+</ul>
+</li>
+<li><strong>SCPs (Service Control Policies)</strong>:<ul>
+<li>Apply at the <strong>organization level</strong> (root, OU, or account).</li>
+<li>Restrict/allow services across accounts.</li>
+<li>Affect <strong>all identities</strong> (users, groups, roles) <strong>including root user</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>👉 IAM = access control inside an account.</p>
+<p>👉 SCPs = broader guardrails across multiple accounts.</p>
+<h3 id="organizations-setup">🟠 Organizations setup</h3>
+<p>Keep in mind that this process assumes that you have access to two existing AWS accounts, and that you can sign in to each account as an administrator.</p>
+<p>Review these steps forsetting up AWS Organizations:</p>
+<ul>
+<li><strong>Step 1</strong> → <strong>Create an organization</strong> using your main AWS account (becomes the management account). Invite or create member accounts.</li>
+<li><strong>Step 2</strong> → create two organizational units in your new organization and place the member accounts in those OUs.</li>
+<li><strong>Step 3</strong> → create service control policies, which enable you to apply restrictions to what actions can be delegated to users and roles in the member accounts. A service control policy is a type of organization control policy.</li>
+<li><strong>Step 4</strong> → <strong>Test policies</strong> by signing in as users or using the IAM policy simulator.</li>
+</ul>
+<h3 id="limits-of-aws-organizations">🟠 Limits of AWS Organizations</h3>
+<ul>
+<li><strong>Naming</strong>: Unicode, max 250 characters.</li>
+<li><strong>Entities &amp; limits</strong>:<ul>
+<li>Accounts: varies.</li>
+<li>Roots: 1.</li>
+<li>OUs: up to 1,000.</li>
+<li>Policies: up to 1,000.</li>
+<li>Policy document size: max 5,120 bytes.</li>
+<li>Max OU nesting: 5 levels.</li>
+<li>Invitations per day: 20.</li>
+<li>Member accounts created concurrently: 5.</li>
+<li>Policies can be attached to unlimited entities.</li>
+</ul>
+</li>
+</ul>
+<h3 id="accessing-aws-organizations">🟠 Accessing AWS Organizations</h3>
+<p>You can manage Organizations through:</p>
+<ul>
+<li><strong>AWS Management Console</strong> → web-based UI.</li>
+<li><strong>AWS CLI</strong> → faster, command-line management.</li>
+<li><strong>AWS SDKs</strong> → programmatic access with libraries for Java, Python, Ruby, .NET, iOS, Android, etc.</li>
+<li><strong>HTTPS Query API</strong> → direct API calls (requires digitally signed requests).</li>
+</ul>
+<h2 id="4-section-4-aws-billing-and-cost-management">4️⃣ Section 4: AWS Billing and Cost Management</h2>
+<h3 id="introducing-aws-billing-and-cost-management">🟠 Introducing AWS Billing and Cost Management</h3>
+<p><strong>AWS Billing and Cost Management</strong> → service that you use to pay your AWS bill, monitor your usage, and budget your costs. Billing and Cost Management enables you to forecast and obtain a better idea of what your costs and usage might be in the future so that you can plan ahead.</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Custom time periods (daily or monthly view).</li>
+<li>Filtering and grouping of data by dimensions.</li>
+<li><strong>AWS Cost and Usage Report Tool</strong> → detailed insights to identify optimization opportunities.</li>
+</ul>
+<h3 id="aws-billing-dashboard">🟠 AWS Billing Dashboard</h3>
+<ul>
+<li>Central view of AWS expenditure.</li>
+<li>Key graphs:<ul>
+<li><strong>Spend Summary</strong> → past month spending, current month-to-date, forecast for this month.</li>
+<li><strong>Month-to-Date Spend by Service</strong> → shows top services used and their cost proportions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="tools">🟠 Tools</h3>
+<p>Accessible from the billing dashboard:</p>
+<ul>
+<li><strong>AWS Bills</strong></li>
+<li><strong>AWS Cost Explorer</strong></li>
+<li><strong>AWS Budgets</strong></li>
+<li><strong>AWS Cost and Usage Reports</strong></li>
+</ul>
+<h3 id="monthly-bills">🟠 Monthly Bills</h3>
+<ul>
+<li>Provides <strong>detailed breakdown</strong> of costs:<ul>
+<li>By AWS service.</li>
+<li>By AWS Region.</li>
+<li>By linked account.</li>
+</ul>
+</li>
+<li>Most up-to-date source for <strong>monthly bill and usage information</strong>.</li>
+</ul>
+<h3 id="cost-explorer">🟠 Cost Explorer</h3>
+<p>The AWS Billing and Cost Management console includes the Cost Explorer page for viewing your AWS cost data as a graph.</p>
+<ul>
+<li>Tool for <strong>visualizing and analyzing AWS cost and usage</strong> over time.</li>
+<li>Default report shows <strong>top cost-incurring services</strong>.</li>
+<li>Monthly running costs → overview of last 3 months + forecast for next month (with confidence interval).</li>
+</ul>
+<p>Cost Explorer enables you to:</p>
+<ul>
+<li>View charts of your costs.</li>
+<li>View cost data for the past 13 months.</li>
+<li>Forecast how much you are likely to spend over the next 3 months.</li>
+<li>Discover patterns in how much you spend on AWS resources over time and identify costproblem areas.</li>
+<li>Identify the services that you use the most</li>
+<li>View metrics, like which Availability Zones have the most traffic or which linked AWS account is used the most.</li>
+</ul>
+<h3 id="forecast-and-track-costs">🟠 Forecast and track costs</h3>
+<p><strong>AWS Budgets</strong> → uses the cost visualization that is provided by Cost Explorer to show you the status of your budgets and to provide forecasts of your estimated costs.</p>
+<ul>
+<li>Lets you:<ul>
+<li>Track budgets at monthly, quarterly, or yearly levels.</li>
+<li>Customize start and end dates.</li>
+<li>Set alerts when <strong>actual or forecasted costs exceed budget</strong>.</li>
+</ul>
+</li>
+<li>Notifications sent via <strong>email</strong> or <strong>Amazon SNS</strong>.</li>
+</ul>
+<h3 id="cost-and-usage-reporting">🟠 Cost and usage reporting</h3>
+<p>The AWS Cost and Usage Report is a single location for accessing comprehensive information about your AWS costs and usage.</p>
+<p>This tool lists the usage for each service category that is used by an account (and its users) in hourly or daily line items, and any tax that you activated for tax allocation purposes.</p>
+<p>You can choose to have AWS to publish billing reports to an S3 bucket.</p>
+<p>These reports can be updated once a day.</p>
+<p><strong>Resume:</strong></p>
+<ul>
+<li><strong>Most comprehensive cost/usage data</strong> in AWS.</li>
+<li>Provides detailed hourly/daily line items by:<ul>
+<li>Service category.</li>
+<li>Account/user usage.</li>
+<li>Tax allocations (if enabled).</li>
+</ul>
+</li>
+<li>Reports can be delivered automatically to an <strong>S3 bucket</strong>, updated <strong>daily</strong>.</li>
+</ul>
+<h2 id="5-section-5-technical-support">5️⃣ Section 5: Technical support</h2>
+<h3 id="aws-support-1-of-2">🟠 AWS support (1 of 2)</h3>
+<p>AWS Support can provide you with a unique combination of tools and expertise based on your current or future planned use cases</p>
+<ul>
+<li>AWS Support provides <strong>tools + expertise</strong> tailored to customer needs.</li>
+<li>Covers all types of customers:<ul>
+<li>Experimenting with AWS.</li>
+<li>Running production workloads.</li>
+<li>Using AWS for mission-critical business operations.</li>
+</ul>
+</li>
+<li>Goal: enable customers to <strong>plan, deploy, and optimize with confiden</strong></li>
+</ul>
+<h3 id="aws-support-2-of-2">🟠 AWS support (2 of 2)</h3>
+<p>With AWS, customers can plan, deploy, and optimize with confidence.</p>
+<p>If you would like proactive guidance, AWS Support has Technical Account Managers (TAMs)who are designated as that user’s primary point of contact. The TAM can provide guidance, architectural review, and continuous ongoing communication to keep you informed and prepared as you plan, deploy, and optimize your solutions.</p>
+<p>If you want to ensure that you follow best practices to increase performance and fault tolerance in the AWS environment, AWS SupporthasAWS Trusted Advisor. AWS Trusted Advisor is like a customized cloud expert.It is an online resource that checks for opportunities to reduce monthly expenditures and increase productivity.</p>
+<p>For account assistance, the Support Concierge is a billing and account expert who will provide quick and efficient analysis on billing and account issues. The concierge addresses all non-technical billing and account-level inquiries.</p>
+<h3 id="support-plans">🟠 Support plans</h3>
+<p>AWS wants you to be able to plan, deploy, and optimize with confidence. We have developed specific plans to support you, including Basic, Developer, Business, and Enterprise support plans.</p>
+<ul>
+<li><strong>Basic Support (free)</strong><ul>
+<li>24/7 access to customer service, docs, whitepapers, forums.</li>
+<li>6 core Trusted Advisor checks.</li>
+<li>Personal Health Dashboard.</li>
+<li>❌ No technical case support.</li>
+</ul>
+</li>
+<li><strong>Developer Support</strong><ul>
+<li>For testing/early development.</li>
+<li>Technical guidance available.</li>
+<li>Best for <strong>non-production workloads</strong>.</li>
+</ul>
+</li>
+<li><strong>Business Support</strong><ul>
+<li>For <strong>production workloads</strong>.</li>
+<li>Suitable for organizations using multiple key AWS services extensively.</li>
+<li>Ensures workloads are <strong>available, scalable, and secure</strong>.</li>
+</ul>
+</li>
+<li><strong>Enterprise Support</strong><ul>
+<li>For <strong>mission-critical workloads</strong>.</li>
+<li>Focus on <strong>proactive management</strong> and best practices.</li>
+<li>Includes <strong>TAM</strong> with deep knowledge of your use case and architecture.</li>
+<li>Supports launches, migrations, and continuous optimization.</li>
+</ul>
+</li>
+</ul>
+<h3 id="case-severity-and-response-times">🟠 Case severity and response times</h3>
+<p>It addition to understanding the costs that are associated with different support plans, it is critical that you understand the service levels that are associated with each plan. In addition to the support plan you select, the case severity will drive the type of response that you receive.</p>
+<p>There are five different severity levels:</p>
+<ul>
+<li><strong>Critical</strong> → Business at risk, critical app functions unavailable.</li>
+<li><strong>Urgent</strong> → Significant impact, important app functions unavailable.</li>
+<li><strong>High</strong> → Important functions impaired or degraded.</li>
+<li><strong>Normal</strong> → Non-critical functions abnormal, or time-sensitive dev question.</li>
+<li><strong>Low</strong> → General dev question or feature request.</li>
+</ul>
+<p>👉 <strong>Basic Support Plan does not include case support</strong>.</p>
+<p>👉 Higher plans ensure faster response times according to severity.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/jalando.code" target="_blank" rel="noopener" title="\@jalando.code" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/albamdls" target="_blank" rel="noopener" title="albamdls" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
