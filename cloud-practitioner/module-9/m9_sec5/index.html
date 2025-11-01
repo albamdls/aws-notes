@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>◽️ Section 5 - AWS Global Infrastructure and Edge Services - AWS Cloud Practitioner Notes</title>
+
+  <!-- Page description -->
+  
+    <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️" />
+  
+
+  <!-- Redirect -->
+  
+    <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module-9/m9_sec5/" />
+  
+
+  <!-- Page author -->
+  
+    <meta name="author" content="Alba | @jalando.code" />
+  
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  <link rel="stylesheet" href="../../../css/colors.css">
+  <link rel="stylesheet" href="../../../css/bundle.css">
+  <link rel="stylesheet" href="../../../css/theme.css">
+  <link media="print" onload="this.media='all'" rel="stylesheet" href="../../../css/atom-dark-one.min.css">
+  <!--
+    extra_ess contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  
+  
+
+  <!--
+    Include Google Analytics tracking code.
+
+    http://www.mkdocs.org/user-guide/configuration/#google_analytics
+  -->
+  
+
+</head>
+
+<body>
+<input id="dark-mode" type="checkbox" />
+<!--
+  The JS has to be loaded here for maximum performance, right after the #dark-mode
+-->
+<script src="../../../js/theme.js"></script>
+<div class="app-body">
+  <!-- KPN STYLE Beginning -->
+  <div class="app-layout ">
+    <!-- Top Bar -->
+    <nav class="app-layout__top-bar top-bar">
+      <a class="top-bar__logo">
+        <img alt="KPN Logo" src="../../../img/logo-kpn.svg" />
+      </a>
+      <div class="top-bar__title">AWS Cloud Practitioner Notes</div>
+      <ul class="top-bar__menu">
+        <!--
+          Create a search form that sends the user to the search.html file - this is
+          the other file in the template which adds search to the theme. The only
+          requirement here is that there is a text input with the name 'q' and the
+          action and methods match below.
+        -->
+          <li class="top-bar__item">
+
+            <span role="search" id="search-input-wrapper">
+              <form action="../../../search.html" method="get">
+                <input type="text" class="input" id="search-input" name="q" placeholder="Search..." />
+              </form>
+            </span >
+          </li>
+        <!--
+          Versioning support
+        -->
+        
+        <!--
+          Support repo URL
+        -->
+        <li class="top-bar__item">
+          
+        </li>
+
+        <li class="top-bar__item">
+            <label class="top-bar__link" id="label-dark-mode" for="dark-mode" title="Dark mode">
+              <svg alt="dark mode" width="24" height="24">
+                <image xlink:href="../../../img/ui-bulb.svg" width="24" height="24"/>
+            </svg>
+            </label>
+        </li>
+        <li class="top-bar__item top-bar__item--trigger"></li>
+
+        <!-- <li class="top-bar__item">
+
+          <a class="top-bar__link top-bar__link--active">Home</a>
+        </li>
+        <li class="top-bar__item"><a class="top-bar__link">Information</a></li>
+        <li class="top-bar__item">
+          <a class="top-bar__link top-bar__link--collapsed">Getting Started</a>
+
+        </li>
+        <li class="top-bar__item top-bar__item--trigger">Menu</li> -->
+      </ul>
+    </nav>
+
+    <!--
+      Create the navigation for the documentation.
+
+      Because we don't know how many levels deep the navigation is, it needs to
+      be included in it's own file so it can be recursive. Otherwise the theme
+      can also only support a specific number of levels.
+
+      See the nav.html file for more details about how this works.
+    -->
+    <nav class="app-layout__side-bar side-bar">
+      <div class="side-bar__action-bar">
+        <a class="side-bar__link" href="/">AWS Cloud Practitioner Notes</a>
+        <!--
+          Versioning support
+        -->
+        
+        <button class="side-bar__close"></button>
+      </div>
+      <ul class="side-bar__menu">
+        
+          <!--
+
+-->
+
+<li>
+  <a href="../../.." class="side-bar__link ">
+    🏠 Home
+  </a>
+</li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 1 - Cloud Concepts Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - What is Cloud Computing?
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec2/" class="side-bar__link ">
+    ◽ Section 2 - Advantages of Cloud Computing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Introduction to Amazon Web Services (AWS)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 2 - Cloud Economics and Billing
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Fundamentals of pricing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Total Cost of Ownership
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - AWS Organizations
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Billing and Cost Management
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Technical support
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌  Module 3 - AWS Global Infrastructure Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Global Infrastructure
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS services and service category overview
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 4 - AWS Cloud Security
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Shared Responsibility Model
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS Identity and Access Management (IAM)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Securing a New AWS Account
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Accounts
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Securing Data on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Working to Ensure Compliance
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 5 - Networking and Content Delivery
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Networking Basics
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - VPC Connectivity Options
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Your VPC
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Amazon Route 53
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Amazon CloudFront
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 6 - Compute
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Compute Services Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Cost Optimization
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Container Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Lambda (Serverless Compute)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - AWS Elastic Beanstalk
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 7 - Storage
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Storage Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Hybrid and Data Transfer Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Backup, Archive, and Data Protection
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec7/" class="side-bar__link ">
+    ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 8 - Databases
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Nonrelational Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Database Migration and Integration on AWS
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--expanded side-bar__link--active">
+      📌 Module 9 - Cloud Architecture
+    </span>
+    <ul class="side-bar__sub-menu side-bar__sub-menu--visible">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Cloud Architecture Design Principles
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - High Availability and Fault Tolerance
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Elasticity and Scalability in the Cloud
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Loose Coupling and Microservices Architecture
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="./" class="side-bar__link side-bar__link--active">
+    ◽️ Section 5 - AWS Global Infrastructure and Edge Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Designing for Security and Compliance in the Cloud
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 10 - Automatic Scaling and Monitoring
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Elastic Load Balancing (ELB)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon CloudWatch
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Auto Scaling
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+      </ul>
+    </nav>
+
+    <!-- MAIN BLOCK -->
+    <main class="app-layout__main main">
+      <div class="app-layout__title-bar title-bar">
+        <div class="title-bar__title">◽️ Section 5 - AWS Global Infrastructure and Edge Services</div>
+      </div>
+      
+      <div class="sidebar--secondary hidden-s hidden-xs">
+        <h4>Table of contents</h4>
+        <ul>
+        
+          
+            
+                <li><a class="a" href="#5-section-5-aws-global-infrastructure-and-edge-services">5️⃣ Section 5: AWS Global Infrastructure and Edge Services</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#introduction">🟠 Introduction</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#aws-global-infrastructure-overview">🌎 AWS Global Infrastructure Overview</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#aws-regions">🗺️ AWS Regions</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#availability-zones-azs">🏢 Availability Zones (AZs)</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#edge-locations">🌐 Edge Locations</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#aws-edge-and-hybrid-services">🧰 AWS Edge and Hybrid Services</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#amazon-cloudfront-content-delivery-network">⚙️ Amazon CloudFront (Content Delivery Network)</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#aws-global-accelerator">🌍 AWS Global Accelerator</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#aws-outposts-and-local-zones">🏠 AWS Outposts and Local Zones</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#aws-wavelength">📡 AWS Wavelength</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#key-takeaways">🧠 Key Takeaways</a></li>
+                
+            
+          
+        
+        </ul>
+      </div>
+      
+      <div class="container content-block">
+        <div class="kpn-style">
+          <div class="card">
+            <div class="card__body">
+
+              
+              <h1 id="module-9-cloud-architecture">🏗️ <strong>Module 9 - Cloud Architecture</strong></h1>
+<h2 id="5-section-5-aws-global-infrastructure-and-edge-services">5️⃣ <strong>Section 5: AWS Global Infrastructure and Edge Services</strong></h2>
+<h3 id="introduction">🟠 <strong>Introduction</strong></h3>
+<p>AWS operates the world’s largest and most reliable <strong>global cloud infrastructure</strong>, designed for <strong>high availability</strong>, <strong>low latency</strong>, and <strong>security</strong>.<br />
+It allows you to deploy applications closer to users, meet data residency requirements, and build <strong>resilient global architectures</strong>.</p>
+<p>This section explains how the AWS Global Infrastructure works — including <strong>Regions</strong>, <strong>Availability Zones (AZs)</strong>, <strong>Edge Locations</strong>, and <strong>Edge Services</strong> like <strong>CloudFront</strong>, <strong>Global Accelerator</strong>, and <strong>Outposts</strong>.</p>
+<hr />
+<h3 id="aws-global-infrastructure-overview">🌎 <strong>AWS Global Infrastructure Overview</strong></h3>
+<p>AWS infrastructure is made up of several layers that provide global reach, redundancy, and performance:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Region</strong></td>
+<td>A physical location in the world where AWS has multiple Availability Zones.</td>
+</tr>
+<tr>
+<td><strong>Availability Zone (AZ)</strong></td>
+<td>One or more data centers with independent power, networking, and connectivity within a Region.</td>
+</tr>
+<tr>
+<td><strong>Edge Location</strong></td>
+<td>Data center used by Amazon CloudFront to cache content closer to users.</td>
+</tr>
+<tr>
+<td><strong>Local Zone</strong></td>
+<td>Brings AWS compute, storage, and database services closer to large population centers for low latency.</td>
+</tr>
+<tr>
+<td><strong>Wavelength Zone</strong></td>
+<td>Integrates AWS services into 5G networks for ultra-low latency.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Tip:</em> AWS operates <strong>hundreds of data centers</strong> across <strong>32+ Regions</strong> and <strong>100+ AZs</strong> (and growing).</p>
+<hr />
+<h3 id="aws-regions">🗺️ <strong>AWS Regions</strong></h3>
+<p>A <strong>Region</strong> is a <strong>geographical area</strong> containing multiple, isolated <strong>Availability Zones</strong>.</p>
+<h4 id="key-characteristics">🔹 <strong>Key Characteristics</strong></h4>
+<ul>
+<li>Each Region is <strong>completely independent</strong> — for data sovereignty and fault isolation.  </li>
+<li>Regions are connected through the <strong>AWS global network backbone</strong>.  </li>
+<li>Customers choose Regions based on:</li>
+<li><strong>Proximity to users</strong> (for low latency).  </li>
+<li><strong>Data residency and compliance</strong> requirements.  </li>
+<li><strong>Service availability</strong> and <strong>cost</strong>.</li>
+</ul>
+<p>🧠 <em>Example:</em> A European company may choose <strong>eu-west-1 (Ireland)</strong> to comply with EU data laws.</p>
+<hr />
+<h3 id="availability-zones-azs">🏢 <strong>Availability Zones (AZs)</strong></h3>
+<p><strong>Availability Zones</strong> are the building blocks of AWS Regions.<br />
+Each Region contains <strong>two or more AZs</strong> that are physically separate but interconnected with high-speed, low-latency networks.</p>
+<h4 id="characteristics">⚙️ <strong>Characteristics</strong></h4>
+<ul>
+<li>Each AZ has <strong>independent power, cooling, and networking</strong>.  </li>
+<li>Connected through <strong>redundant, private fiber</strong> with &lt;2 ms latency.  </li>
+<li>Enable <strong>fault-tolerant and high-availability</strong> architectures by distributing workloads across AZs.</li>
+</ul>
+<p>🧠 <em>Example:</em><br />
+Deploying EC2 instances in <strong>multiple AZs</strong> within the same Region ensures your application stays online even if one data center fails.</p>
+<hr />
+<h3 id="edge-locations">🌐 <strong>Edge Locations</strong></h3>
+<p><strong>Edge Locations</strong> are data centers that cache copies of your application’s content closer to end users.<br />
+They form part of the <strong>Amazon CloudFront</strong> content delivery network (CDN).</p>
+<table>
+<thead>
+<tr>
+<th><strong>Feature</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Caching</strong></td>
+<td>Stores copies of static and dynamic content closer to users.</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Reduces latency and improves load times.</td>
+</tr>
+<tr>
+<td><strong>Global Reach</strong></td>
+<td>400+ Edge Locations in 90+ cities worldwide.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Tip:</em> Users’ requests automatically route to the <strong>nearest Edge Location</strong>, minimizing latency.</p>
+<hr />
+<h3 id="aws-edge-and-hybrid-services">🧰 <strong>AWS Edge and Hybrid Services</strong></h3>
+<p>AWS provides <strong>edge computing services</strong> to extend the cloud closer to end users and on-premises environments.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Service</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Use Case</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon CloudFront</strong></td>
+<td>Content Delivery Network (CDN) that caches and delivers web content via Edge Locations.</td>
+<td>Websites, APIs, video streaming.</td>
+</tr>
+<tr>
+<td><strong>AWS Global Accelerator</strong></td>
+<td>Uses AWS’s global network to improve performance and availability for global applications.</td>
+<td>Low-latency access to multi-Region apps.</td>
+</tr>
+<tr>
+<td><strong>AWS Outposts</strong></td>
+<td>Brings AWS infrastructure and services on-premises for consistent hybrid operations.</td>
+<td>On-prem apps needing local data processing.</td>
+</tr>
+<tr>
+<td><strong>AWS Local Zones</strong></td>
+<td>Extend AWS services closer to major population centers.</td>
+<td>Gaming, media, real-time apps needing sub-10ms latency.</td>
+</tr>
+<tr>
+<td><strong>AWS Wavelength</strong></td>
+<td>Embeds AWS compute and storage within 5G networks for ultra-low latency.</td>
+<td>IoT, AR/VR, mobile edge computing.</td>
+</tr>
+<tr>
+<td><strong>AWS Snow Family</strong></td>
+<td>Portable edge devices for offline or disconnected environments.</td>
+<td>Remote data collection and migration.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Example:</em><br />
+A video streaming platform uses <strong>CloudFront</strong> to deliver content from global Edge Locations while <strong>Global Accelerator</strong> ensures fast connections to backend APIs.</p>
+<hr />
+<h3 id="amazon-cloudfront-content-delivery-network">⚙️ <strong>Amazon CloudFront (Content Delivery Network)</strong></h3>
+<p><strong>CloudFront</strong> accelerates the delivery of content to users by caching it at Edge Locations.</p>
+<h4 id="key-features">💡 <strong>Key Features</strong></h4>
+<ul>
+<li>Delivers static (HTML, CSS) and dynamic (API responses) content.  </li>
+<li>Integrates with <strong>S3</strong>, <strong>EC2</strong>, and <strong>Load Balancers</strong> as origins.  </li>
+<li>Supports <strong>HTTPS</strong>, <strong>geo-restrictions</strong>, and <strong>signed URLs</strong>.  </li>
+<li>Provides <strong>DDoS protection</strong> with <strong>AWS Shield</strong> and <strong>WAF</strong> integration.  </li>
+<li>Monitored through <strong>CloudWatch</strong> for real-time metrics.</li>
+</ul>
+<p>🧠 <em>Benefit:</em> Improves global performance, reduces server load, and lowers data transfer costs.</p>
+<hr />
+<h3 id="aws-global-accelerator">🌍 <strong>AWS Global Accelerator</strong></h3>
+<p><strong>AWS Global Accelerator</strong> optimizes routing of user traffic to the closest AWS endpoint using the <strong>AWS global network</strong> instead of the public internet.</p>
+<h4 id="key-benefits">⚙️ <strong>Key Benefits</strong></h4>
+<ul>
+<li>Improves <strong>availability</strong> with automatic health checks and failover.  </li>
+<li>Reduces <strong>latency</strong> by routing through AWS backbone network.  </li>
+<li>Provides <strong>two static IP addresses</strong> for simplified global access.  </li>
+<li>Integrates with <strong>EC2</strong>, <strong>ALB/NLB</strong>, and <strong>Elastic IPs</strong>.</li>
+</ul>
+<p>🧠 <em>Example:</em><br />
+A global e-commerce website uses <strong>Global Accelerator</strong> to route customers to the nearest healthy Region for faster checkout.</p>
+<hr />
+<h3 id="aws-outposts-and-local-zones">🏠 <strong>AWS Outposts and Local Zones</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Service</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Best For</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Outposts</strong></td>
+<td>Extends AWS infrastructure, APIs, and tools into on-prem data centers.</td>
+<td>Hybrid workloads requiring local data processing.</td>
+</tr>
+<tr>
+<td><strong>Local Zones</strong></td>
+<td>AWS compute, storage, and database services deployed near large metro areas.</td>
+<td>Low-latency applications (gaming, rendering, streaming).</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Tip:</em> Combine Outposts for <strong>on-prem compute</strong> and CloudFront for <strong>global edge distribution</strong>.</p>
+<hr />
+<h3 id="aws-wavelength">📡 <strong>AWS Wavelength</strong></h3>
+<p><strong>AWS Wavelength</strong> brings AWS compute and storage services <strong>into 5G networks</strong>, enabling ultra-low-latency applications.</p>
+<h4 id="use-cases">💡 <strong>Use Cases</strong></h4>
+<ul>
+<li>Augmented/Virtual Reality (AR/VR).  </li>
+<li>Autonomous vehicles.  </li>
+<li>IoT analytics at the network edge.  </li>
+<li>Real-time video streaming.  </li>
+</ul>
+<p>🧠 <em>Example:</em> A mobile gaming company runs its backend on <strong>Wavelength Zones</strong> to deliver millisecond response times to players.</p>
+<hr />
+<h3 id="key-takeaways">🧠 <strong>Key Takeaways</strong></h3>
+<ul>
+<li>The <strong>AWS Global Infrastructure</strong> provides the foundation for <strong>high availability, low latency, and fault tolerance</strong> worldwide.  </li>
+<li><strong>Regions</strong> = isolated geographical areas; <strong>AZs</strong> = redundant data centers within Regions.  </li>
+<li><strong>Edge Locations</strong> power <strong>CloudFront</strong>, caching content close to users for performance.  </li>
+<li><strong>Global Accelerator</strong>, <strong>Local Zones</strong>, <strong>Outposts</strong>, and <strong>Wavelength</strong> extend AWS services globally and locally.  </li>
+<li>Choose Regions strategically based on <strong>latency</strong>, <strong>compliance</strong>, and <strong>cost</strong>.  </li>
+<li>Use <strong>multi-Region architectures</strong> for global resilience and <strong>edge services</strong> for faster content delivery.  </li>
+</ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__body">
+        
+        <div class="row">
+          <div class="col col--s-4 col--m-3 col--l-2">
+          </div>
+          <div class="col col--s-4 col--m space-between">
+            
+              <a class="footer__link padding-top-0 navigation-prev"
+                href="../m9_sec4/"
+                title="◽️ Section 4 - Loose Coupling and Microservices Architecture">
+                &#8592; Previous Page
+              </a>
+            
+            
+            
+              <a class="footer__link padding-top-0 navigation-next"
+                href="../m9_sec6/"
+                title="◽️ Section 6 - Designing for Security and Compliance in the Cloud"/>
+                Next Page &#8594;
+              </a>
+            
+          </div>
+          <div class="col col--s-4 col--m-3 ">
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+  </div>
+
+
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2025-11-01 12:57:39.503753+00:00
+  -->
+
+  <!--
+    To include static assets from our theme, just add
+    ../../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/groovy.min.js"></script>
+  <script src="../../../js/languages/asciidoc.min.js"></script>
+  <script src="../../../js/languages/nix.min.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script async src="../../../js/detail.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../../search/main.js"></script>
+  
+
+
+  <script>
+  function getMermaidTheme() {
+    if (document.getElementById("dark-mode").checked) {
+      return 'dark'
+    }
+    return 'forest'
+  }
+
+  function initMermaid() {
+    mermaid.initialize({
+      theme: getMermaidTheme(),
+      logLevel: 1,
+    });
+  }
+  var mermaidClass = document.getElementsByClassName('mermaid');
+  if (mermaidClass.length > 0) {
+
+    var mermaidScript = document.createElement('script');
+    mermaidScript.setAttribute("src", "../../../js/mermaid.min.js");
+    mermaidScript.setAttribute("async", "false");
+    mermaidScript.setAttribute("type", "text/javascript");
+    mermaidScript.onload = initMermaid;
+    document.body.appendChild(mermaidScript)
+
+  }
+  </script>
+
+</div>
+</body>
+</html>

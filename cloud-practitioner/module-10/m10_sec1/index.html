@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>◽️ Section 1 - Elastic Load Balancing (ELB) - AWS Cloud Practitioner Notes</title>
+
+  <!-- Page description -->
+  
+    <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️" />
+  
+
+  <!-- Redirect -->
+  
+    <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module-10/m10_sec1/" />
+  
+
+  <!-- Page author -->
+  
+    <meta name="author" content="Alba | @jalando.code" />
+  
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  <link rel="stylesheet" href="../../../css/colors.css">
+  <link rel="stylesheet" href="../../../css/bundle.css">
+  <link rel="stylesheet" href="../../../css/theme.css">
+  <link media="print" onload="this.media='all'" rel="stylesheet" href="../../../css/atom-dark-one.min.css">
+  <!--
+    extra_ess contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  
+  
+
+  <!--
+    Include Google Analytics tracking code.
+
+    http://www.mkdocs.org/user-guide/configuration/#google_analytics
+  -->
+  
+
+</head>
+
+<body>
+<input id="dark-mode" type="checkbox" />
+<!--
+  The JS has to be loaded here for maximum performance, right after the #dark-mode
+-->
+<script src="../../../js/theme.js"></script>
+<div class="app-body">
+  <!-- KPN STYLE Beginning -->
+  <div class="app-layout ">
+    <!-- Top Bar -->
+    <nav class="app-layout__top-bar top-bar">
+      <a class="top-bar__logo">
+        <img alt="KPN Logo" src="../../../img/logo-kpn.svg" />
+      </a>
+      <div class="top-bar__title">AWS Cloud Practitioner Notes</div>
+      <ul class="top-bar__menu">
+        <!--
+          Create a search form that sends the user to the search.html file - this is
+          the other file in the template which adds search to the theme. The only
+          requirement here is that there is a text input with the name 'q' and the
+          action and methods match below.
+        -->
+          <li class="top-bar__item">
+
+            <span role="search" id="search-input-wrapper">
+              <form action="../../../search.html" method="get">
+                <input type="text" class="input" id="search-input" name="q" placeholder="Search..." />
+              </form>
+            </span >
+          </li>
+        <!--
+          Versioning support
+        -->
+        
+        <!--
+          Support repo URL
+        -->
+        <li class="top-bar__item">
+          
+        </li>
+
+        <li class="top-bar__item">
+            <label class="top-bar__link" id="label-dark-mode" for="dark-mode" title="Dark mode">
+              <svg alt="dark mode" width="24" height="24">
+                <image xlink:href="../../../img/ui-bulb.svg" width="24" height="24"/>
+            </svg>
+            </label>
+        </li>
+        <li class="top-bar__item top-bar__item--trigger"></li>
+
+        <!-- <li class="top-bar__item">
+
+          <a class="top-bar__link top-bar__link--active">Home</a>
+        </li>
+        <li class="top-bar__item"><a class="top-bar__link">Information</a></li>
+        <li class="top-bar__item">
+          <a class="top-bar__link top-bar__link--collapsed">Getting Started</a>
+
+        </li>
+        <li class="top-bar__item top-bar__item--trigger">Menu</li> -->
+      </ul>
+    </nav>
+
+    <!--
+      Create the navigation for the documentation.
+
+      Because we don't know how many levels deep the navigation is, it needs to
+      be included in it's own file so it can be recursive. Otherwise the theme
+      can also only support a specific number of levels.
+
+      See the nav.html file for more details about how this works.
+    -->
+    <nav class="app-layout__side-bar side-bar">
+      <div class="side-bar__action-bar">
+        <a class="side-bar__link" href="/">AWS Cloud Practitioner Notes</a>
+        <!--
+          Versioning support
+        -->
+        
+        <button class="side-bar__close"></button>
+      </div>
+      <ul class="side-bar__menu">
+        
+          <!--
+
+-->
+
+<li>
+  <a href="../../.." class="side-bar__link ">
+    🏠 Home
+  </a>
+</li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 1 - Cloud Concepts Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - What is Cloud Computing?
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec2/" class="side-bar__link ">
+    ◽ Section 2 - Advantages of Cloud Computing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Introduction to Amazon Web Services (AWS)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 2 - Cloud Economics and Billing
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Fundamentals of pricing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Total Cost of Ownership
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - AWS Organizations
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Billing and Cost Management
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Technical support
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌  Module 3 - AWS Global Infrastructure Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Global Infrastructure
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS services and service category overview
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 4 - AWS Cloud Security
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Shared Responsibility Model
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS Identity and Access Management (IAM)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Securing a New AWS Account
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Accounts
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Securing Data on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Working to Ensure Compliance
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 5 - Networking and Content Delivery
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Networking Basics
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - VPC Connectivity Options
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Your VPC
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Amazon Route 53
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Amazon CloudFront
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 6 - Compute
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Compute Services Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Cost Optimization
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Container Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Lambda (Serverless Compute)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - AWS Elastic Beanstalk
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 7 - Storage
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Storage Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Hybrid and Data Transfer Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Backup, Archive, and Data Protection
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec7/" class="side-bar__link ">
+    ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 8 - Databases
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Nonrelational Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Database Migration and Integration on AWS
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 9 - Cloud Architecture
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Cloud Architecture Design Principles
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - High Availability and Fault Tolerance
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Elasticity and Scalability in the Cloud
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Loose Coupling and Microservices Architecture
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Global Infrastructure and Edge Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Designing for Security and Compliance in the Cloud
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--expanded side-bar__link--active">
+      📌 Module 10 - Automatic Scaling and Monitoring
+    </span>
+    <ul class="side-bar__sub-menu side-bar__sub-menu--visible">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="./" class="side-bar__link side-bar__link--active">
+    ◽️ Section 1 - Elastic Load Balancing (ELB)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m10_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon CloudWatch
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m10_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Auto Scaling
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+      </ul>
+    </nav>
+
+    <!-- MAIN BLOCK -->
+    <main class="app-layout__main main">
+      <div class="app-layout__title-bar title-bar">
+        <div class="title-bar__title">◽️ Section 1 - Elastic Load Balancing (ELB)</div>
+      </div>
+      
+      <div class="sidebar--secondary hidden-s hidden-xs">
+        <h4>Table of contents</h4>
+        <ul>
+        
+          
+            
+                <li><a class="a" href="#1-section-1-elastic-load-balancing-elb">1️⃣ Section 1: Elastic Load Balancing (ELB)</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#introduction">🟠 Introduction</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#what-is-elastic-load-balancing">⚖️ What Is Elastic Load Balancing?</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#how-elb-works">💡 How ELB Works</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#key-benefits-of-elastic-load-balancing">🧱 Key Benefits of Elastic Load Balancing</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#types-of-elastic-load-balancers">🧩 Types of Elastic Load Balancers</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#application-load-balancer-alb-details">🧰 Application Load Balancer (ALB) Details</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#network-load-balancer-nlb-details">⚡ Network Load Balancer (NLB) Details</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#gateway-load-balancer-gwlb">🛡️ Gateway Load Balancer (GWLB)</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#load-balancer-health-checks">🧮 Load Balancer Health Checks</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#integration-with-auto-scaling">🧩 Integration with Auto Scaling</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#security-features">🔐 Security Features</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#key-takeaways">🧠 Key Takeaways</a></li>
+                
+            
+          
+        
+        </ul>
+      </div>
+      
+      <div class="container content-block">
+        <div class="kpn-style">
+          <div class="card">
+            <div class="card__body">
+
+              
+              <h1 id="module-10-automatic-scaling-and-monitoring">⚙️ <strong>Module 10 - Automatic Scaling and Monitoring</strong></h1>
+<h2 id="1-section-1-elastic-load-balancing-elb">1️⃣ <strong>Section 1: Elastic Load Balancing (ELB)</strong></h2>
+<h3 id="introduction">🟠 <strong>Introduction</strong></h3>
+<p>Applications deployed in the cloud need to handle <strong>variable traffic loads</strong> while maintaining <strong>availability</strong> and <strong>performance</strong>.<br />
+<strong>Elastic Load Balancing (ELB)</strong> automatically distributes incoming application traffic across multiple <strong>targets</strong> — such as Amazon EC2 instances, containers, IP addresses, or Lambda functions.</p>
+<p>It ensures that no single component is overwhelmed, improving <strong>fault tolerance</strong>, <strong>scalability</strong>, and <strong>user experience</strong>.</p>
+<hr />
+<h3 id="what-is-elastic-load-balancing">⚖️ <strong>What Is Elastic Load Balancing?</strong></h3>
+<p><strong>Elastic Load Balancing</strong> is a fully managed service that:
+- Distributes traffic evenly across multiple resources.<br />
+- Monitors health and routes traffic only to healthy targets.<br />
+- Scales automatically with changing traffic patterns.<br />
+- Integrates with <strong>Auto Scaling</strong> and <strong>CloudWatch</strong> for performance and monitoring.  </p>
+<p>🧠 <em>Example:</em><br />
+During a marketing campaign, ELB automatically balances millions of incoming requests across multiple EC2 instances running in different Availability Zones.</p>
+<hr />
+<h3 id="how-elb-works">💡 <strong>How ELB Works</strong></h3>
+<ol>
+<li>A user sends a request to your application (e.g., through a web browser).  </li>
+<li>The request first reaches the <strong>Elastic Load Balancer</strong>.  </li>
+<li>ELB checks the <strong>health</strong> of registered targets (EC2, containers, etc.).  </li>
+<li>The load balancer forwards the request to one of the <strong>healthy targets</strong>.  </li>
+<li>If a target becomes unhealthy, ELB automatically routes traffic to other healthy instances.</li>
+</ol>
+<hr />
+<h3 id="key-benefits-of-elastic-load-balancing">🧱 <strong>Key Benefits of Elastic Load Balancing</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Benefit</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High Availability</strong></td>
+<td>Distributes traffic across multiple Availability Zones.</td>
+</tr>
+<tr>
+<td><strong>Fault Tolerance</strong></td>
+<td>Automatically reroutes traffic away from unhealthy targets.</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Handles varying traffic loads seamlessly.</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Integrates with AWS Certificate Manager (ACM) for HTTPS.</td>
+</tr>
+<tr>
+<td><strong>Elasticity</strong></td>
+<td>Works with Auto Scaling to dynamically adjust capacity.</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Integrated with Amazon CloudWatch for metrics and health checks.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Tip:</em> ELB scales automatically — you don’t need to manually configure capacity.</p>
+<hr />
+<h3 id="types-of-elastic-load-balancers">🧩 <strong>Types of Elastic Load Balancers</strong></h3>
+<p>AWS offers different load balancers for different workloads.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Type</strong></th>
+<th><strong>Best For</strong></th>
+<th><strong>Protocols Supported</strong></th>
+<th><strong>Key Features</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Application Load Balancer (ALB)</strong></td>
+<td>Web applications and microservices.</td>
+<td>HTTP, HTTPS, gRPC</td>
+<td>Layer 7 routing, host/path-based routing, WebSocket support.</td>
+</tr>
+<tr>
+<td><strong>Network Load Balancer (NLB)</strong></td>
+<td>High-performance, low-latency apps.</td>
+<td>TCP, UDP, TLS</td>
+<td>Handles millions of requests per second with ultra-low latency.</td>
+</tr>
+<tr>
+<td><strong>Gateway Load Balancer (GWLB)</strong></td>
+<td>Third-party virtual appliances (firewalls, intrusion detection).</td>
+<td>IP</td>
+<td>Integrates third-party security and networking tools.</td>
+</tr>
+<tr>
+<td><strong>Classic Load Balancer (CLB)</strong></td>
+<td>Legacy applications.</td>
+<td>HTTP, HTTPS, TCP</td>
+<td>Basic load balancing across EC2 instances.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Example:</em><br />
+Use <strong>ALB</strong> for a modern web app with microservices, <strong>NLB</strong> for real-time gaming or financial trading, and <strong>GWLB</strong> for advanced network security.</p>
+<hr />
+<h3 id="application-load-balancer-alb-details">🧰 <strong>Application Load Balancer (ALB) Details</strong></h3>
+<p><strong>ALB</strong> operates at <strong>Layer 7 (Application Layer)</strong> of the OSI model, routing requests based on content.</p>
+<h4 id="key-features"><strong>Key Features</strong></h4>
+<ul>
+<li><strong>Path-based routing</strong>: <code>/images</code> → one target group, <code>/api</code> → another.  </li>
+<li><strong>Host-based routing</strong>: <code>api.example.com</code> → one service, <code>shop.example.com</code> → another.  </li>
+<li><strong>Container integration</strong> with Amazon ECS and EKS.  </li>
+<li><strong>WebSocket support</strong> for real-time communication.  </li>
+<li><strong>SSL termination</strong> with AWS Certificate Manager (ACM).</li>
+</ul>
+<p>🧠 <em>Example:</em><br />
+A web app with microservices can route <code>/login</code> requests to the auth service and <code>/orders</code> to the order service automatically via ALB rules.</p>
+<hr />
+<h3 id="network-load-balancer-nlb-details">⚡ <strong>Network Load Balancer (NLB) Details</strong></h3>
+<p><strong>NLB</strong> operates at <strong>Layer 4 (Transport Layer)</strong> and is optimized for <strong>high throughput and low latency</strong>.</p>
+<h4 id="key-features_1"><strong>Key Features</strong></h4>
+<ul>
+<li>Handles <strong>millions of requests per second</strong>.  </li>
+<li>Supports <strong>static IP addresses</strong> and <strong>Elastic IPs</strong>.  </li>
+<li>Ideal for applications needing <strong>TCP/UDP</strong> or <strong>TLS passthrough</strong>.  </li>
+<li>Integrates with <strong>PrivateLink</strong> for secure access between VPCs.</li>
+</ul>
+<p>🧠 <em>Example:</em><br />
+Use NLB for financial trading apps that require constant, fast TCP connections.</p>
+<hr />
+<h3 id="gateway-load-balancer-gwlb">🛡️ <strong>Gateway Load Balancer (GWLB)</strong></h3>
+<p><strong>GWLB</strong> simplifies the deployment and scaling of <strong>virtual network appliances</strong> such as:
+- Firewalls<br />
+- Intrusion detection/prevention systems (IDS/IPS)<br />
+- Deep packet inspection (DPI) tools  </p>
+<h4 id="key-features_2"><strong>Key Features</strong></h4>
+<ul>
+<li>Combines <strong>transparent network gateway</strong> + <strong>load balancer</strong>.  </li>
+<li>Uses <strong>GENEVE</strong> protocol for encapsulation.  </li>
+<li>Ensures traffic is inspected by appliances before reaching its destination.</li>
+</ul>
+<p>🧠 <em>Use Case:</em><br />
+Organizations can deploy third-party firewall appliances (e.g., Palo Alto, Check Point) with GWLB for managed inspection at scale.</p>
+<hr />
+<h3 id="load-balancer-health-checks">🧮 <strong>Load Balancer Health Checks</strong></h3>
+<p>Each load balancer continuously monitors the health of its targets.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Health Check Type</strong></th>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTTP(S) Check</strong></td>
+<td><code>/health</code> endpoint returns 200 OK.</td>
+</tr>
+<tr>
+<td><strong>TCP Check</strong></td>
+<td>Confirms that the port is open and responsive.</td>
+</tr>
+<tr>
+<td><strong>Target Group Status</strong></td>
+<td>Unhealthy targets are automatically removed until they recover.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Best Practice:</em> Configure multiple health check endpoints for redundancy and faster detection.</p>
+<hr />
+<h3 id="integration-with-auto-scaling">🧩 <strong>Integration with Auto Scaling</strong></h3>
+<p><strong>Elastic Load Balancing</strong> integrates seamlessly with <strong>Amazon EC2 Auto Scaling</strong>:
+- ELB automatically registers new instances when they launch.<br />
+- Deregisters instances when they terminate.<br />
+- Ensures only <strong>healthy instances</strong> receive traffic.  </p>
+<p>🧠 <em>Result:</em> Fully elastic, self-healing architecture — your app scales automatically without downtime.</p>
+<hr />
+<h3 id="security-features">🔐 <strong>Security Features</strong></h3>
+<ul>
+<li><strong>HTTPS/TLS support</strong> with <strong>AWS Certificate Manager</strong>.  </li>
+<li><strong>Security groups</strong> control inbound and outbound traffic.  </li>
+<li><strong>Integration with WAF and Shield</strong> for DDoS protection.  </li>
+<li><strong>Access logs</strong> capture detailed request information for analysis.  </li>
+</ul>
+<p>🧠 <em>Tip:</em> Enable <strong>access logging</strong> and <strong>CloudWatch metrics</strong> to analyze performance and detect anomalies.</p>
+<hr />
+<h3 id="key-takeaways">🧠 <strong>Key Takeaways</strong></h3>
+<ul>
+<li><strong>Elastic Load Balancing (ELB)</strong> automatically distributes traffic across multiple targets.  </li>
+<li>Provides <strong>fault tolerance</strong>, <strong>high availability</strong>, and <strong>elastic scalability</strong>.  </li>
+<li>Choose <strong>ALB</strong> for HTTP/S apps, <strong>NLB</strong> for TCP/UDP workloads, <strong>GWLB</strong> for network appliances, and <strong>CLB</strong> for legacy systems.  </li>
+<li><strong>Integrates with Auto Scaling and CloudWatch</strong> for a fully automated architecture.  </li>
+<li>Supports <strong>encryption</strong>, <strong>DDoS protection</strong>, and <strong>access logging</strong> for secure operations.  </li>
+<li>A core building block for resilient, scalable AWS architectures.  </li>
+</ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__body">
+        
+        <div class="row">
+          <div class="col col--s-4 col--m-3 col--l-2">
+          </div>
+          <div class="col col--s-4 col--m space-between">
+            
+              <a class="footer__link padding-top-0 navigation-prev"
+                href="../../module-9/m9_sec6/"
+                title="◽️ Section 6 - Designing for Security and Compliance in the Cloud">
+                &#8592; Previous Page
+              </a>
+            
+            
+            
+              <a class="footer__link padding-top-0 navigation-next"
+                href="../m10_sec2/"
+                title="◽️ Section 2 - Amazon CloudWatch"/>
+                Next Page &#8594;
+              </a>
+            
+          </div>
+          <div class="col col--s-4 col--m-3 ">
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+  </div>
+
+
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2025-11-01 12:57:39.324935+00:00
+  -->
+
+  <!--
+    To include static assets from our theme, just add
+    ../../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/groovy.min.js"></script>
+  <script src="../../../js/languages/asciidoc.min.js"></script>
+  <script src="../../../js/languages/nix.min.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script async src="../../../js/detail.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../../search/main.js"></script>
+  
+
+
+  <script>
+  function getMermaidTheme() {
+    if (document.getElementById("dark-mode").checked) {
+      return 'dark'
+    }
+    return 'forest'
+  }
+
+  function initMermaid() {
+    mermaid.initialize({
+      theme: getMermaidTheme(),
+      logLevel: 1,
+    });
+  }
+  var mermaidClass = document.getElementsByClassName('mermaid');
+  if (mermaidClass.length > 0) {
+
+    var mermaidScript = document.createElement('script');
+    mermaidScript.setAttribute("src", "../../../js/mermaid.min.js");
+    mermaidScript.setAttribute("async", "false");
+    mermaidScript.setAttribute("type", "text/javascript");
+    mermaidScript.onload = initMermaid;
+    document.body.appendChild(mermaidScript)
+
+  }
+  </script>
+
+</div>
+</body>
+</html>

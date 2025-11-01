@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF) - AWS Cloud Practitioner Notes</title>
+
+  <!-- Page description -->
+  
+    <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️" />
+  
+
+  <!-- Redirect -->
+  
+    <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module-1/m1_sec4/" />
+  
+
+  <!-- Page author -->
+  
+    <meta name="author" content="Alba | @jalando.code" />
+  
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  <link rel="stylesheet" href="../../../css/colors.css">
+  <link rel="stylesheet" href="../../../css/bundle.css">
+  <link rel="stylesheet" href="../../../css/theme.css">
+  <link media="print" onload="this.media='all'" rel="stylesheet" href="../../../css/atom-dark-one.min.css">
+  <!--
+    extra_ess contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  
+  
+
+  <!--
+    Include Google Analytics tracking code.
+
+    http://www.mkdocs.org/user-guide/configuration/#google_analytics
+  -->
+  
+
+</head>
+
+<body>
+<input id="dark-mode" type="checkbox" />
+<!--
+  The JS has to be loaded here for maximum performance, right after the #dark-mode
+-->
+<script src="../../../js/theme.js"></script>
+<div class="app-body">
+  <!-- KPN STYLE Beginning -->
+  <div class="app-layout ">
+    <!-- Top Bar -->
+    <nav class="app-layout__top-bar top-bar">
+      <a class="top-bar__logo">
+        <img alt="KPN Logo" src="../../../img/logo-kpn.svg" />
+      </a>
+      <div class="top-bar__title">AWS Cloud Practitioner Notes</div>
+      <ul class="top-bar__menu">
+        <!--
+          Create a search form that sends the user to the search.html file - this is
+          the other file in the template which adds search to the theme. The only
+          requirement here is that there is a text input with the name 'q' and the
+          action and methods match below.
+        -->
+          <li class="top-bar__item">
+
+            <span role="search" id="search-input-wrapper">
+              <form action="../../../search.html" method="get">
+                <input type="text" class="input" id="search-input" name="q" placeholder="Search..." />
+              </form>
+            </span >
+          </li>
+        <!--
+          Versioning support
+        -->
+        
+        <!--
+          Support repo URL
+        -->
+        <li class="top-bar__item">
+          
+        </li>
+
+        <li class="top-bar__item">
+            <label class="top-bar__link" id="label-dark-mode" for="dark-mode" title="Dark mode">
+              <svg alt="dark mode" width="24" height="24">
+                <image xlink:href="../../../img/ui-bulb.svg" width="24" height="24"/>
+            </svg>
+            </label>
+        </li>
+        <li class="top-bar__item top-bar__item--trigger"></li>
+
+        <!-- <li class="top-bar__item">
+
+          <a class="top-bar__link top-bar__link--active">Home</a>
+        </li>
+        <li class="top-bar__item"><a class="top-bar__link">Information</a></li>
+        <li class="top-bar__item">
+          <a class="top-bar__link top-bar__link--collapsed">Getting Started</a>
+
+        </li>
+        <li class="top-bar__item top-bar__item--trigger">Menu</li> -->
+      </ul>
+    </nav>
+
+    <!--
+      Create the navigation for the documentation.
+
+      Because we don't know how many levels deep the navigation is, it needs to
+      be included in it's own file so it can be recursive. Otherwise the theme
+      can also only support a specific number of levels.
+
+      See the nav.html file for more details about how this works.
+    -->
+    <nav class="app-layout__side-bar side-bar">
+      <div class="side-bar__action-bar">
+        <a class="side-bar__link" href="/">AWS Cloud Practitioner Notes</a>
+        <!--
+          Versioning support
+        -->
+        
+        <button class="side-bar__close"></button>
+      </div>
+      <ul class="side-bar__menu">
+        
+          <!--
+
+-->
+
+<li>
+  <a href="../../.." class="side-bar__link ">
+    🏠 Home
+  </a>
+</li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--expanded side-bar__link--active">
+      📌 Module 1 - Cloud Concepts Overview
+    </span>
+    <ul class="side-bar__sub-menu side-bar__sub-menu--visible">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m1_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - What is Cloud Computing?
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m1_sec2/" class="side-bar__link ">
+    ◽ Section 2 - Advantages of Cloud Computing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m1_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Introduction to Amazon Web Services (AWS)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="./" class="side-bar__link side-bar__link--active">
+    ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 2 - Cloud Economics and Billing
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Fundamentals of pricing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Total Cost of Ownership
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - AWS Organizations
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Billing and Cost Management
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Technical support
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌  Module 3 - AWS Global Infrastructure Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Global Infrastructure
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS services and service category overview
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 4 - AWS Cloud Security
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Shared Responsibility Model
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS Identity and Access Management (IAM)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Securing a New AWS Account
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Accounts
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Securing Data on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Working to Ensure Compliance
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 5 - Networking and Content Delivery
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Networking Basics
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - VPC Connectivity Options
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Your VPC
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Amazon Route 53
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Amazon CloudFront
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 6 - Compute
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Compute Services Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Cost Optimization
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Container Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Lambda (Serverless Compute)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - AWS Elastic Beanstalk
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 7 - Storage
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Storage Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Hybrid and Data Transfer Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Backup, Archive, and Data Protection
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec7/" class="side-bar__link ">
+    ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 8 - Databases
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Nonrelational Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Database Migration and Integration on AWS
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 9 - Cloud Architecture
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Cloud Architecture Design Principles
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - High Availability and Fault Tolerance
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Elasticity and Scalability in the Cloud
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Loose Coupling and Microservices Architecture
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Global Infrastructure and Edge Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Designing for Security and Compliance in the Cloud
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 10 - Automatic Scaling and Monitoring
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Elastic Load Balancing (ELB)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon CloudWatch
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Auto Scaling
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+      </ul>
+    </nav>
+
+    <!-- MAIN BLOCK -->
+    <main class="app-layout__main main">
+      <div class="app-layout__title-bar title-bar">
+        <div class="title-bar__title">◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)</div>
+      </div>
+      
+      <div class="sidebar--secondary hidden-s hidden-xs">
+        <h4>Table of contents</h4>
+        <ul>
+        
+          
+            
+                <li><a class="a" href="#4-section-4-aws-cloud-adoption-framework-aws-caf">4️⃣ Section 4: AWS Cloud Adoption Framework (AWS CAF)</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#overview">🟠 Overview</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#what-is-the-aws-cloud-adoption-framework-aws-caf">🟠 What is the AWS Cloud Adoption Framework (AWS CAF)?</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#business-vs-technical-perspectives">🟠 Business vs. Technical Perspectives</a></li>
+                
+            
+                <li><a class="a" href="#the-six-aws-caf-perspectives">🧩 The Six AWS CAF Perspectives</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#1-business-perspective">🟣 1. Business Perspective</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#2-people-perspective">🟢 2. People Perspective</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#3-governance-perspective">🟠 3. Governance Perspective</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#4-platform-perspective">🔵 4. Platform Perspective</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#5-security-perspective">🔐 5. Security Perspective</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#6-operations-perspective">⚙️ 6. Operations Perspective</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#key-takeaways">🟢 Key Takeaways</a></li>
+                
+            
+          
+        
+        </ul>
+      </div>
+      
+      <div class="container content-block">
+        <div class="kpn-style">
+          <div class="card">
+            <div class="card__body">
+
+              
+              <h1 id="module-1-cloud-concepts-overview">☁️ Module 1 - Cloud Concepts Overview</h1>
+<h2 id="4-section-4-aws-cloud-adoption-framework-aws-caf">4️⃣ Section 4: AWS Cloud Adoption Framework (AWS CAF)</h2>
+<hr />
+<h3 id="overview">🟠 Overview</h3>
+<p>Every organization’s <strong>cloud adoption journey</strong> is unique.<br />
+However, to successfully migrate an IT portfolio to the cloud, <strong>three elements must align</strong>:  </p>
+<ol>
+<li>👥 <strong>People</strong>  </li>
+<li>⚙️ <strong>Processes</strong>  </li>
+<li>💻 <strong>Technology</strong>  </li>
+</ol>
+<p>Business and technology leaders must:<br />
+- Understand the <strong>current state</strong>, <strong>target state</strong>, and <strong>transition plan</strong>.<br />
+- Define clear <strong>goals and processes</strong> for their teams.  </p>
+<hr />
+<h3 id="what-is-the-aws-cloud-adoption-framework-aws-caf">🟠 What is the AWS Cloud Adoption Framework (AWS CAF)?</h3>
+<p>The <strong>AWS Cloud Adoption Framework (AWS CAF)</strong> provides <strong>guidance and best practices</strong> to help organizations:<br />
+- Identify <strong>gaps in skills, processes, or technology</strong>.<br />
+- Build a <strong>comprehensive cloud strategy</strong> across the entire organization.<br />
+- Accelerate <strong>successful cloud adoption</strong> throughout the IT lifecycle.  </p>
+<p>At a high level, the <strong>AWS CAF</strong> organizes guidance into <strong>six perspectives</strong>, which represent different <strong>areas of focus</strong> spanning <strong>people, process, and technology</strong>.  </p>
+<p>Each <strong>perspective</strong> contains a set of <strong>capabilities</strong> — distinct responsibilities managed by functionally related stakeholders.  </p>
+<p>By identifying capability gaps, organizations can create <strong>targeted workstreams</strong> that support their cloud journey.  </p>
+<p>📘 <strong>Summary:</strong><br />
+- 6 Perspectives<br />
+- Each includes multiple Capabilities<br />
+- Used to evaluate readiness and plan cloud adoption  </p>
+<hr />
+<h3 id="business-vs-technical-perspectives">🟠 Business vs. Technical Perspectives</h3>
+<p>AWS CAF perspectives are grouped into two categories:  </p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Perspectives</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business Capabilities</strong></td>
+<td>Business, People, Governance</td>
+<td>Align business strategies, processes, and organizational readiness</td>
+</tr>
+<tr>
+<td><strong>Technical Capabilities</strong></td>
+<td>Platform, Security, Operations</td>
+<td>Focus on architecture, security, and operational excellence</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-six-aws-caf-perspectives">🧩 The Six AWS CAF Perspectives</h2>
+<hr />
+<h3 id="1-business-perspective">🟣 1. Business Perspective</h3>
+<p>👥 <strong>Stakeholders:</strong> Business managers, finance managers, budget owners, strategy stakeholders.  </p>
+<p>🎯 <strong>Goal:</strong><br />
+Ensure that <strong>IT aligns with business needs</strong> and that <strong>investments generate measurable business results</strong>.  </p>
+<p>💼 <strong>Key Capabilities:</strong><br />
+- IT finance<br />
+- IT strategy<br />
+- Benefits realization<br />
+- Business risk management  </p>
+<p>💬 <strong>In short:</strong> Build a strong business case for cloud adoption and prioritize initiatives aligned with organizational goals.  </p>
+<hr />
+<h3 id="2-people-perspective">🟢 2. People Perspective</h3>
+<p>👥 <strong>Stakeholders:</strong> HR leaders, staffing and people managers.  </p>
+<p>🎯 <strong>Goal:</strong><br />
+Evaluate <strong>organizational structure, skills, and roles</strong>, and identify <strong>gaps</strong> to create an <strong>agile, cloud-ready workforce</strong>.  </p>
+<p>📋 <strong>Key Capabilities:</strong><br />
+- Resource management<br />
+- Incentive management<br />
+- Career management<br />
+- Training management<br />
+- Organizational change management  </p>
+<p>💬 <strong>In short:</strong> Focus on <strong>training, staffing, and cultural transformation</strong> to enable agility.  </p>
+<hr />
+<h3 id="3-governance-perspective">🟠 3. Governance Perspective</h3>
+<p>👥 <strong>Stakeholders:</strong> CIOs, program managers, enterprise architects, business analysts, portfolio managers.  </p>
+<p>🎯 <strong>Goal:</strong><br />
+Align <strong>IT strategy</strong> and <strong>business goals</strong> through structured processes and governance mechanisms.<br />
+This alignment helps <strong>maximize business value</strong> and <strong>minimize risk</strong>.  </p>
+<p>📋 <strong>Key Capabilities:</strong><br />
+- Portfolio management<br />
+- Program and project management<br />
+- Business performance measurement<br />
+- License management  </p>
+<p>💬 <strong>In short:</strong> Establish governance to ensure IT delivers measurable business outcomes safely and efficiently.  </p>
+<hr />
+<h3 id="4-platform-perspective">🔵 4. Platform Perspective</h3>
+<p>👥 <strong>Stakeholders:</strong> CTOs, IT managers, solutions architects.  </p>
+<p>🎯 <strong>Goal:</strong><br />
+Understand and describe the <strong>architecture of the target cloud environment</strong>, using models and frameworks to plan, build, and migrate workloads.  </p>
+<p>📋 <strong>Key Capabilities:</strong><br />
+- Compute provisioning<br />
+- Network provisioning<br />
+- Storage provisioning<br />
+- Database provisioning<br />
+- Systems and solution architecture<br />
+- Application development  </p>
+<p>💬 <strong>In short:</strong> Design and implement <strong>technical architectures</strong> for cloud solutions and migrations.  </p>
+<hr />
+<h3 id="5-security-perspective">🔐 5. Security Perspective</h3>
+<p>👥 <strong>Stakeholders:</strong> CISOs, IT security managers, IT security analysts.  </p>
+<p>🎯 <strong>Goal:</strong><br />
+Ensure the organization meets <strong>security objectives</strong> such as visibility, auditability, control, and agility.<br />
+Use AWS CAF to <strong>structure and implement security controls</strong> effectively.  </p>
+<p>📋 <strong>Key Capabilities:</strong><br />
+- Identity and access management (IAM)<br />
+- Detective controls<br />
+- Infrastructure security<br />
+- Data protection<br />
+- Incident response  </p>
+<p>💬 <strong>In short:</strong> Maintain a <strong>secure, compliant, and resilient</strong> cloud environment.  </p>
+<hr />
+<h3 id="6-operations-perspective">⚙️ 6. Operations Perspective</h3>
+<p>👥 <strong>Stakeholders:</strong> IT operations managers, IT support managers.  </p>
+<p>🎯 <strong>Goal:</strong><br />
+Define <strong>how day-to-day, quarterly, and annual operations</strong> are conducted.<br />
+Align IT operations with business needs and ensure continuous improvement.  </p>
+<p>📋 <strong>Key Capabilities:</strong><br />
+- Service monitoring<br />
+- Application performance monitoring<br />
+- Resource inventory management<br />
+- Release/change management<br />
+- Reporting and analytics<br />
+- Business continuity / disaster recovery<br />
+- IT service catalog  </p>
+<p>💬 <strong>In short:</strong> Support stable and efficient <strong>business operations</strong> while managing cloud-based environments.  </p>
+<hr />
+<h3 id="key-takeaways">🟢 Key Takeaways</h3>
+<p>✅ <strong>Cloud adoption requires alignment</strong> between people, processes, and technology.<br />
+✅ The <strong>AWS Cloud Adoption Framework (CAF)</strong> provides best practices to guide that journey.<br />
+✅ The <strong>six CAF perspectives</strong> ensure all areas of the organization are ready for the cloud:<br />
+1. Business<br />
+2. People<br />
+3. Governance<br />
+4. Platform<br />
+5. Security<br />
+6. Operations  </p>
+<p>Each perspective identifies key <strong>capabilities</strong> and <strong>stakeholders</strong> to ensure a complete and successful migration strategy.  </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__body">
+        
+        <div class="row">
+          <div class="col col--s-4 col--m-3 col--l-2">
+          </div>
+          <div class="col col--s-4 col--m space-between">
+            
+              <a class="footer__link padding-top-0 navigation-prev"
+                href="../m1_sec3/"
+                title="◽️ Section 3 - Introduction to Amazon Web Services (AWS)">
+                &#8592; Previous Page
+              </a>
+            
+            
+            
+              <a class="footer__link padding-top-0 navigation-next"
+                href="../../module-2/m2_sec1/"
+                title="◽️ Section 1 - Fundamentals of pricing"/>
+                Next Page &#8594;
+              </a>
+            
+          </div>
+          <div class="col col--s-4 col--m-3 ">
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+  </div>
+
+
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2025-11-01 12:57:39.320886+00:00
+  -->
+
+  <!--
+    To include static assets from our theme, just add
+    ../../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/groovy.min.js"></script>
+  <script src="../../../js/languages/asciidoc.min.js"></script>
+  <script src="../../../js/languages/nix.min.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script async src="../../../js/detail.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../../search/main.js"></script>
+  
+
+
+  <script>
+  function getMermaidTheme() {
+    if (document.getElementById("dark-mode").checked) {
+      return 'dark'
+    }
+    return 'forest'
+  }
+
+  function initMermaid() {
+    mermaid.initialize({
+      theme: getMermaidTheme(),
+      logLevel: 1,
+    });
+  }
+  var mermaidClass = document.getElementsByClassName('mermaid');
+  if (mermaidClass.length > 0) {
+
+    var mermaidScript = document.createElement('script');
+    mermaidScript.setAttribute("src", "../../../js/mermaid.min.js");
+    mermaidScript.setAttribute("async", "false");
+    mermaidScript.setAttribute("type", "text/javascript");
+    mermaidScript.onload = initMermaid;
+    document.body.appendChild(mermaidScript)
+
+  }
+  </script>
+
+</div>
+</body>
+</html>

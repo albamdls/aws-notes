@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2) - AWS Cloud Practitioner Notes</title>
+
+  <!-- Page description -->
+  
+    <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️" />
+  
+
+  <!-- Redirect -->
+  
+    <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module-6/m6_sec2/" />
+  
+
+  <!-- Page author -->
+  
+    <meta name="author" content="Alba | @jalando.code" />
+  
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  <link rel="stylesheet" href="../../../css/colors.css">
+  <link rel="stylesheet" href="../../../css/bundle.css">
+  <link rel="stylesheet" href="../../../css/theme.css">
+  <link media="print" onload="this.media='all'" rel="stylesheet" href="../../../css/atom-dark-one.min.css">
+  <!--
+    extra_ess contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  
+  
+
+  <!--
+    Include Google Analytics tracking code.
+
+    http://www.mkdocs.org/user-guide/configuration/#google_analytics
+  -->
+  
+
+</head>
+
+<body>
+<input id="dark-mode" type="checkbox" />
+<!--
+  The JS has to be loaded here for maximum performance, right after the #dark-mode
+-->
+<script src="../../../js/theme.js"></script>
+<div class="app-body">
+  <!-- KPN STYLE Beginning -->
+  <div class="app-layout ">
+    <!-- Top Bar -->
+    <nav class="app-layout__top-bar top-bar">
+      <a class="top-bar__logo">
+        <img alt="KPN Logo" src="../../../img/logo-kpn.svg" />
+      </a>
+      <div class="top-bar__title">AWS Cloud Practitioner Notes</div>
+      <ul class="top-bar__menu">
+        <!--
+          Create a search form that sends the user to the search.html file - this is
+          the other file in the template which adds search to the theme. The only
+          requirement here is that there is a text input with the name 'q' and the
+          action and methods match below.
+        -->
+          <li class="top-bar__item">
+
+            <span role="search" id="search-input-wrapper">
+              <form action="../../../search.html" method="get">
+                <input type="text" class="input" id="search-input" name="q" placeholder="Search..." />
+              </form>
+            </span >
+          </li>
+        <!--
+          Versioning support
+        -->
+        
+        <!--
+          Support repo URL
+        -->
+        <li class="top-bar__item">
+          
+        </li>
+
+        <li class="top-bar__item">
+            <label class="top-bar__link" id="label-dark-mode" for="dark-mode" title="Dark mode">
+              <svg alt="dark mode" width="24" height="24">
+                <image xlink:href="../../../img/ui-bulb.svg" width="24" height="24"/>
+            </svg>
+            </label>
+        </li>
+        <li class="top-bar__item top-bar__item--trigger"></li>
+
+        <!-- <li class="top-bar__item">
+
+          <a class="top-bar__link top-bar__link--active">Home</a>
+        </li>
+        <li class="top-bar__item"><a class="top-bar__link">Information</a></li>
+        <li class="top-bar__item">
+          <a class="top-bar__link top-bar__link--collapsed">Getting Started</a>
+
+        </li>
+        <li class="top-bar__item top-bar__item--trigger">Menu</li> -->
+      </ul>
+    </nav>
+
+    <!--
+      Create the navigation for the documentation.
+
+      Because we don't know how many levels deep the navigation is, it needs to
+      be included in it's own file so it can be recursive. Otherwise the theme
+      can also only support a specific number of levels.
+
+      See the nav.html file for more details about how this works.
+    -->
+    <nav class="app-layout__side-bar side-bar">
+      <div class="side-bar__action-bar">
+        <a class="side-bar__link" href="/">AWS Cloud Practitioner Notes</a>
+        <!--
+          Versioning support
+        -->
+        
+        <button class="side-bar__close"></button>
+      </div>
+      <ul class="side-bar__menu">
+        
+          <!--
+
+-->
+
+<li>
+  <a href="../../.." class="side-bar__link ">
+    🏠 Home
+  </a>
+</li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 1 - Cloud Concepts Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - What is Cloud Computing?
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec2/" class="side-bar__link ">
+    ◽ Section 2 - Advantages of Cloud Computing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Introduction to Amazon Web Services (AWS)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 2 - Cloud Economics and Billing
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Fundamentals of pricing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Total Cost of Ownership
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - AWS Organizations
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Billing and Cost Management
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Technical support
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌  Module 3 - AWS Global Infrastructure Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Global Infrastructure
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS services and service category overview
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 4 - AWS Cloud Security
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Shared Responsibility Model
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS Identity and Access Management (IAM)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Securing a New AWS Account
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Accounts
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Securing Data on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Working to Ensure Compliance
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 5 - Networking and Content Delivery
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Networking Basics
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - VPC Connectivity Options
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Your VPC
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Amazon Route 53
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Amazon CloudFront
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--expanded side-bar__link--active">
+      📌 Module 6 - Compute
+    </span>
+    <ul class="side-bar__sub-menu side-bar__sub-menu--visible">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Compute Services Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="./" class="side-bar__link side-bar__link--active">
+    ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Cost Optimization
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Container Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Lambda (Serverless Compute)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - AWS Elastic Beanstalk
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 7 - Storage
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Storage Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Hybrid and Data Transfer Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Backup, Archive, and Data Protection
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec7/" class="side-bar__link ">
+    ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 8 - Databases
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Nonrelational Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Database Migration and Integration on AWS
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 9 - Cloud Architecture
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Cloud Architecture Design Principles
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - High Availability and Fault Tolerance
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Elasticity and Scalability in the Cloud
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Loose Coupling and Microservices Architecture
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Global Infrastructure and Edge Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Designing for Security and Compliance in the Cloud
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 10 - Automatic Scaling and Monitoring
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Elastic Load Balancing (ELB)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon CloudWatch
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Auto Scaling
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+      </ul>
+    </nav>
+
+    <!-- MAIN BLOCK -->
+    <main class="app-layout__main main">
+      <div class="app-layout__title-bar title-bar">
+        <div class="title-bar__title">◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)</div>
+      </div>
+      
+      <div class="sidebar--secondary hidden-s hidden-xs">
+        <h4>Table of contents</h4>
+        <ul>
+        
+          
+            
+                <li><a class="a" href="#2-section-2-amazon-elastic-compute-cloud-amazon-ec2">2️⃣ Section 2: Amazon Elastic Compute Cloud (Amazon EC2)</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#introduction-to-amazon-ec2">🟠 Introduction to Amazon EC2</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#understanding-ec2-instances">💡 Understanding EC2 Instances</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#the-ec2-launch-process">⚙️ The EC2 Launch Process</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#amazon-machine-images-amis">🧱 Amazon Machine Images (AMIs)</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#ec2-storage-options">💾 EC2 Storage Options</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#security-and-access">🔒 Security and Access</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#networking">🌐 Networking</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#ec2-instance-lifecycle">🧩 EC2 Instance Lifecycle</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#monitoring-ec2">📊 Monitoring EC2</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#ec2-cost-model">💬 EC2 Cost Model</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#key-takeaways">🧠 Key Takeaways</a></li>
+                
+            
+          
+        
+        </ul>
+      </div>
+      
+      <div class="container content-block">
+        <div class="kpn-style">
+          <div class="card">
+            <div class="card__body">
+
+              
+              <h1 id="module-6-compute">⚙️ <strong>Module 6 - Compute</strong></h1>
+<h2 id="2-section-2-amazon-elastic-compute-cloud-amazon-ec2">2️⃣ <strong>Section 2: Amazon Elastic Compute Cloud (Amazon EC2)</strong></h2>
+<h3 id="introduction-to-amazon-ec2">🟠 <strong>Introduction to Amazon EC2</strong></h3>
+<p><strong>Amazon Elastic Compute Cloud (Amazon EC2)</strong> provides secure, resizable compute capacity in the AWS Cloud.<br />
+It is designed to make web-scale cloud computing easier for developers.</p>
+<p>With EC2, you can:
+- Launch virtual servers (instances) within minutes.
+- Configure CPU, memory, storage, and networking.
+- Scale up or down to handle variable workloads.
+- Pay only for what you use.</p>
+<p><strong>Key benefits:</strong>
+- Elasticity and scalability.<br />
+- Complete control over instances.<br />
+- Flexible cloud hosting environment.<br />
+- Integration with most AWS services.</p>
+<hr />
+<h3 id="understanding-ec2-instances">💡 <strong>Understanding EC2 Instances</strong></h3>
+<p>An <strong>EC2 instance</strong> is a virtual server running on AWS infrastructure.</p>
+<p>You can:
+- Choose from a wide variety of <strong>instance types</strong> optimized for compute, memory, or storage.
+- Launch instances in specific <strong>Availability Zones</strong> within a Region.
+- Use <strong>Auto Scaling</strong> and <strong>Elastic Load Balancing (ELB)</strong> for high availability and performance.</p>
+<p>Each instance type is a combination of:
+- <strong>CPU</strong>
+- <strong>Memory</strong>
+- <strong>Storage</strong>
+- <strong>Networking capacity</strong></p>
+<hr />
+<h3 id="the-ec2-launch-process">⚙️ <strong>The EC2 Launch Process</strong></h3>
+<p>When launching an EC2 instance, you define its configuration in several steps:</p>
+<ol>
+<li><strong>Choose an Amazon Machine Image (AMI)</strong>  </li>
+<li>AMI = a pre-configured template containing an operating system, software, and settings.  </li>
+<li>AWS provides both <strong>public AMIs</strong> and <strong>custom AMIs</strong>.  </li>
+<li>
+<p>You can also create your own AMI from an existing instance for reuse.</p>
+</li>
+<li>
+<p><strong>Choose an Instance Type</strong>  </p>
+</li>
+<li>
+<p>Instance types are grouped into families based on their use case:  </p>
+<table>
+<thead>
+<tr>
+<th>Instance Family</th>
+<th>Optimization Focus</th>
+<th>Example Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>General Purpose</strong></td>
+<td>Balanced compute, memory, and networking</td>
+<td>Web servers, app servers</td>
+</tr>
+<tr>
+<td><strong>Compute Optimized</strong></td>
+<td>High-performance CPU</td>
+<td>High-traffic web apps, scientific modeling</td>
+</tr>
+<tr>
+<td><strong>Memory Optimized</strong></td>
+<td>Large memory for in-memory processing</td>
+<td>Databases, analytics</td>
+</tr>
+<tr>
+<td><strong>Storage Optimized</strong></td>
+<td>High, sequential read/write access</td>
+<td>Data warehousing, big data</td>
+</tr>
+<tr>
+<td><strong>Accelerated Computing</strong></td>
+<td>GPU or FPGA acceleration</td>
+<td>Machine learning, rendering</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Configure Instance Details</strong>  </p>
+</li>
+<li>Specify <strong>number of instances</strong>, <strong>VPC</strong>, <strong>subnet</strong>, <strong>public IP settings</strong>, <strong>IAM role</strong>, and <strong>shutdown behavior</strong>.</li>
+<li>
+<p>Optionally, add <strong>user data scripts</strong> to automate setup tasks at boot.</p>
+</li>
+<li>
+<p><strong>Add Storage</strong>  </p>
+</li>
+<li>
+<p>Choose between multiple storage options (see below).</p>
+</li>
+<li>
+<p><strong>Add Tags</strong>  </p>
+</li>
+<li>
+<p>Tags are key-value pairs for organization and cost tracking (e.g., <code>Environment=Production</code>).</p>
+</li>
+<li>
+<p><strong>Configure Security Group</strong>  </p>
+</li>
+<li>Acts as a <strong>virtual firewall</strong> for your instance.</li>
+<li>
+<p>Controls inbound/outbound traffic using rules (protocols, ports, IP ranges).</p>
+</li>
+<li>
+<p><strong>Review and Launch</strong>  </p>
+</li>
+<li>Choose or create a <strong>key pair</strong> to enable secure SSH (Linux) or RDP (Windows) access.</li>
+</ol>
+<hr />
+<h3 id="amazon-machine-images-amis">🧱 <strong>Amazon Machine Images (AMIs)</strong></h3>
+<ul>
+<li>An <strong>AMI</strong> defines:</li>
+<li>The operating system.</li>
+<li>Initial state (applications, libraries, and configurations).</li>
+<li>Permissions for usage (public or private).</li>
+<li>You can <strong>share</strong>, <strong>copy</strong>, or <strong>encrypt</strong> AMIs.</li>
+<li>AMIs are Region-specific but can be copied to other Regions.</li>
+</ul>
+<hr />
+<h3 id="ec2-storage-options">💾 <strong>EC2 Storage Options</strong></h3>
+<p>AWS provides several types of storage that can be attached or integrated with EC2:</p>
+<table>
+<thead>
+<tr>
+<th>Storage Type</th>
+<th>Description</th>
+<th>Key Features</th>
+<th>Example Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Elastic Block Store (EBS)</strong></td>
+<td>Block storage attached to EC2 instances.</td>
+<td>Persistent, durable, automatically replicated within AZ.</td>
+<td>Databases, file systems, boot volumes.</td>
+</tr>
+<tr>
+<td><strong>Instance Store</strong></td>
+<td>Temporary block storage physically attached to the host.</td>
+<td>Very high I/O performance but data lost when instance stops/terminates.</td>
+<td>Caching, temporary files, buffers.</td>
+</tr>
+<tr>
+<td><strong>Amazon Elastic File System (EFS)</strong></td>
+<td>Fully managed NFS file system shared across instances.</td>
+<td>Scalable, elastic, accessible across multiple AZs.</td>
+<td>Shared application data, content management.</td>
+</tr>
+<tr>
+<td><strong>Amazon Simple Storage Service (S3)</strong></td>
+<td>Object storage for any type of data.</td>
+<td>Highly durable (11 9s), scalable, accessible anywhere.</td>
+<td>Backups, logs, static assets, snapshots.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="security-and-access">🔒 <strong>Security and Access</strong></h3>
+<h4 id="key-pairs">🔑 <strong>Key Pairs</strong></h4>
+<ul>
+<li>Used for secure SSH/RDP access to your instances.</li>
+<li>A key pair consists of:</li>
+<li><strong>Public key</strong> (stored by AWS)</li>
+<li><strong>Private key</strong> (stored by you, required for login)</li>
+<li>Always keep private keys secure. Lost private keys cannot be recovered.</li>
+</ul>
+<h4 id="security-groups">🧱 <strong>Security Groups</strong></h4>
+<ul>
+<li>Virtual firewalls controlling inbound/outbound traffic.</li>
+<li>Rules are <strong>stateful</strong>: if you allow an inbound connection, its response is automatically allowed.</li>
+<li>You can assign one or more security groups per instance.</li>
+</ul>
+<h4 id="iam-roles">👤 <strong>IAM Roles</strong></h4>
+<ul>
+<li>Allow your instance to securely access other AWS services <strong>without embedding credentials</strong>.</li>
+<li>Best practice: assign a specific IAM role to each instance rather than using access keys.</li>
+</ul>
+<hr />
+<h3 id="networking">🌐 <strong>Networking</strong></h3>
+<p>Each EC2 instance resides inside an <strong>Amazon Virtual Private Cloud (VPC)</strong>.  </p>
+<p>Within the VPC, you can configure:
+- <strong>Subnets</strong> → logical segments of your network (public or private).<br />
+- <strong>Elastic IP Addresses</strong> → static public IPs that can be reassigned between instances.<br />
+- <strong>Elastic Network Interfaces (ENIs)</strong> → virtual network cards for more advanced configurations.</p>
+<p><strong>Public vs. Private IPs</strong>
+- <strong>Public IPs</strong>: Accessible from the Internet (temporary unless associated with an Elastic IP).<br />
+- <strong>Private IPs</strong>: Used for communication within a VPC.</p>
+<hr />
+<h3 id="ec2-instance-lifecycle">🧩 <strong>EC2 Instance Lifecycle</strong></h3>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pending</strong></td>
+<td>The instance is being launched.</td>
+</tr>
+<tr>
+<td><strong>Running</strong></td>
+<td>The instance is operational and billing begins.</td>
+</tr>
+<tr>
+<td><strong>Stopping / Stopped</strong></td>
+<td>Instance is halted but data persists on EBS volumes.</td>
+</tr>
+<tr>
+<td><strong>Shutting-down / Terminated</strong></td>
+<td>Instance is permanently deleted.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="monitoring-ec2">📊 <strong>Monitoring EC2</strong></h3>
+<p>Use <strong>Amazon CloudWatch</strong> to monitor EC2 performance metrics, such as:
+- CPU utilization<br />
+- Disk I/O<br />
+- Network traffic<br />
+- Status checks  </p>
+<p>You can create <strong>CloudWatch Alarms</strong> to trigger notifications or Auto Scaling actions.</p>
+<hr />
+<h3 id="ec2-cost-model">💬 <strong>EC2 Cost Model</strong></h3>
+<p>Amazon EC2 offers multiple pricing models:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>On-Demand</strong></td>
+<td>Pay per second or hour with no commitment.</td>
+<td>Short-term, unpredictable workloads.</td>
+</tr>
+<tr>
+<td><strong>Reserved Instances</strong></td>
+<td>1–3 year commitment with discounts up to 75%.</td>
+<td>Steady-state workloads.</td>
+</tr>
+<tr>
+<td><strong>Spot Instances</strong></td>
+<td>Up to 90% discount; can be interrupted by AWS.</td>
+<td>Flexible, fault-tolerant workloads.</td>
+</tr>
+<tr>
+<td><strong>Dedicated Hosts / Instances</strong></td>
+<td>Physically isolated hardware.</td>
+<td>Compliance or licensing requirements.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="key-takeaways">🧠 <strong>Key Takeaways</strong></h3>
+<ul>
+<li><strong>Amazon EC2</strong> provides scalable virtual servers in the cloud.  </li>
+<li>You can fully control the instance type, OS, storage, and network.  </li>
+<li><strong>AMIs</strong> simplify deployment by offering reusable templates.  </li>
+<li><strong>Security Groups</strong> act as virtual firewalls; <strong>IAM Roles</strong> grant secure access to other AWS services.  </li>
+<li><strong>CloudWatch</strong> is used for monitoring performance.  </li>
+<li>Choose the right <strong>pricing model</strong> to balance cost and flexibility.  </li>
+<li>Combine <strong>Auto Scaling</strong> and <strong>Elastic Load Balancing</strong> for high availability and resilience.</li>
+</ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__body">
+        
+        <div class="row">
+          <div class="col col--s-4 col--m-3 col--l-2">
+          </div>
+          <div class="col col--s-4 col--m space-between">
+            
+              <a class="footer__link padding-top-0 navigation-prev"
+                href="../m6_sec1/"
+                title="◽️ Section 1 - Compute Services Overview">
+                &#8592; Previous Page
+              </a>
+            
+            
+            
+              <a class="footer__link padding-top-0 navigation-next"
+                href="../m6_sec3/"
+                title="◽️ Section 3 - Amazon EC2 Cost Optimization"/>
+                Next Page &#8594;
+              </a>
+            
+          </div>
+          <div class="col col--s-4 col--m-3 ">
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+  </div>
+
+
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2025-11-01 12:57:39.410753+00:00
+  -->
+
+  <!--
+    To include static assets from our theme, just add
+    ../../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/groovy.min.js"></script>
+  <script src="../../../js/languages/asciidoc.min.js"></script>
+  <script src="../../../js/languages/nix.min.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script async src="../../../js/detail.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../../search/main.js"></script>
+  
+
+
+  <script>
+  function getMermaidTheme() {
+    if (document.getElementById("dark-mode").checked) {
+      return 'dark'
+    }
+    return 'forest'
+  }
+
+  function initMermaid() {
+    mermaid.initialize({
+      theme: getMermaidTheme(),
+      logLevel: 1,
+    });
+  }
+  var mermaidClass = document.getElementsByClassName('mermaid');
+  if (mermaidClass.length > 0) {
+
+    var mermaidScript = document.createElement('script');
+    mermaidScript.setAttribute("src", "../../../js/mermaid.min.js");
+    mermaidScript.setAttribute("async", "false");
+    mermaidScript.setAttribute("type", "text/javascript");
+    mermaidScript.onload = initMermaid;
+    document.body.appendChild(mermaidScript)
+
+  }
+  </script>
+
+</div>
+</body>
+</html>

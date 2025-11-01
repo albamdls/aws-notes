@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>◽️ Section 6 - Designing for Security and Compliance in the Cloud - AWS Cloud Practitioner Notes</title>
+
+  <!-- Page description -->
+  
+    <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️" />
+  
+
+  <!-- Redirect -->
+  
+    <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module-9/m9_sec6/" />
+  
+
+  <!-- Page author -->
+  
+    <meta name="author" content="Alba | @jalando.code" />
+  
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  <link rel="stylesheet" href="../../../css/colors.css">
+  <link rel="stylesheet" href="../../../css/bundle.css">
+  <link rel="stylesheet" href="../../../css/theme.css">
+  <link media="print" onload="this.media='all'" rel="stylesheet" href="../../../css/atom-dark-one.min.css">
+  <!--
+    extra_ess contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  
+  
+
+  <!--
+    Include Google Analytics tracking code.
+
+    http://www.mkdocs.org/user-guide/configuration/#google_analytics
+  -->
+  
+
+</head>
+
+<body>
+<input id="dark-mode" type="checkbox" />
+<!--
+  The JS has to be loaded here for maximum performance, right after the #dark-mode
+-->
+<script src="../../../js/theme.js"></script>
+<div class="app-body">
+  <!-- KPN STYLE Beginning -->
+  <div class="app-layout ">
+    <!-- Top Bar -->
+    <nav class="app-layout__top-bar top-bar">
+      <a class="top-bar__logo">
+        <img alt="KPN Logo" src="../../../img/logo-kpn.svg" />
+      </a>
+      <div class="top-bar__title">AWS Cloud Practitioner Notes</div>
+      <ul class="top-bar__menu">
+        <!--
+          Create a search form that sends the user to the search.html file - this is
+          the other file in the template which adds search to the theme. The only
+          requirement here is that there is a text input with the name 'q' and the
+          action and methods match below.
+        -->
+          <li class="top-bar__item">
+
+            <span role="search" id="search-input-wrapper">
+              <form action="../../../search.html" method="get">
+                <input type="text" class="input" id="search-input" name="q" placeholder="Search..." />
+              </form>
+            </span >
+          </li>
+        <!--
+          Versioning support
+        -->
+        
+        <!--
+          Support repo URL
+        -->
+        <li class="top-bar__item">
+          
+        </li>
+
+        <li class="top-bar__item">
+            <label class="top-bar__link" id="label-dark-mode" for="dark-mode" title="Dark mode">
+              <svg alt="dark mode" width="24" height="24">
+                <image xlink:href="../../../img/ui-bulb.svg" width="24" height="24"/>
+            </svg>
+            </label>
+        </li>
+        <li class="top-bar__item top-bar__item--trigger"></li>
+
+        <!-- <li class="top-bar__item">
+
+          <a class="top-bar__link top-bar__link--active">Home</a>
+        </li>
+        <li class="top-bar__item"><a class="top-bar__link">Information</a></li>
+        <li class="top-bar__item">
+          <a class="top-bar__link top-bar__link--collapsed">Getting Started</a>
+
+        </li>
+        <li class="top-bar__item top-bar__item--trigger">Menu</li> -->
+      </ul>
+    </nav>
+
+    <!--
+      Create the navigation for the documentation.
+
+      Because we don't know how many levels deep the navigation is, it needs to
+      be included in it's own file so it can be recursive. Otherwise the theme
+      can also only support a specific number of levels.
+
+      See the nav.html file for more details about how this works.
+    -->
+    <nav class="app-layout__side-bar side-bar">
+      <div class="side-bar__action-bar">
+        <a class="side-bar__link" href="/">AWS Cloud Practitioner Notes</a>
+        <!--
+          Versioning support
+        -->
+        
+        <button class="side-bar__close"></button>
+      </div>
+      <ul class="side-bar__menu">
+        
+          <!--
+
+-->
+
+<li>
+  <a href="../../.." class="side-bar__link ">
+    🏠 Home
+  </a>
+</li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 1 - Cloud Concepts Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - What is Cloud Computing?
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec2/" class="side-bar__link ">
+    ◽ Section 2 - Advantages of Cloud Computing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Introduction to Amazon Web Services (AWS)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 2 - Cloud Economics and Billing
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Fundamentals of pricing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Total Cost of Ownership
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - AWS Organizations
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Billing and Cost Management
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Technical support
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌  Module 3 - AWS Global Infrastructure Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Global Infrastructure
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS services and service category overview
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 4 - AWS Cloud Security
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Shared Responsibility Model
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS Identity and Access Management (IAM)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Securing a New AWS Account
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Accounts
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Securing Data on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Working to Ensure Compliance
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 5 - Networking and Content Delivery
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Networking Basics
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - VPC Connectivity Options
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Your VPC
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Amazon Route 53
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Amazon CloudFront
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 6 - Compute
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Compute Services Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Cost Optimization
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Container Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Lambda (Serverless Compute)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-6/m6_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - AWS Elastic Beanstalk
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 7 - Storage
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Storage Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Hybrid and Data Transfer Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Backup, Archive, and Data Protection
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec7/" class="side-bar__link ">
+    ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 8 - Databases
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Nonrelational Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Database Migration and Integration on AWS
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--expanded side-bar__link--active">
+      📌 Module 9 - Cloud Architecture
+    </span>
+    <ul class="side-bar__sub-menu side-bar__sub-menu--visible">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Cloud Architecture Design Principles
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - High Availability and Fault Tolerance
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Elasticity and Scalability in the Cloud
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Loose Coupling and Microservices Architecture
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m9_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Global Infrastructure and Edge Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="./" class="side-bar__link side-bar__link--active">
+    ◽️ Section 6 - Designing for Security and Compliance in the Cloud
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 10 - Automatic Scaling and Monitoring
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Elastic Load Balancing (ELB)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon CloudWatch
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Auto Scaling
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+      </ul>
+    </nav>
+
+    <!-- MAIN BLOCK -->
+    <main class="app-layout__main main">
+      <div class="app-layout__title-bar title-bar">
+        <div class="title-bar__title">◽️ Section 6 - Designing for Security and Compliance in the Cloud</div>
+      </div>
+      
+      <div class="sidebar--secondary hidden-s hidden-xs">
+        <h4>Table of contents</h4>
+        <ul>
+        
+          
+            
+                <li><a class="a" href="#6-section-6-designing-for-security-and-compliance-in-the-cloud">6️⃣ Section 6: Designing for Security and Compliance in the Cloud</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#introduction">🟠 Introduction</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#the-shared-responsibility-model">🧩 The Shared Responsibility Model</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#security-by-design">🔐 Security by Design</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#identity-and-access-management-iam">🛡️ Identity and Access Management (IAM)</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#network-security">🌐 Network Security</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#data-protection-and-encryption">🧱 Data Protection and Encryption</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#security-monitoring-and-threat-detection">🧮 Security Monitoring and Threat Detection</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#compliance-and-governance">📜 Compliance and Governance</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#automation-and-security-at-scale">⚙️ Automation and Security at Scale</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#key-takeaways">🧠 Key Takeaways</a></li>
+                
+            
+          
+        
+        </ul>
+      </div>
+      
+      <div class="container content-block">
+        <div class="kpn-style">
+          <div class="card">
+            <div class="card__body">
+
+              
+              <h1 id="module-9-cloud-architecture">🏗️ <strong>Module 9 - Cloud Architecture</strong></h1>
+<h2 id="6-section-6-designing-for-security-and-compliance-in-the-cloud">6️⃣ <strong>Section 6: Designing for Security and Compliance in the Cloud</strong></h2>
+<h3 id="introduction">🟠 <strong>Introduction</strong></h3>
+<p>Security is the <strong>top priority</strong> at AWS and a <strong>shared responsibility</strong> between AWS and the customer.<br />
+When designing architectures in the cloud, you must implement <strong>defense in depth</strong>, <strong>encryption</strong>, and <strong>access control</strong> across every layer.</p>
+<p>AWS provides numerous services, tools, and best practices to help you design <strong>secure, compliant, and auditable</strong> cloud environments.</p>
+<hr />
+<h3 id="the-shared-responsibility-model">🧩 <strong>The Shared Responsibility Model</strong></h3>
+<p>In the AWS Cloud, <strong>security and compliance responsibilities</strong> are shared between AWS and the customer.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Responsibility</strong></th>
+<th><strong>AWS</strong></th>
+<th><strong>Customer</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Infrastructure Security</strong></td>
+<td>Secures the physical facilities, hardware, and global network.</td>
+<td>Configures resources securely (IAM, networking, encryption).</td>
+</tr>
+<tr>
+<td><strong>Compute and Storage</strong></td>
+<td>Manages the host operating systems and virtualization layers.</td>
+<td>Manages guest OS, applications, and data access.</td>
+</tr>
+<tr>
+<td><strong>Networking</strong></td>
+<td>Protects global backbone and routing.</td>
+<td>Configures firewalls, VPC security groups, and NACLs.</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td>Provides encryption and storage isolation.</td>
+<td>Classifies and controls access to data.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Tip:</em> AWS secures <strong>the cloud</strong>, while customers secure <strong>what’s in the cloud</strong>.</p>
+<hr />
+<h3 id="security-by-design">🔐 <strong>Security by Design</strong></h3>
+<p>AWS encourages <strong>security to be built into every layer</strong> of your architecture.</p>
+<h4 id="key-security-design-principles"><strong>Key Security Design Principles</strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Principle</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Implement Least Privilege</strong></td>
+<td>Give users and applications only the permissions they need.</td>
+</tr>
+<tr>
+<td><strong>2. Enable Traceability</strong></td>
+<td>Use logging and monitoring (CloudTrail, Config) for visibility.</td>
+</tr>
+<tr>
+<td><strong>3. Apply Defense in Depth</strong></td>
+<td>Layer security controls (network, IAM, encryption, application).</td>
+</tr>
+<tr>
+<td><strong>4. Automate Security Tasks</strong></td>
+<td>Use infrastructure as code (IaC) and automated remediation.</td>
+</tr>
+<tr>
+<td><strong>5. Protect Data in Transit and at Rest</strong></td>
+<td>Use TLS, SSE-KMS, or client-side encryption.</td>
+</tr>
+<tr>
+<td><strong>6. Prepare for Security Events</strong></td>
+<td>Enable alerts, incident response plans, and recovery processes.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Best Practice:</em> Automate security using <strong>AWS Config Rules</strong>, <strong>GuardDuty</strong>, and <strong>Security Hub</strong>.</p>
+<hr />
+<h3 id="identity-and-access-management-iam">🛡️ <strong>Identity and Access Management (IAM)</strong></h3>
+<p><strong>AWS Identity and Access Management (IAM)</strong> allows you to control who can access your AWS resources and how.</p>
+<h4 id="core-features">🔧 <strong>Core Features</strong></h4>
+<ul>
+<li><strong>Users and Groups:</strong> Define individual or team access.  </li>
+<li><strong>Roles:</strong> Grant temporary permissions for AWS services or federated identities.  </li>
+<li><strong>Policies:</strong> JSON documents that define permissions (allow or deny actions).  </li>
+<li><strong>Access Keys and MFA:</strong> Enable secure authentication.  </li>
+<li><strong>IAM Identity Center (SSO):</strong> Centralized access for enterprise users.</li>
+</ul>
+<p>🧠 <em>Tip:</em> Always apply <strong>least privilege</strong>, use <strong>IAM roles</strong> instead of long-term keys, and enable <strong>MFA</strong> for all accounts.</p>
+<hr />
+<h3 id="network-security">🌐 <strong>Network Security</strong></h3>
+<p>AWS networking services enable you to <strong>secure data traffic</strong> and <strong>isolate resources</strong>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Service / Feature</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon VPC</strong></td>
+<td>Create isolated virtual networks.</td>
+</tr>
+<tr>
+<td><strong>Security Groups</strong></td>
+<td>Instance-level virtual firewalls.</td>
+</tr>
+<tr>
+<td><strong>Network ACLs (NACLs)</strong></td>
+<td>Subnet-level traffic filtering.</td>
+</tr>
+<tr>
+<td><strong>VPC Peering / PrivateLink</strong></td>
+<td>Secure, private communication between VPCs or services.</td>
+</tr>
+<tr>
+<td><strong>AWS Shield</strong></td>
+<td>Managed DDoS protection.</td>
+</tr>
+<tr>
+<td><strong>AWS WAF (Web Application Firewall)</strong></td>
+<td>Protects against web exploits and attacks.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Example:</em> Combine <strong>VPC</strong>, <strong>Security Groups</strong>, and <strong>WAF</strong> to secure your public-facing web applications.</p>
+<hr />
+<h3 id="data-protection-and-encryption">🧱 <strong>Data Protection and Encryption</strong></h3>
+<p>AWS provides <strong>encryption at rest and in transit</strong> for all major services.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Service</strong></th>
+<th><strong>Encryption Options</strong></th>
+<th><strong>Managed By</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon S3</strong></td>
+<td>SSE-S3, SSE-KMS, SSE-C, client-side.</td>
+<td>Customer / AWS.</td>
+</tr>
+<tr>
+<td><strong>Amazon EBS / RDS / DynamoDB</strong></td>
+<td>KMS-managed encryption.</td>
+<td>Customer.</td>
+</tr>
+<tr>
+<td><strong>AWS KMS (Key Management Service)</strong></td>
+<td>Centralized key management with audit logs.</td>
+<td>Customer.</td>
+</tr>
+<tr>
+<td><strong>AWS Certificate Manager (ACM)</strong></td>
+<td>Provision and manage SSL/TLS certificates.</td>
+<td>AWS.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Tip:</em> Use <strong>AWS KMS</strong> for unified key management and <strong>ACM</strong> for secure HTTPS endpoints.</p>
+<hr />
+<h3 id="security-monitoring-and-threat-detection">🧮 <strong>Security Monitoring and Threat Detection</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Service</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS CloudTrail</strong></td>
+<td>Logs all API calls and user actions.</td>
+</tr>
+<tr>
+<td><strong>AWS Config</strong></td>
+<td>Tracks configuration changes and compliance.</td>
+</tr>
+<tr>
+<td><strong>Amazon CloudWatch</strong></td>
+<td>Monitors performance metrics and sets alerts.</td>
+</tr>
+<tr>
+<td><strong>Amazon GuardDuty</strong></td>
+<td>Detects malicious activity and anomalies.</td>
+</tr>
+<tr>
+<td><strong>AWS Security Hub</strong></td>
+<td>Centralized security visibility and best practice checks.</td>
+</tr>
+<tr>
+<td><strong>AWS Detective</strong></td>
+<td>Investigates security findings with context.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Best Practice:</em> Enable <strong>GuardDuty</strong>, <strong>Config</strong>, and <strong>CloudTrail</strong> in all accounts by default.</p>
+<hr />
+<h3 id="compliance-and-governance">📜 <strong>Compliance and Governance</strong></h3>
+<p>AWS adheres to numerous global compliance standards and frameworks, helping customers meet their own regulatory obligations.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Framework / Standard</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISO 27001 / 27017 / 27018</strong></td>
+<td>Information security management and cloud privacy.</td>
+</tr>
+<tr>
+<td><strong>SOC 1, SOC 2, SOC 3</strong></td>
+<td>Internal control and security reporting.</td>
+</tr>
+<tr>
+<td><strong>PCI DSS</strong></td>
+<td>Secure handling of payment card data.</td>
+</tr>
+<tr>
+<td><strong>HIPAA</strong></td>
+<td>Protects healthcare information.</td>
+</tr>
+<tr>
+<td><strong>FedRAMP</strong></td>
+<td>Federal government compliance in the U.S.</td>
+</tr>
+<tr>
+<td><strong>GDPR</strong></td>
+<td>EU data privacy regulation.</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 <em>Tip:</em> Use <strong>AWS Artifact</strong> to download compliance reports and certifications.</p>
+<hr />
+<h3 id="automation-and-security-at-scale">⚙️ <strong>Automation and Security at Scale</strong></h3>
+<p>Automation ensures consistent and repeatable security configurations across accounts and Regions.</p>
+<h4 id="aws-tools-for-security-automation"><strong>AWS Tools for Security Automation</strong></h4>
+<ul>
+<li><strong>AWS CloudFormation</strong> – Deploy secure infrastructure as code.  </li>
+<li><strong>AWS Systems Manager (SSM)</strong> – Patch and configure systems automatically.  </li>
+<li><strong>AWS Organizations &amp; SCPs</strong> – Enforce policies across multiple accounts.  </li>
+<li><strong>AWS Control Tower</strong> – Automate account setup and guardrails.  </li>
+</ul>
+<p>🧠 <em>Example:</em> Automatically deploy a compliant landing zone using <strong>Control Tower</strong> with <strong>predefined security guardrails</strong>.</p>
+<hr />
+<h3 id="key-takeaways">🧠 <strong>Key Takeaways</strong></h3>
+<ul>
+<li>AWS and customers share security responsibilities — AWS secures <strong>the cloud</strong>, you secure <strong>your data and configurations</strong>.  </li>
+<li>Implement <strong>defense in depth</strong> with IAM, encryption, and network isolation.  </li>
+<li>Automate security controls and auditing using <strong>Config</strong>, <strong>GuardDuty</strong>, <strong>CloudTrail</strong>, and <strong>Security Hub</strong>.  </li>
+<li>Use <strong>KMS</strong> and <strong>ACM</strong> for encryption and certificate management.  </li>
+<li>Design architectures that meet <strong>compliance standards</strong> (ISO, SOC, PCI, HIPAA, GDPR).  </li>
+<li>Build security into every stage of development — automate wherever possible.  </li>
+<li>Always apply the <strong>principle of least privilege</strong> and enable <strong>multi-factor authentication (MFA)</strong> for all users.  </li>
+</ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__body">
+        
+        <div class="row">
+          <div class="col col--s-4 col--m-3 col--l-2">
+          </div>
+          <div class="col col--s-4 col--m space-between">
+            
+              <a class="footer__link padding-top-0 navigation-prev"
+                href="../m9_sec5/"
+                title="◽️ Section 5 - AWS Global Infrastructure and Edge Services">
+                &#8592; Previous Page
+              </a>
+            
+            
+            
+              <a class="footer__link padding-top-0 navigation-next"
+                href="../../module-10/m10_sec1/"
+                title="◽️ Section 1 - Elastic Load Balancing (ELB)"/>
+                Next Page &#8594;
+              </a>
+            
+          </div>
+          <div class="col col--s-4 col--m-3 ">
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+  </div>
+
+
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2025-11-01 12:57:39.509076+00:00
+  -->
+
+  <!--
+    To include static assets from our theme, just add
+    ../../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/groovy.min.js"></script>
+  <script src="../../../js/languages/asciidoc.min.js"></script>
+  <script src="../../../js/languages/nix.min.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script async src="../../../js/detail.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../../search/main.js"></script>
+  
+
+
+  <script>
+  function getMermaidTheme() {
+    if (document.getElementById("dark-mode").checked) {
+      return 'dark'
+    }
+    return 'forest'
+  }
+
+  function initMermaid() {
+    mermaid.initialize({
+      theme: getMermaidTheme(),
+      logLevel: 1,
+    });
+  }
+  var mermaidClass = document.getElementsByClassName('mermaid');
+  if (mermaidClass.length > 0) {
+
+    var mermaidScript = document.createElement('script');
+    mermaidScript.setAttribute("src", "../../../js/mermaid.min.js");
+    mermaidScript.setAttribute("async", "false");
+    mermaidScript.setAttribute("type", "text/javascript");
+    mermaidScript.onload = initMermaid;
+    document.body.appendChild(mermaidScript)
+
+  }
+  </script>
+
+</div>
+</body>
+</html>

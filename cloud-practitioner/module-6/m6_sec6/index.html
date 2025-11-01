@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--
+    The page_title contains the title for a page as shown in the navigation.
+    Site name contains the name as defined in the mkdocs.yml
+  -->
+  <title>◽️ Section 6 - AWS Elastic Beanstalk - AWS Cloud Practitioner Notes</title>
+
+  <!-- Page description -->
+  
+    <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️" />
+  
+
+  <!-- Redirect -->
+  
+    <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module-6/m6_sec6/" />
+  
+
+  <!-- Page author -->
+  
+    <meta name="author" content="Alba | @jalando.code" />
+  
+  <!--
+    Just add a favicon.ico image to the docs.
+  -->
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  <link rel="stylesheet" href="../../../css/colors.css">
+  <link rel="stylesheet" href="../../../css/bundle.css">
+  <link rel="stylesheet" href="../../../css/theme.css">
+  <link media="print" onload="this.media='all'" rel="stylesheet" href="../../../css/atom-dark-one.min.css">
+  <!--
+    extra_ess contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  
+  
+
+  <!--
+    Include Google Analytics tracking code.
+
+    http://www.mkdocs.org/user-guide/configuration/#google_analytics
+  -->
+  
+
+</head>
+
+<body>
+<input id="dark-mode" type="checkbox" />
+<!--
+  The JS has to be loaded here for maximum performance, right after the #dark-mode
+-->
+<script src="../../../js/theme.js"></script>
+<div class="app-body">
+  <!-- KPN STYLE Beginning -->
+  <div class="app-layout ">
+    <!-- Top Bar -->
+    <nav class="app-layout__top-bar top-bar">
+      <a class="top-bar__logo">
+        <img alt="KPN Logo" src="../../../img/logo-kpn.svg" />
+      </a>
+      <div class="top-bar__title">AWS Cloud Practitioner Notes</div>
+      <ul class="top-bar__menu">
+        <!--
+          Create a search form that sends the user to the search.html file - this is
+          the other file in the template which adds search to the theme. The only
+          requirement here is that there is a text input with the name 'q' and the
+          action and methods match below.
+        -->
+          <li class="top-bar__item">
+
+            <span role="search" id="search-input-wrapper">
+              <form action="../../../search.html" method="get">
+                <input type="text" class="input" id="search-input" name="q" placeholder="Search..." />
+              </form>
+            </span >
+          </li>
+        <!--
+          Versioning support
+        -->
+        
+        <!--
+          Support repo URL
+        -->
+        <li class="top-bar__item">
+          
+        </li>
+
+        <li class="top-bar__item">
+            <label class="top-bar__link" id="label-dark-mode" for="dark-mode" title="Dark mode">
+              <svg alt="dark mode" width="24" height="24">
+                <image xlink:href="../../../img/ui-bulb.svg" width="24" height="24"/>
+            </svg>
+            </label>
+        </li>
+        <li class="top-bar__item top-bar__item--trigger"></li>
+
+        <!-- <li class="top-bar__item">
+
+          <a class="top-bar__link top-bar__link--active">Home</a>
+        </li>
+        <li class="top-bar__item"><a class="top-bar__link">Information</a></li>
+        <li class="top-bar__item">
+          <a class="top-bar__link top-bar__link--collapsed">Getting Started</a>
+
+        </li>
+        <li class="top-bar__item top-bar__item--trigger">Menu</li> -->
+      </ul>
+    </nav>
+
+    <!--
+      Create the navigation for the documentation.
+
+      Because we don't know how many levels deep the navigation is, it needs to
+      be included in it's own file so it can be recursive. Otherwise the theme
+      can also only support a specific number of levels.
+
+      See the nav.html file for more details about how this works.
+    -->
+    <nav class="app-layout__side-bar side-bar">
+      <div class="side-bar__action-bar">
+        <a class="side-bar__link" href="/">AWS Cloud Practitioner Notes</a>
+        <!--
+          Versioning support
+        -->
+        
+        <button class="side-bar__close"></button>
+      </div>
+      <ul class="side-bar__menu">
+        
+          <!--
+
+-->
+
+<li>
+  <a href="../../.." class="side-bar__link ">
+    🏠 Home
+  </a>
+</li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 1 - Cloud Concepts Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - What is Cloud Computing?
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec2/" class="side-bar__link ">
+    ◽ Section 2 - Advantages of Cloud Computing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Introduction to Amazon Web Services (AWS)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-1/m1_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 2 - Cloud Economics and Billing
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Fundamentals of pricing
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Total Cost of Ownership
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - AWS Organizations
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - AWS Billing and Cost Management
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-2/m2_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Technical support
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌  Module 3 - AWS Global Infrastructure Overview
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Global Infrastructure
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-3/m3_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS services and service category overview
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 4 - AWS Cloud Security
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Shared Responsibility Model
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - AWS Identity and Access Management (IAM)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Securing a New AWS Account
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Accounts
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Securing Data on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-4/m4_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Working to Ensure Compliance
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 5 - Networking and Content Delivery
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Networking Basics
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - VPC Connectivity Options
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Securing Your VPC
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Amazon Route 53
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-5/m5_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Amazon CloudFront
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--expanded side-bar__link--active">
+      📌 Module 6 - Compute
+    </span>
+    <ul class="side-bar__sub-menu side-bar__sub-menu--visible">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Compute Services Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Cost Optimization
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Container Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../m6_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Lambda (Serverless Compute)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="./" class="side-bar__link side-bar__link--active">
+    ◽️ Section 6 - AWS Elastic Beanstalk
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 7 - Storage
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - AWS Storage Overview
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - Hybrid and Data Transfer Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Backup, Archive, and Data Protection
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-7/m7_sec7/" class="side-bar__link ">
+    ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 8 - Databases
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Nonrelational Databases on AWS
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-8/m8_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Database Migration and Integration on AWS
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 9 - Cloud Architecture
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Introduction to Cloud Architecture Design Principles
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - High Availability and Fault Tolerance
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Elasticity and Scalability in the Cloud
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec4/" class="side-bar__link ">
+    ◽️ Section 4 - Loose Coupling and Microservices Architecture
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec5/" class="side-bar__link ">
+    ◽️ Section 5 - AWS Global Infrastructure and Edge Services
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-9/m9_sec6/" class="side-bar__link ">
+    ◽️ Section 6 - Designing for Security and Compliance in the Cloud
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <span class="side-bar__link side-bar__link--collapsed">
+      📌 Module 10 - Automatic Scaling and Monitoring
+    </span>
+    <ul class="side-bar__sub-menu ">
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec1/" class="side-bar__link ">
+    ◽️ Section 1 - Elastic Load Balancing (ELB)
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec2/" class="side-bar__link ">
+    ◽️ Section 2 - Amazon CloudWatch
+  </a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+  <a href="../../module-10/m10_sec3/" class="side-bar__link ">
+    ◽️ Section 3 - Amazon EC2 Auto Scaling
+  </a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+      </ul>
+    </nav>
+
+    <!-- MAIN BLOCK -->
+    <main class="app-layout__main main">
+      <div class="app-layout__title-bar title-bar">
+        <div class="title-bar__title">◽️ Section 6 - AWS Elastic Beanstalk</div>
+      </div>
+      
+      <div class="sidebar--secondary hidden-s hidden-xs">
+        <h4>Table of contents</h4>
+        <ul>
+        
+          
+            
+                <li><a class="a" href="#6-section-6-aws-elastic-beanstalk">6️⃣ Section 6: AWS Elastic Beanstalk</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#introduction">🟠 Introduction</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#what-is-aws-elastic-beanstalk">🌱 What Is AWS Elastic Beanstalk?</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#supported-platforms">🧩 Supported Platforms</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#how-elastic-beanstalk-works">⚙️ How Elastic Beanstalk Works</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#application-architecture">🧱 Application Architecture</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#deployment-models">💻 Deployment Models</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#scaling-with-elastic-beanstalk">📈 Scaling with Elastic Beanstalk</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#monitoring-and-health">🔍 Monitoring and Health</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#configuration-management">🛠️ Configuration Management</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#benefits-of-using-elastic-beanstalk">💡 Benefits of Using Elastic Beanstalk</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#security-considerations">🔒 Security Considerations</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#best-practices">🧠 Best Practices</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#key-takeaways">🧠 Key Takeaways</a></li>
+                
+            
+          
+        
+        </ul>
+      </div>
+      
+      <div class="container content-block">
+        <div class="kpn-style">
+          <div class="card">
+            <div class="card__body">
+
+              
+              <h1 id="module-6-compute">⚙️ <strong>Module 6 - Compute</strong></h1>
+<h2 id="6-section-6-aws-elastic-beanstalk">6️⃣ <strong>Section 6: AWS Elastic Beanstalk</strong></h2>
+<h3 id="introduction">🟠 <strong>Introduction</strong></h3>
+<p><strong>AWS Elastic Beanstalk</strong> is a <strong>Platform as a Service (PaaS)</strong> that simplifies the process of deploying, managing, and scaling web applications and services.<br />
+You simply upload your code, and Elastic Beanstalk automatically handles the deployment — including capacity provisioning, load balancing, auto scaling, and application health monitoring.</p>
+<p>You retain full control over the AWS resources running your application and can adjust configurations at any time.</p>
+<hr />
+<h3 id="what-is-aws-elastic-beanstalk">🌱 <strong>What Is AWS Elastic Beanstalk?</strong></h3>
+<p>Elastic Beanstalk helps developers focus on <strong>writing code</strong>, not managing infrastructure.</p>
+<p><strong>Key capabilities:</strong>
+- Automatically provisions and operates the underlying infrastructure (EC2, ELB, Auto Scaling, RDS, etc.).<br />
+- Supports multiple application platforms and programming languages.<br />
+- Provides a unified dashboard to monitor performance and health.<br />
+- Offers full control over resources if you want to customize configurations.<br />
+- No additional charge — you pay only for the AWS resources used by your application.</p>
+<hr />
+<h3 id="supported-platforms">🧩 <strong>Supported Platforms</strong></h3>
+<p>AWS Elastic Beanstalk supports a wide range of languages and frameworks, including:</p>
+<ul>
+<li><strong>Java</strong>  </li>
+<li><strong>.NET</strong>  </li>
+<li><strong>PHP</strong>  </li>
+<li><strong>Node.js</strong>  </li>
+<li><strong>Python</strong>  </li>
+<li><strong>Ruby</strong>  </li>
+<li><strong>Go</strong>  </li>
+<li><strong>Docker containers</strong></li>
+</ul>
+<p>You can also use <strong>custom platforms</strong> with pre-configured AMIs for unique workloads.</p>
+<hr />
+<h3 id="how-elastic-beanstalk-works">⚙️ <strong>How Elastic Beanstalk Works</strong></h3>
+<ol>
+<li><strong>Upload your application code.</strong>  </li>
+<li>Supported sources: ZIP files, WAR files, or container images.  </li>
+<li>
+<p>You can deploy using the AWS Management Console, CLI, or API.</p>
+</li>
+<li>
+<p><strong>Elastic Beanstalk provisions resources automatically.</strong>  </p>
+</li>
+<li>Creates an <strong>EC2 Auto Scaling group</strong>.  </li>
+<li>Configures <strong>Elastic Load Balancer (ELB)</strong>.  </li>
+<li>Sets up <strong>CloudWatch monitoring</strong> for metrics and alarms.  </li>
+<li>
+<p>Optionally launches an <strong>RDS instance</strong> for database needs.</p>
+</li>
+<li>
+<p><strong>The environment is launched and monitored.</strong>  </p>
+</li>
+<li>Elastic Beanstalk monitors health and manages updates.  </li>
+<li>Developers can deploy new versions at any time.</li>
+</ol>
+<hr />
+<h3 id="application-architecture">🧱 <strong>Application Architecture</strong></h3>
+<p>An Elastic Beanstalk application consists of two main components:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Application</strong></td>
+<td>A logical collection of components (environments, versions, configurations).</td>
+</tr>
+<tr>
+<td><strong>Environment</strong></td>
+<td>A collection of AWS resources running a specific version of your application.</td>
+</tr>
+</tbody>
+</table>
+<p>Each environment includes:
+- EC2 instances (compute layer).<br />
+- Load balancer (traffic distribution).<br />
+- Auto Scaling group (elasticity).<br />
+- CloudWatch alarms (monitoring).  </p>
+<p>You can deploy multiple environments — for example:
+- <strong>Development</strong>
+- <strong>Testing</strong>
+- <strong>Production</strong></p>
+<hr />
+<h3 id="deployment-models">💻 <strong>Deployment Models</strong></h3>
+<p>Elastic Beanstalk supports several deployment strategies:</p>
+<table>
+<thead>
+<tr>
+<th>Deployment Type</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>All at Once</strong></td>
+<td>Deploys new version to all instances simultaneously.</td>
+<td>Fastest, but may cause downtime.</td>
+</tr>
+<tr>
+<td><strong>Rolling</strong></td>
+<td>Deploys updates in batches, replacing instances gradually.</td>
+<td>Minimizes downtime; maintains partial availability.</td>
+</tr>
+<tr>
+<td><strong>Rolling with Additional Batch</strong></td>
+<td>Adds a new batch of instances before deploying.</td>
+<td>Maintains full capacity during deployment.</td>
+</tr>
+<tr>
+<td><strong>Immutable</strong></td>
+<td>Deploys new version to a separate set of instances, then swaps traffic.</td>
+<td>Safest; ensures rollback capability.</td>
+</tr>
+<tr>
+<td><strong>Blue/Green Deployment</strong></td>
+<td>Creates a new environment (green) and switches traffic from old (blue).</td>
+<td>Zero-downtime updates and testing.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="scaling-with-elastic-beanstalk">📈 <strong>Scaling with Elastic Beanstalk</strong></h3>
+<p>Elastic Beanstalk uses <strong>Auto Scaling</strong> to maintain performance and cost efficiency.</p>
+<ul>
+<li><strong>Horizontal scaling:</strong> Adjusts the number of EC2 instances based on load.  </li>
+<li><strong>Vertical scaling:</strong> Changes instance types for more or less capacity.  </li>
+<li>You can configure scaling based on:</li>
+<li>CPU utilization  </li>
+<li>Network traffic  </li>
+<li>Latency  </li>
+<li>Custom CloudWatch metrics</li>
+</ul>
+<p><strong>Load Balancing:</strong><br />
+Elastic Beanstalk automatically configures <strong>Elastic Load Balancer (ELB)</strong> to distribute incoming traffic evenly across instances.</p>
+<hr />
+<h3 id="monitoring-and-health">🔍 <strong>Monitoring and Health</strong></h3>
+<p>Elastic Beanstalk integrates with <strong>Amazon CloudWatch</strong> to track performance and system health.</p>
+<p>Metrics monitored include:
+- CPU utilization<br />
+- Network I/O<br />
+- Request count<br />
+- Latency<br />
+- Error rates  </p>
+<p>Elastic Beanstalk provides a <strong>Health Dashboard</strong> showing:
+- Environment health status (green, yellow, red).<br />
+- Event logs.<br />
+- Deployment history.</p>
+<hr />
+<h3 id="configuration-management">🛠️ <strong>Configuration Management</strong></h3>
+<p>Elastic Beanstalk allows configuration at multiple levels:</p>
+<ol>
+<li><strong>Environment Configuration</strong></li>
+<li>
+<p>Modify EC2 instance types, scaling rules, or load balancer settings.</p>
+</li>
+<li>
+<p><strong>Configuration Files (.ebextensions)</strong></p>
+</li>
+<li>
+<p>Include <code>.config</code> files in your project root to customize resources (install software, configure packages, modify settings).</p>
+</li>
+<li>
+<p><strong>Saved Configurations</strong></p>
+</li>
+<li>
+<p>Reuse environment templates for consistent deployments across environments.</p>
+</li>
+<li>
+<p><strong>Environment Variables</strong></p>
+</li>
+<li>Store sensitive configuration data for your application (e.g., API keys, DB credentials).</li>
+</ol>
+<hr />
+<h3 id="benefits-of-using-elastic-beanstalk">💡 <strong>Benefits of Using Elastic Beanstalk</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fast Deployment</strong></td>
+<td>Deploy fully configured applications within minutes.</td>
+</tr>
+<tr>
+<td><strong>Automatic Management</strong></td>
+<td>Handles infrastructure, scaling, and health monitoring.</td>
+</tr>
+<tr>
+<td><strong>Developer Productivity</strong></td>
+<td>Focus on code instead of infrastructure.</td>
+</tr>
+<tr>
+<td><strong>Customizable</strong></td>
+<td>Full control of underlying AWS resources if needed.</td>
+</tr>
+<tr>
+<td><strong>No Extra Cost</strong></td>
+<td>You pay only for the AWS resources your app uses.</td>
+</tr>
+<tr>
+<td><strong>Integrated Monitoring</strong></td>
+<td>Built-in health checks and CloudWatch integration.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="security-considerations">🔒 <strong>Security Considerations</strong></h3>
+<ul>
+<li>Elastic Beanstalk environments run inside your <strong>VPC</strong>.  </li>
+<li>Use <strong>IAM roles</strong> for EC2 instances to securely access other AWS services.  </li>
+<li>Use <strong>security groups</strong> to control network traffic.  </li>
+<li>Enable <strong>encryption</strong> for data in transit (HTTPS/SSL).  </li>
+<li>Apply the <strong>principle of least privilege</strong> for permissions.  </li>
+<li>Use <strong>AWS Config</strong> or <strong>AWS CloudTrail</strong> to audit configuration and access changes.</li>
+</ul>
+<hr />
+<h3 id="best-practices">🧠 <strong>Best Practices</strong></h3>
+<ol>
+<li><strong>Use Blue/Green deployments</strong> to minimize downtime.  </li>
+<li><strong>Monitor health and logs</strong> regularly to identify performance bottlenecks.  </li>
+<li><strong>Enable automatic scaling</strong> to handle variable traffic patterns.  </li>
+<li><strong>Automate environment creation</strong> using the Elastic Beanstalk CLI or CloudFormation.  </li>
+<li><strong>Secure your application</strong> using IAM, HTTPS, and network isolation.  </li>
+<li><strong>Use environment tagging</strong> to manage cost allocation.  </li>
+<li><strong>Regularly update platform versions</strong> for performance and security patches.</li>
+</ol>
+<hr />
+<h3 id="key-takeaways">🧠 <strong>Key Takeaways</strong></h3>
+<ul>
+<li><strong>AWS Elastic Beanstalk</strong> is a <strong>fully managed PaaS</strong> for deploying web applications quickly and efficiently.  </li>
+<li>It automatically handles <strong>provisioning, scaling, load balancing, and monitoring</strong>.  </li>
+<li>Supports multiple <strong>languages, frameworks, and Docker containers</strong>.  </li>
+<li>Developers retain <strong>full control</strong> over the underlying AWS resources.  </li>
+<li>Deploy applications using <strong>rolling</strong>, <strong>immutable</strong>, or <strong>blue/green</strong> strategies for reliability.  </li>
+<li>Integrates with <strong>CloudWatch</strong>, <strong>IAM</strong>, and <strong>VPC</strong> for security and observability.  </li>
+<li>Ideal for teams that want <strong>speed, automation, and scalability</strong> without managing infrastructure.  </li>
+</ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__body">
+        
+        <div class="row">
+          <div class="col col--s-4 col--m-3 col--l-2">
+          </div>
+          <div class="col col--s-4 col--m space-between">
+            
+              <a class="footer__link padding-top-0 navigation-prev"
+                href="../m6_sec5/"
+                title="◽️ Section 5 - AWS Lambda (Serverless Compute)">
+                &#8592; Previous Page
+              </a>
+            
+            
+            
+              <a class="footer__link padding-top-0 navigation-next"
+                href="../../module-7/m7_sec1/"
+                title="◽️ Section 1 - AWS Storage Overview"/>
+                Next Page &#8594;
+              </a>
+            
+          </div>
+          <div class="col col--s-4 col--m-3 ">
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+  </div>
+
+
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2025-11-01 12:57:39.428481+00:00
+  -->
+
+  <!--
+    To include static assets from our theme, just add
+    ../../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/groovy.min.js"></script>
+  <script src="../../../js/languages/asciidoc.min.js"></script>
+  <script src="../../../js/languages/nix.min.js"></script>
+
+  <script>
+    hljs.highlightAll();
+  </script>
+  <script async src="../../../js/detail.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+    <script src="../../../search/main.js"></script>
+  
+
+
+  <script>
+  function getMermaidTheme() {
+    if (document.getElementById("dark-mode").checked) {
+      return 'dark'
+    }
+    return 'forest'
+  }
+
+  function initMermaid() {
+    mermaid.initialize({
+      theme: getMermaidTheme(),
+      logLevel: 1,
+    });
+  }
+  var mermaidClass = document.getElementsByClassName('mermaid');
+  if (mermaidClass.length > 0) {
+
+    var mermaidScript = document.createElement('script');
+    mermaidScript.setAttribute("src", "../../../js/mermaid.min.js");
+    mermaidScript.setAttribute("async", "false");
+    mermaidScript.setAttribute("type", "text/javascript");
+    mermaidScript.onload = initMermaid;
+    document.body.appendChild(mermaidScript)
+
+  }
+  </script>
+
+</div>
+</body>
+</html>
