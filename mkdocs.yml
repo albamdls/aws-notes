@@ -4,55 +4,81 @@ site_author: Alba | @jalando.code
 site_description: Apuntes visuales del curso AWS Cloud Practitioner ☁️
 
 theme:
-  name: material
+  name: kpn
   logo: images/icons/favicon.png
   favicon: images/icons/favicon.png
-  palette:
-    - scheme: default
-      primary: blue
-      accent: light blue
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      primary: light blue
-      accent: cyan
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
   features:
     - navigation.tabs
+    - navigation.top
     - search.highlight
-
 
 extra:
   social:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/jalando.code
-      name: \@jalando.code
+      name: "@jalando.code"
     - icon: fontawesome/brands/github
       link: https://github.com/albamdls
       name: albamdls
 
 nav:
   - 🏠 Home: index.md
-  - ☁️ AWS Cloud Practitioner:
-      - 📌 Module 1: cloud-practitioner/module_1.md
-      - 📌 Module 2: cloud-practitioner/module_2.md
-      - 📌 Module 3: cloud-practitioner/module_3.md
-      - 📌 Module 4: cloud-practitioner/module_4.md
-      - 📌 Module 5: cloud-practitioner/module_5.md
-      - 📌 Module 6: cloud-practitioner/module_6.md
-      - 📌 Module 7: cloud-practitioner/module_7.md
-      - 📌 Module 8: cloud-practitioner/module_8.md
-      - 📌 Module 9: cloud-practitioner/module_9.md
-      - 📌 Module 10: cloud-practitioner/module_10.md
-  - 🤖 AWS AI Practitioner:
-      - 📌 Module 1: ai-practitioner/module_1.md
-      - 📌 Module 2: ai-practitioner/module_2.md
-      - 📌 Module 3: ai-practitioner/module_3.md
-      - 📌 Module 4: ai-practitioner/module_4.md
-      - 📌 Module 5: ai-practitioner/module_5.md
-      - 📌 Module 6: ai-practitioner/module_6.md
-      - 📌 Module 7: ai-practitioner/module_7.md
-      - 📌 Module 8: ai-practitioner/module_8.md
+  - 📌 Module 1 - Cloud Concepts Overview :
+      - ◽️ Section 1 - What is Cloud Computing?: cloud-practitioner/module-1/m1_sec1.md
+      - ◽ Section 2 - Advantages of Cloud Computing : cloud-practitioner/module-1/m1_sec2.md
+      - ◽️ Section 3 - Introduction to Amazon Web Services (AWS): cloud-practitioner/module-1/m1_sec3.md
+      - ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF): cloud-practitioner/module-1/m1_sec4.md
+  - 📌 Module 2 - Cloud Economics and Billing:
+      - ◽️ Section 1 - Fundamentals of pricing: cloud-practitioner/module-2/m2_sec1.md
+      - ◽️ Section 2 - Total Cost of Ownership: cloud-practitioner/module-2/m2_sec2.md
+      - ◽️ Section 3 - AWS Organizations: cloud-practitioner/module-2/m2_sec3.md
+      - ◽️ Section 4 - AWS Billing and Cost Management: cloud-practitioner/module-2/m2_sec4.md
+      - ◽️ Section 5 - Technical support: cloud-practitioner/module-2/m2_sec5.md
+  - 📌  Module 3 - AWS Global Infrastructure Overview:
+      - ◽️ Section 1 - AWS Global Infrastructure: cloud-practitioner/module-3/m3_sec1.md
+      - ◽️ Section 2 - AWS services and service category overview: cloud-practitioner/module-3/m3_sec2.md
+  - 📌 Module 4 - AWS Cloud Security:
+      - ◽️ Section 1 - AWS Shared Responsibility Model: cloud-practitioner/module-4/m4_sec1.md
+      - ◽️ Section 2 - AWS Identity and Access Management (IAM): cloud-practitioner/module-4/m4_sec2.md
+      - ◽️ Section 3 - Securing a New AWS Account: cloud-practitioner/module-4/m4_sec3.md
+      - ◽️ Section 4 - Securing Accounts: cloud-practitioner/module-4/m4_sec4.md
+      - ◽️ Section 5 - Securing Data on AWS: cloud-practitioner/module-4/m4_sec5.md
+      - ◽️ Section 6 - Working to Ensure Compliance: cloud-practitioner/module-4/m4_sec6.md
+  - 📌 Module 5 - Networking and Content Delivery:
+      - ◽️ Section 1 - Networking Basics: cloud-practitioner/module-5/m5_sec1.md
+      - ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC): cloud-practitioner/module-5/m5_sec2.md
+      - ◽️ Section 3 - VPC Connectivity Options: cloud-practitioner/module-5/m5_sec3.md
+      - ◽️ Section 4 - Securing Your VPC: cloud-practitioner/module-5/m5_sec4.md
+      - ◽️ Section 5 - Amazon Route 53: cloud-practitioner/module-5/m5_sec5.md
+      - ◽️ Section 6 - Amazon CloudFront: cloud-practitioner/module-5/m5_sec6.md
+  - 📌 Module 6 - Compute:
+      - ◽️ Section 1 - Compute Services Overview: cloud-practitioner/module-6/m6_sec1.md
+      - ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2): cloud-practitioner/module-6/m6_sec2.md
+      - ◽️ Section 3 - Amazon EC2 Cost Optimization: cloud-practitioner/module-6/m6_sec3.md
+      - ◽️ Section 4 - Container Services: cloud-practitioner/module-6/m6_sec4.md
+      - ◽️ Section 5 - AWS Lambda (Serverless Compute): cloud-practitioner/module-6/m6_sec5.md
+      - ◽️ Section 6 - AWS Elastic Beanstalk: cloud-practitioner/module-6/m6_sec6.md
+  - 📌 Module 7 - Storage:
+      - ◽️ Section 1 - AWS Storage Overview: cloud-practitioner/module-7/m7_sec1.md
+      - ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3): cloud-practitioner/module-7/m7_sec2.md
+      - ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store: cloud-practitioner/module-7/m7_sec3.md
+      - ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx: cloud-practitioner/module-7/m7_sec4.md
+      - ◽️ Section 5 - Hybrid and Data Transfer Services: cloud-practitioner/module-7/m7_sec5.md
+      - ◽️ Section 6 - Backup, Archive, and Data Protection: cloud-practitioner/module-7/m7_sec6.md
+      - ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage: cloud-practitioner/module-7/m7_sec7.md
+  - 📌 Module 8 - Databases:
+      - ◽️ Section 1 - Introduction to Databases on AWS: cloud-practitioner/module-8/m8_sec1.md
+      - ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora): cloud-practitioner/module-8/m8_sec2.md
+      - ◽️ Section 3 - Nonrelational Databases on AWS: cloud-practitioner/module-8/m8_sec3.md
+      - ◽️ Section 4 - Database Migration and Integration on AWS: cloud-practitioner/module-8/m8_sec4.md
+  - 📌 Module 9 - Cloud Architecture:
+      - ◽️ Section 1 - Introduction to Cloud Architecture Design Principles: cloud-practitioner/module-9/m9_sec1.md
+      - ◽️ Section 2 - High Availability and Fault Tolerance: cloud-practitioner/module-9/m9_sec2.md
+      - ◽️ Section 3 - Elasticity and Scalability in the Cloud: cloud-practitioner/module-9/m9_sec3.md
+      - ◽️ Section 4 - Loose Coupling and Microservices Architecture: cloud-practitioner/module-9/m9_sec4.md
+      - ◽️ Section 5 - AWS Global Infrastructure and Edge Services: cloud-practitioner/module-9/m9_sec5.md
+      - ◽️ Section 6 - Designing for Security and Compliance in the Cloud: cloud-practitioner/module-9/m9_sec6.md
+  - 📌 Module 10 - Automatic Scaling and Monitoring:
+      - ◽️ Section 1 - Elastic Load Balancing (ELB): cloud-practitioner/module-10/m10_sec1.md
+      - ◽️ Section 2 - Amazon CloudWatch: cloud-practitioner/module-10/m10_sec2.md
+      - ◽️ Section 3 - Amazon EC2 Auto Scaling: cloud-practitioner/module-10/m10_sec3.md

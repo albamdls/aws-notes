@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#module-5-networking-and-content-delivery" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -233,26 +238,6 @@
   
   
   ☁️ AWS Cloud Practitioner
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../ai-practitioner/module_1/" class="md-tabs__link">
-          
-  
-  
-  🤖 AWS AI Practitioner
 
         </a>
       </li>
@@ -465,6 +450,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 5
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -477,6 +477,841 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-section-1-networking-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Section 1: Networking Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Section 1: Networking Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is a Network?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 IP Addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv4-vs-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 IPv4 vs IPv6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classless-inter-domain-routing-cidr" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Classless Inter-Domain Routing (CIDR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Classless Inter-Domain Routing (CIDR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-cidr-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Special CIDR Cases:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osi-model-open-systems-interconnection" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 OSI Model (Open Systems Interconnection)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-section-2-amazon-virtual-private-cloud-amazon-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Section 2: Amazon Virtual Private Cloud (Amazon VPC)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Section 2: Amazon Virtual Private Cloud (Amazon VPC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-amazon-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is Amazon VPC?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpcs-and-subnets" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 VPCs and Subnets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 VPCs and Subnets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vpc-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 VPC characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subnets-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Subnets characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addressing-in-a-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 IP Addressing in a VPC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reserved-ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Reserved IP Addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-ip-address-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Public IP Address Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Public IP Address Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-public-ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Types of public IP addresses:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elastic-network-interface-eni" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Elastic Network Interface (ENI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-tables-and-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Route Tables and Routes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Route Tables and Routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Key concepts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-route-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Main route table:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-section-3-vpc-connectivity-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Section 3: VPC Connectivity Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Section 3: VPC Connectivity Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-site-to-site-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Site-to-Site VPN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 AWS Site-to-Site VPN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-create-a-vpn-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Steps to create a VPN connection:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-direct-connect-dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Direct Connect (DX)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 AWS Direct Connect (DX)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Benefits:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpc-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 VPC Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 VPC Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-types-of-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Two types of endpoints:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-transit-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Transit Gateway
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 AWS Transit Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-aws-transit-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Benefits of AWS Transit Gateway:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Activities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Activities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-diagram-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Network Diagram Exercise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-vpc-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎥 AWS VPC Demonstration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-section-4-securing-your-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Section 4: Securing Your VPC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ Section 4: Securing Your VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Security Groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Security Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Key Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-group-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Security Group Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-security-group-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Custom Security Group Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Custom Security Group Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inbound-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Inbound Rules:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outbound-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Outbound Rules:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-access-control-lists-network-acls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Network Access Control Lists (Network ACLs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Network Access Control Lists (Network ACLs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Key Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-acl-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Network ACL Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-network-acl-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Custom Network ACL Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Custom Network ACL Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Example Configuration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-groups-vs-network-acls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Security Groups vs Network ACLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-design-a-secure-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Activity: Design a Secure VPC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Activity: Design a Secure VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-section-5-amazon-route-53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Section 5: Amazon Route 53
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5️⃣ Section 5: Amazon Route 53">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-amazon-route-53" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is Amazon Route 53?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-route-53-dns-resolution-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 How Route 53 DNS Resolution Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-route-53-supported-routing-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon Route 53 Supported Routing Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-multi-region-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Use Case: Multi-Region Deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-route-53-dns-failover" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon Route 53 DNS Failover
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Amazon Route 53 DNS Failover">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Capabilities:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-checks-can-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Health checks can monitor:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-section-6-amazon-cloudfront" class="md-nav__link">
+    <span class="md-ellipsis">
+      6️⃣ Section 6: Amazon CloudFront
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6️⃣ Section 6: Amazon CloudFront">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-latency-and-content-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Network Latency and Content Delivery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Network Latency and Content Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-content-delivery-network-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is a Content Delivery Network (CDN)?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 What is a Content Delivery Network (CDN)?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Key Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudfront-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon CloudFront Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Amazon CloudFront Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Key Highlights:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudfront-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon CloudFront Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Amazon CloudFront Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Components:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudfront-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon CloudFront Benefits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudfront-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon CloudFront Pricing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -605,238 +1440,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    🤖 AWS AI Practitioner
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            🤖 AWS AI Practitioner
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ai-practitioner/module_1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    📌 Module 1
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ai-practitioner/module_2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    📌 Module 2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ai-practitioner/module_3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    📌 Module 3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ai-practitioner/module_4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    📌 Module 4
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ai-practitioner/module_5/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    📌 Module 5
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ai-practitioner/module_6/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    📌 Module 6
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ai-practitioner/module_7/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    📌 Module 7
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ai-practitioner/module_8/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    📌 Module 8
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -854,6 +1457,832 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-section-1-networking-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Section 1: Networking Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Section 1: Networking Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is a Network?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 IP Addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv4-vs-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 IPv4 vs IPv6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classless-inter-domain-routing-cidr" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Classless Inter-Domain Routing (CIDR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Classless Inter-Domain Routing (CIDR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-cidr-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Special CIDR Cases:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osi-model-open-systems-interconnection" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 OSI Model (Open Systems Interconnection)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-section-2-amazon-virtual-private-cloud-amazon-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Section 2: Amazon Virtual Private Cloud (Amazon VPC)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Section 2: Amazon Virtual Private Cloud (Amazon VPC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-amazon-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is Amazon VPC?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpcs-and-subnets" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 VPCs and Subnets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 VPCs and Subnets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vpc-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 VPC characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subnets-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Subnets characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addressing-in-a-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 IP Addressing in a VPC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reserved-ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Reserved IP Addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-ip-address-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Public IP Address Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Public IP Address Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-public-ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Types of public IP addresses:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elastic-network-interface-eni" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Elastic Network Interface (ENI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-tables-and-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Route Tables and Routes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Route Tables and Routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Key concepts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-route-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Main route table:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-section-3-vpc-connectivity-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Section 3: VPC Connectivity Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Section 3: VPC Connectivity Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-site-to-site-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Site-to-Site VPN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 AWS Site-to-Site VPN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-create-a-vpn-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Steps to create a VPN connection:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-direct-connect-dx" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Direct Connect (DX)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 AWS Direct Connect (DX)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Benefits:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpc-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 VPC Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 VPC Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-types-of-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Two types of endpoints:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-transit-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Transit Gateway
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 AWS Transit Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-aws-transit-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Benefits of AWS Transit Gateway:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Activities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Activities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-diagram-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Network Diagram Exercise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-vpc-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎥 AWS VPC Demonstration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-section-4-securing-your-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Section 4: Securing Your VPC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ Section 4: Securing Your VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Security Groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Security Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Key Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-group-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Security Group Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-security-group-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Custom Security Group Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Custom Security Group Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inbound-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Inbound Rules:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outbound-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Outbound Rules:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-access-control-lists-network-acls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Network Access Control Lists (Network ACLs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Network Access Control Lists (Network ACLs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Key Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-acl-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Network ACL Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-network-acl-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Custom Network ACL Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Custom Network ACL Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Example Configuration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-groups-vs-network-acls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Security Groups vs Network ACLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-design-a-secure-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Activity: Design a Secure VPC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Activity: Design a Secure VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-section-5-amazon-route-53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Section 5: Amazon Route 53
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5️⃣ Section 5: Amazon Route 53">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-amazon-route-53" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is Amazon Route 53?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-route-53-dns-resolution-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 How Route 53 DNS Resolution Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-route-53-supported-routing-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon Route 53 Supported Routing Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-case-multi-region-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Use Case: Multi-Region Deployment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-route-53-dns-failover" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon Route 53 DNS Failover
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Amazon Route 53 DNS Failover">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Capabilities:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-checks-can-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Health checks can monitor:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-section-6-amazon-cloudfront" class="md-nav__link">
+    <span class="md-ellipsis">
+      6️⃣ Section 6: Amazon CloudFront
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6️⃣ Section 6: Amazon CloudFront">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-latency-and-content-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Network Latency and Content Delivery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Network Latency and Content Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-content-delivery-network-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 What is a Content Delivery Network (CDN)?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 What is a Content Delivery Network (CDN)?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Key Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudfront-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon CloudFront Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Amazon CloudFront Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Key Highlights:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudfront-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon CloudFront Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🟠 Amazon CloudFront Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Components:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudfront-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon CloudFront Benefits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudfront-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Amazon CloudFront Pricing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -869,9 +2298,1126 @@
 
 
 
-  <h1>📌 Module 5</h1>
-
-
+<h1 id="module-5-networking-and-content-delivery">🌐 Module 5 - Networking and Content Delivery</h1>
+<h2 id="1-section-1-networking-basics">1️⃣ Section 1: Networking Basics</h2>
+<p>In this section, we review fundamental networking concepts that form the foundation for understanding <strong>Amazon Virtual Private Cloud (Amazon VPC)</strong>.</p>
+<hr />
+<h3 id="what-is-a-network">🟠 What is a Network?</h3>
+<p>A <strong>computer network</strong> is a connection of <strong>two or more client machines</strong> that share resources.</p>
+<p>🔹 <strong>Key concepts:</strong></p>
+<ul>
+<li>A network can be <strong>logically partitioned</strong> into smaller units called <strong>subnets</strong>.</li>
+<li><strong>Networking devices</strong> (such as routers and switches) connect clients and enable communication between them.</li>
+</ul>
+<p>📘 <strong>Example:</strong></p>
+<pre><code>Subnet 1  ↔  Router  ↔  Subnet 2
+</code></pre>
+<hr />
+<h3 id="ip-addresses">🟠 IP Addresses</h3>
+<p>Each device in a network has a <strong>unique Internet Protocol (IP) address</strong> that identifies it.</p>
+<ul>
+<li>IP addresses are written in <strong>decimal format</strong> (e.g., <code>192.0.2.0</code>) but are stored in <strong>binary</strong> by machines.</li>
+<li>Each IP address consists of <strong>four octets</strong>, separated by dots (<code>.</code>).</li>
+<li>Each octet = <strong>8 bits</strong> → ranges from <strong>0 to 255</strong>.</li>
+<li>Total = <strong>32 bits</strong> in binary (4 × 8).</li>
+</ul>
+<p>💡 <strong>Example:</strong>
+<code>192.0.2.0</code> = 11000000.00000000.00000010.00000000</p>
+<hr />
+<h3 id="ipv4-vs-ipv6">🟠 IPv4 vs IPv6</h3>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Bit Length</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IPv4</strong></td>
+<td>32 bits</td>
+<td><code>192.0.2.0</code></td>
+<td>Older standard, supports ~4.3 billion addresses</td>
+</tr>
+<tr>
+<td><strong>IPv6</strong></td>
+<td>128 bits</td>
+<td><code>2600:1f18:22ba:8c00:ba86:a05e:a5ba:00FF</code></td>
+<td>Newer standard, supports vastly more devices</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 <strong>IPv6 address format:</strong></p>
+<ul>
+<li>8 groups of 4 hexadecimal characters separated by colons (<code>:</code>).</li>
+<li>Each group = <strong>16 bits</strong> → range from <code>0000</code> to <code>FFFF</code>.</li>
+<li>Total = <strong>128 bits</strong> in binary.</li>
+</ul>
+<p>✅ <strong>IPv6 enables more scalability</strong> to accommodate the growing number of internet-connected devices.</p>
+<hr />
+<h3 id="classless-inter-domain-routing-cidr">🟠 Classless Inter-Domain Routing (CIDR)</h3>
+<p><strong>CIDR (Classless Inter-Domain Routing)</strong> is a notation used to describe a <strong>range of IP addresses</strong>.</p>
+<p>📘 <strong>CIDR format:</strong></p>
+<pre><code>&lt;IP Address&gt;/&lt;Prefix Length&gt;
+</code></pre>
+<p>For example: <code>192.0.2.0/24</code></p>
+<p>🔹 <strong>How it works:</strong></p>
+<ul>
+<li>The number after the slash (<code>/</code>) indicates how many bits are <strong>fixed</strong> for the network identifier.</li>
+<li>The remaining bits are <strong>variable</strong> (host identifiers).</li>
+</ul>
+<h4 id="example">🧮 Example:</h4>
+<table>
+<thead>
+<tr>
+<th>CIDR</th>
+<th>Fixed Bits</th>
+<th>Flexible Bits</th>
+<th>Address Range</th>
+<th>Total IPs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>192.0.2.0/24</code></td>
+<td>24</td>
+<td>8</td>
+<td><code>192.0.2.0 – 192.0.2.255</code></td>
+<td>256</td>
+</tr>
+<tr>
+<td><code>192.0.2.0/16</code></td>
+<td>16</td>
+<td>16</td>
+<td><code>192.0.0.0 – 192.0.255.255</code></td>
+<td>65,536</td>
+</tr>
+</tbody>
+</table>
+<h4 id="special-cidr-cases">⚙️ Special CIDR Cases:</h4>
+<ul>
+<li><code>192.0.2.0/32</code> → Only <strong>one</strong> fixed IP (useful for firewall rules).</li>
+<li><code>0.0.0.0/0</code> → Represents <strong>all IP addresses on the internet</strong>.</li>
+</ul>
+<p>💡 CIDR simplifies routing and allocation of IP addresses by grouping consecutive addresses efficiently.</p>
+<hr />
+<h3 id="osi-model-open-systems-interconnection">🟠 OSI Model (Open Systems Interconnection)</h3>
+<p>The <strong>OSI model</strong> is a conceptual framework that describes how <strong>data travels through a network</strong>.</p>
+<p>It consists of <strong>7 layers</strong>, each responsible for specific functions and protocols.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Name</th>
+<th>Function</th>
+<th>Common Protocols / Addresses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>7</strong></td>
+<td>Application</td>
+<td>Interface for apps to access the network</td>
+<td>HTTP(S), FTP, DHCP, LDAP</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Presentation</td>
+<td>Data formatting, encryption, translation</td>
+<td>ASCII, ICA</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Session</td>
+<td>Manages sessions and data exchange</td>
+<td>NetBIOS, RPC</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Transport</td>
+<td>End-to-end communication between hosts</td>
+<td>TCP, UDP</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Network</td>
+<td>Routing and packet forwarding</td>
+<td>IP</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Data Link</td>
+<td>Transfers data within same LAN</td>
+<td>MAC, Bridges, Switches</td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td>Physical</td>
+<td>Transmits raw bits over medium</td>
+<td>Electrical signals, Hubs</td>
+</tr>
+</tbody>
+</table>
+<p>🧩 <strong>Key Notes:</strong></p>
+<ul>
+<li><strong>Routers</strong> operate at <strong>Layer 3 (Network)</strong>.</li>
+<li><strong>Switches and bridges</strong> operate at <strong>Layer 2 (Data Link)</strong>.</li>
+<li><strong>Hubs</strong> work at <strong>Layer 1 (Physical)</strong>.</li>
+</ul>
+<p>💬 The OSI model helps you understand how communication happens inside <strong>Amazon VPC</strong>, which will be covered next.</p>
+<hr />
+<h3 id="key-takeaways">🟢 Key Takeaways</h3>
+<p>✅ A <strong>network</strong> connects devices to share resources and can be divided into <strong>subnets</strong>.
+✅ Each device has a <strong>unique IP address</strong> (IPv4 or IPv6).
+✅ <strong>CIDR notation</strong> defines IP address ranges using a prefix (e.g., <code>/24</code>).
+✅ The <strong>OSI model</strong> describes how data moves through seven network layers.
+✅ These fundamentals are essential for understanding <strong>Amazon VPC</strong> and AWS networking.</p>
+<hr />
+<h2 id="2-section-2-amazon-virtual-private-cloud-amazon-vpc">2️⃣ Section 2: Amazon Virtual Private Cloud (Amazon VPC)</h2>
+<hr />
+<h3 id="what-is-amazon-vpc">🟠 What is Amazon VPC?</h3>
+<p><strong>Amazon Virtual Private Cloud (Amazon VPC)</strong> enables you to provision a <strong>logically isolated section of the AWS Cloud</strong> where you can launch AWS resources in a virtual network that <strong>you define and control</strong>.</p>
+<p>🔹 <strong>Key capabilities:</strong></p>
+<ul>
+<li>Selection of your <strong>own IP address range</strong>.</li>
+<li><strong>Creation of subnets</strong> within the VPC.</li>
+<li><strong>Configuration of route tables</strong> and network gateways.</li>
+<li>Use of <strong>IPv4 and IPv6</strong> for secure access to resources.</li>
+<li>Multiple layers of <strong>network security</strong> using <strong>security groups</strong> and <strong>network ACLs</strong>.</li>
+</ul>
+<p>📘 Example setup:</p>
+<ul>
+<li><strong>Public subnet</strong> → web servers that access the internet.</li>
+<li><strong>Private subnet</strong> → backend systems (databases, application servers) without internet access.</li>
+</ul>
+<p>✅ <strong>Amazon VPC provides full control</strong> over your virtual networking environment, similar to running your own data center but with the scalability of AWS.</p>
+<hr />
+<h3 id="vpcs-and-subnets">🟠 VPCs and Subnets</h3>
+<p>A <strong>VPC</strong> is a <strong>virtual network</strong> isolated from other VPCs in the AWS Cloud.</p>
+<h4 id="vpc-characteristics">📋 <strong>VPC characteristics:</strong></h4>
+<ul>
+<li>Logically isolated from other VPCs.</li>
+<li>Dedicated to your AWS account.</li>
+<li>Belongs to a <strong>single Region</strong> but can <strong>span multiple Availability Zones (AZs)</strong>.</li>
+</ul>
+<h4 id="subnets-characteristics">📋 <strong>Subnets characteristics:</strong></h4>
+<ul>
+<li>A <strong>range of IP addresses</strong> that divides a VPC into smaller networks.</li>
+<li>Each subnet belongs to <strong>a single Availability Zone</strong>.</li>
+<li>
+<p><strong>Classified as:</strong></p>
+</li>
+<li>
+<p><strong>Public subnet</strong> → direct internet access.</p>
+</li>
+<li><strong>Private subnet</strong> → no internet access.</li>
+</ul>
+<p>💡 Best practice: Create <strong>subnets in multiple AZs</strong> for <strong>high availability</strong> and fault tolerance.</p>
+<hr />
+<h3 id="ip-addressing-in-a-vpc">🟠 IP Addressing in a VPC</h3>
+<p>When you create a VPC, you must assign an <strong>IPv4 CIDR block</strong> (range of private IPv4 addresses).</p>
+<p>🔹 <strong>Important notes:</strong></p>
+<ul>
+<li>CIDR block cannot be changed after creation.</li>
+<li>
+<p>CIDR block size limits:</p>
+</li>
+<li>
+<p><strong>Largest:</strong> <code>/16</code> → 65,536 addresses.</p>
+</li>
+<li><strong>Smallest:</strong> <code>/28</code> → 16 addresses.</li>
+<li><strong>IPv6</strong> addressing is also supported.</li>
+<li><strong>Subnet CIDR blocks cannot overlap.</strong></li>
+<li>No <strong>duplicate IP addresses</strong> are allowed in the same VPC.</li>
+</ul>
+<p>🧮 <strong>Example:</strong>
+A VPC with a <code>/16</code> block (65,536 IPs) can be divided into <code>/24</code> subnets (256 IPs each).</p>
+<p>📚 Learn more: <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">AWS VPC Documentation</a></p>
+<hr />
+<h3 id="reserved-ip-addresses">🟠 Reserved IP Addresses</h3>
+<p>When you create a <strong>subnet</strong>, AWS reserves <strong>five IP addresses</strong> in each subnet’s CIDR block that cannot be used.</p>
+<table>
+<thead>
+<tr>
+<th>Reserved For</th>
+<th>Example (CIDR 10.0.0.0/24)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network address</td>
+<td>10.0.0.0</td>
+<td>Identifies the subnet itself</td>
+</tr>
+<tr>
+<td>VPC local router</td>
+<td>10.0.0.1</td>
+<td>For internal communication</td>
+</tr>
+<tr>
+<td>DNS resolution</td>
+<td>10.0.0.2</td>
+<td>AWS-provided DNS</td>
+</tr>
+<tr>
+<td>Future use</td>
+<td>10.0.0.3</td>
+<td>Reserved for AWS use</td>
+</tr>
+<tr>
+<td>Broadcast address</td>
+<td>10.0.0.255</td>
+<td>Used for broadcast traffic</td>
+</tr>
+</tbody>
+</table>
+<p>💡 Example: A subnet with <code>/24</code> CIDR block (256 addresses) → <strong>251 available</strong> for use.</p>
+<hr />
+<h3 id="public-ip-address-types">🟠 Public IP Address Types</h3>
+<p>Each instance in a VPC automatically receives a <strong>private IP address</strong>. You can also assign <strong>public IPs</strong> for internet access.</p>
+<h4 id="types-of-public-ip-addresses">📋 <strong>Types of public IP addresses:</strong></h4>
+<ul>
+<li><strong>Public IPv4 address</strong> → Automatically or manually assigned at the subnet level.</li>
+<li>
+<p><strong>Elastic IP address (EIP):</strong></p>
+</li>
+<li>
+<p>Static, public IPv4 address tied to your AWS account.</p>
+</li>
+<li>Can be allocated, reassigned, or released anytime.</li>
+<li>Allows quick recovery by <strong>remapping</strong> to another instance.</li>
+<li>Additional costs may apply — release unused EIPs to avoid charges.</li>
+</ul>
+<p>💡 Associating an <strong>Elastic IP with a network interface</strong> allows you to move all its attributes between instances in one step.</p>
+<p>📚 Learn more: <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html">Elastic IP Addresses Documentation</a></p>
+<hr />
+<h3 id="elastic-network-interface-eni">🟠 Elastic Network Interface (ENI)</h3>
+<p>An <strong>Elastic Network Interface (ENI)</strong> is a <strong>virtual network interface</strong> that you can:</p>
+<ul>
+<li>Attach to an instance.</li>
+<li>Detach from an instance and reattach to another.</li>
+</ul>
+<p>🔹 <strong>Key points:</strong></p>
+<ul>
+<li>ENI attributes (IP, MAC, security group) <strong>move with it</strong> when reattached.</li>
+<li>Each instance has a <strong>primary ENI</strong> (default, non-detachable).</li>
+<li>Additional ENIs can be created and attached depending on instance type.</li>
+</ul>
+<p>📚 Learn more: <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interface Documentation</a></p>
+<hr />
+<h3 id="route-tables-and-routes">🟠 Route Tables and Routes</h3>
+<p>A <strong>route table</strong> defines how <strong>network traffic is directed</strong> from subnets within your VPC.</p>
+<h4 id="key-concepts">📋 <strong>Key concepts:</strong></h4>
+<ul>
+<li>
+<p>A <strong>route</strong> specifies:</p>
+</li>
+<li>
+<p><strong>Destination</strong> → CIDR block of target network.</p>
+</li>
+<li><strong>Target</strong> → where to send traffic (e.g., internet gateway, NAT gateway).</li>
+<li>Each route table contains a <strong>default local route</strong> for internal VPC communication.</li>
+<li>Every <strong>subnet must be associated</strong> with exactly one route table.</li>
+</ul>
+<h4 id="main-route-table">🧭 <strong>Main route table:</strong></h4>
+<ul>
+<li>Automatically created with the VPC.</li>
+<li>Controls routing for subnets not explicitly linked to another route table.</li>
+<li>You can <strong>add custom routes</strong>, but <strong>cannot delete the local route</strong>.</li>
+</ul>
+<p>📚 Learn more: <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">VPC Route Tables Documentation</a></p>
+<hr />
+<h3 id="key-takeaways_1">🟢 Key Takeaways</h3>
+<p>✅ A <strong>VPC</strong> is a logically isolated section of the AWS Cloud.
+✅ Each <strong>VPC belongs to one Region</strong> and requires a <strong>CIDR block</strong>.
+✅ <strong>Subnets</strong> divide a VPC and each belong to one Availability Zone.
+✅ <strong>Route tables</strong> control traffic within and outside subnets.
+✅ Each route table includes a <strong>default local route</strong> that cannot be deleted.</p>
+<hr />
+<h2 id="3-section-3-vpc-connectivity-options">3️⃣ Section 3: VPC Connectivity Options</h2>
+<hr />
+<h3 id="aws-site-to-site-vpn">🟠 AWS Site-to-Site VPN</h3>
+<p>By default, instances launched in a VPC <strong>cannot communicate with remote networks</strong>. To connect your VPC to an on-premises or remote data center, you can set up a <strong>Site-to-Site VPN connection</strong>.</p>
+<h4 id="steps-to-create-a-vpn-connection">⚙️ Steps to create a VPN connection:</h4>
+<ol>
+<li><strong>Create a Virtual Private Gateway (VGW):</strong> Attach it to your VPC.</li>
+<li><strong>Define a Customer Gateway:</strong> Provides AWS with information about your VPN device.</li>
+<li><strong>Configure route tables:</strong> Direct traffic destined for your corporate network to the VGW.</li>
+<li><strong>Establish a Site-to-Site VPN connection:</strong> Links the two networks securely.</li>
+<li><strong>Update security groups and routing rules</strong> to allow communication.</li>
+</ol>
+<p>📘 Learn more: <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpn-connections.html">AWS VPN Connections Documentation</a></p>
+<p>💡 <strong>Example:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Subnet</th>
+<th>Route Table</th>
+<th>Destination</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public Subnet</td>
+<td></td>
+<td>10.0.0.0/16</td>
+<td>local</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>0.0.0.0/0</td>
+<td>igw-id</td>
+</tr>
+<tr>
+<td>Private Subnet</td>
+<td></td>
+<td>10.0.0.0/16</td>
+<td>local</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>192.168.10.0/24</td>
+<td>vgw-id</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="aws-direct-connect-dx">🟠 AWS Direct Connect (DX)</h3>
+<p><strong>AWS Direct Connect (DX)</strong> provides a <strong>dedicated, private network connection</strong> between your on-premises data center and AWS.</p>
+<h4 id="benefits">💡 Benefits:</h4>
+<ul>
+<li>Reduces <strong>network latency</strong> caused by distance.</li>
+<li><strong>Increases bandwidth</strong> throughput.</li>
+<li>Provides a <strong>more consistent network experience</strong> than internet-based VPNs.</li>
+<li>Uses the <strong>IEEE 802.1Q VLAN standard</strong> for virtual local area networks.</li>
+</ul>
+<p>📚 Learn more: <a href="https://aws.amazon.com/directconnect/">AWS Direct Connect</a></p>
+<p>🧩 <strong>Use case:</strong> Ideal for organizations with high-volume data transfers or latency-sensitive workloads between AWS and their data centers.</p>
+<hr />
+<h3 id="vpc-endpoints">🟠 VPC Endpoints</h3>
+<p>A <strong>VPC endpoint</strong> allows private connectivity between your VPC and supported AWS services <strong>without using the internet</strong>, VPN, or Direct Connect.</p>
+<p>🔒 <strong>Traffic never leaves the AWS network.</strong> Instances in the VPC <strong>do not require public IPs</strong> to access these services.</p>
+<h4 id="two-types-of-endpoints">🧩 Two types of endpoints:</h4>
+<ol>
+<li>
+<p><strong>Interface Endpoints</strong> (powered by AWS PrivateLink)</p>
+</li>
+<li>
+<p>Connect to AWS services, partner services, or other customers' VPCs.</p>
+</li>
+<li>Each connection creates an <strong>Elastic Network Interface (ENI)</strong> with a private IP address.</li>
+<li>You are charged per endpoint hour + data processing.</li>
+<li>
+<p>Example: Amazon EC2 API endpoint.</p>
+</li>
+<li>
+<p><strong>Gateway Endpoints</strong></p>
+</li>
+<li>
+<p>Free to use (no hourly charge).</p>
+</li>
+<li>Used for <strong>Amazon S3</strong> and <strong>Amazon DynamoDB</strong>.</li>
+<li>Add a route to the route table targeting the gateway endpoint.</li>
+</ol>
+<p>📚 Learn more: <a href="https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html">VPC Endpoints Documentation</a></p>
+<hr />
+<h3 id="aws-transit-gateway">🟠 AWS Transit Gateway</h3>
+<p>As organizations grow, they often have <strong>hundreds of VPCs</strong> across multiple AWS accounts and Regions. Managing point-to-point connections between them (via VPN or VPC peering) becomes complex.</p>
+<p><strong>AWS Transit Gateway (TGW)</strong> simplifies this by acting as a <strong>central hub</strong> that connects multiple VPCs, on-premises networks, and remote offices using a <strong>hub-and-spoke model</strong>.</p>
+<h4 id="benefits-of-aws-transit-gateway">⚙️ Benefits of AWS Transit Gateway:</h4>
+<ul>
+<li>Centralized control of <strong>connectivity policies</strong>.</li>
+<li>Simplified management and reduced operational cost.</li>
+<li>Scalable to connect <strong>multiple networks</strong> efficiently.</li>
+<li>Each network connects only once—to the transit gateway—and becomes reachable by all others.</li>
+</ul>
+<p>📚 Learn more: <a href="https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html">AWS Transit Gateway Documentation</a></p>
+<p>💡 <strong>Hub-and-Spoke Model:</strong></p>
+<pre><code>     +--------------------+
+     |  AWS Transit GW   |
+     +--------------------+
+      /      |      \   
+ VPC A   VPC B   On-Premises
+</code></pre>
+<hr />
+<h3 id="activities">🧠 Activities</h3>
+<h4 id="network-diagram-exercise">🔹 Network Diagram Exercise</h4>
+<p>Identify and label the VPC components such as:</p>
+<ul>
+<li>Internet gateway (IGW)</li>
+<li>NAT gateway</li>
+<li>Elastic Network Interface (ENI)</li>
+<li>Route tables (public and private)</li>
+<li>Subnets (public and private)</li>
+<li>IP address ranges</li>
+</ul>
+<p>✅ <strong>Solution Overview:</strong></p>
+<ul>
+<li>Public Subnet: 10.0.1.0/24 (uses IGW)</li>
+<li>Private Subnet: 10.0.2.0/24 (uses NAT Gateway)</li>
+<li>Local route: 10.0.0.0/16</li>
+<li>Default route: 0.0.0.0/0 → IGW</li>
+</ul>
+<h4 id="aws-vpc-demonstration">🎥 AWS VPC Demonstration</h4>
+<p>Watch the recorded demo: <a href="https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/ILT-TF-100-ACFNDS-20-EN/Module_5_VPC_Wizard+v2.0.mp4">AWS VPC Wizard Demo</a></p>
+<p>Learn how to use the <strong>VPC Wizard</strong> to create a VPC with public and private subnets.</p>
+<hr />
+<h3 id="key-takeaways_2">🟢 Key Takeaways</h3>
+<p>✅ AWS provides multiple VPC connectivity options:</p>
+<ul>
+<li><strong>Internet Gateway (IGW):</strong> Connects your VPC to the internet.</li>
+<li><strong>NAT Gateway:</strong> Allows private subnets to connect to the internet securely.</li>
+<li><strong>VPC Endpoint:</strong> Connects your VPC privately to AWS services.</li>
+<li><strong>VPC Peering:</strong> Connects two VPCs directly.</li>
+<li><strong>VPC Sharing:</strong> Allows multiple AWS accounts to share a single centrally managed VPC.</li>
+<li><strong>AWS Site-to-Site VPN:</strong> Connects your VPC to on-prem networks securely.</li>
+<li><strong>AWS Direct Connect:</strong> Provides dedicated physical connectivity.</li>
+<li><strong>AWS Transit Gateway:</strong> Central hub for multi-VPC and on-prem connectivity.</li>
+</ul>
+<p>✅ Use the <strong>VPC Wizard</strong> to implement and test your network design efficiently.</p>
+<hr />
+<h2 id="4-section-4-securing-your-vpc">4️⃣ Section 4: Securing Your VPC</h2>
+<hr />
+<h3 id="security-groups">🟠 Security Groups</h3>
+<p>A <strong>security group</strong> acts as a <strong>virtual firewall</strong> for your Amazon EC2 instances, controlling <strong>inbound and outbound traffic</strong>.</p>
+<h4 id="key-characteristics">⚙️ Key Characteristics:</h4>
+<ul>
+<li>Operates at the <strong>instance level</strong> (not at the subnet level).</li>
+<li>Each instance in a subnet can have <strong>different security groups</strong>.</li>
+<li>Used to <strong>filter traffic</strong> to and from your instances.</li>
+</ul>
+<p>📘 <strong>Default behavior:</strong></p>
+<ul>
+<li>Denies <strong>all inbound traffic</strong>.</li>
+<li>Allows <strong>all outbound traffic</strong>.</li>
+</ul>
+<hr />
+<h3 id="security-group-rules">🟠 Security Group Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Default Behavior</th>
+<th>Customization</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inbound</strong></td>
+<td>Denied</td>
+<td>Add rules to allow specific sources, ports, and protocols.</td>
+<td>Each rule specifies Source → Protocol → Port → Description.</td>
+</tr>
+<tr>
+<td><strong>Outbound</strong></td>
+<td>Allowed</td>
+<td>You can restrict or specify targets for traffic.</td>
+<td>If no outbound rules exist, no outbound traffic is allowed.</td>
+</tr>
+</tbody>
+</table>
+<p>🔹 <strong>Stateful behavior:</strong></p>
+<ul>
+<li>Return traffic is <strong>automatically allowed</strong>, even if no explicit rule exists.</li>
+<li>Example: If an instance sends a request, the response traffic is allowed in.</li>
+</ul>
+<p>🧱 <strong>Example Default Rules:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Source/Destination</th>
+<th>Protocol</th>
+<th>Port Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inbound</td>
+<td>sg-xxxxxxxx</td>
+<td>All</td>
+<td>All</td>
+<td>Allow inbound from interfaces in same SG</td>
+</tr>
+<tr>
+<td>Outbound</td>
+<td>0.0.0.0/0</td>
+<td>All</td>
+<td>All</td>
+<td>Allow all IPv4 outbound</td>
+</tr>
+<tr>
+<td>Outbound</td>
+<td>::/0</td>
+<td>All</td>
+<td>All</td>
+<td>Allow all IPv6 outbound</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="custom-security-group-examples">🟠 Custom Security Group Examples</h3>
+<p>You can specify <strong>allow rules only</strong> — <strong>deny rules are not supported</strong>.
+All rules are evaluated before deciding whether to allow traffic.</p>
+<h4 id="inbound-rules">✅ <strong>Inbound Rules:</strong></h4>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Protocol</th>
+<th>Port</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0.0.0/0</td>
+<td>TCP</td>
+<td>80</td>
+<td>Allow HTTP traffic from all IPv4</td>
+</tr>
+<tr>
+<td>0.0.0.0/0</td>
+<td>TCP</td>
+<td>443</td>
+<td>Allow HTTPS traffic from all IPv4</td>
+</tr>
+<tr>
+<td>Your network’s public IPv4 range</td>
+<td>TCP</td>
+<td>22</td>
+<td>Allow SSH access to Linux instances</td>
+</tr>
+</tbody>
+</table>
+<h4 id="outbound-rules">✅ <strong>Outbound Rules:</strong></h4>
+<table>
+<thead>
+<tr>
+<th>Destination</th>
+<th>Protocol</th>
+<th>Port</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database SG ID</td>
+<td>TCP</td>
+<td>1433</td>
+<td>Allow Microsoft SQL Server access</td>
+</tr>
+</tbody>
+</table>
+<p>💡 <strong>Best practice:</strong> Limit inbound SSH access to specific trusted IP ranges and use security groups as logical firewalls between application tiers.</p>
+<hr />
+<h3 id="network-access-control-lists-network-acls">🟠 Network Access Control Lists (Network ACLs)</h3>
+<p>A <strong>Network ACL (Access Control List)</strong> provides an <strong>additional layer of security</strong> at the <strong>subnet level</strong>.
+It acts as a <strong>firewall</strong> for controlling inbound and outbound traffic to and from subnets.</p>
+<h4 id="key-characteristics_1">⚙️ Key Characteristics:</h4>
+<ul>
+<li>Operates at the <strong>subnet level</strong>.</li>
+<li>Each subnet must be associated with <strong>one</strong> network ACL.</li>
+<li>A single network ACL can be associated with <strong>multiple subnets</strong>.</li>
+<li>If not specified, subnets are automatically associated with the <strong>default network ACL</strong>.</li>
+</ul>
+<p>📘 When you associate a new ACL with a subnet, the previous one is <strong>replaced</strong>.</p>
+<hr />
+<h3 id="network-acl-rules">🟠 Network ACL Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rule Types</strong></td>
+<td>Separate inbound and outbound rules. Each can either <strong>allow</strong> or <strong>deny</strong> traffic.</td>
+</tr>
+<tr>
+<td><strong>Default ACL</strong></td>
+<td>Allows all inbound and outbound IPv4 (and IPv6) traffic.</td>
+</tr>
+<tr>
+<td><strong>Stateless</strong></td>
+<td>Return traffic must be explicitly allowed by rules.</td>
+</tr>
+</tbody>
+</table>
+<p>🧱 <strong>Example Default ACL:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Rule #</th>
+<th>Type</th>
+<th>Protocol</th>
+<th>Port</th>
+<th>Source/Destination</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inbound</td>
+<td>100</td>
+<td>All</td>
+<td>All</td>
+<td>All</td>
+<td>0.0.0.0/0</td>
+<td>ALLOW</td>
+</tr>
+<tr>
+<td>Inbound</td>
+<td>*</td>
+<td>All</td>
+<td>All</td>
+<td>All</td>
+<td>0.0.0.0/0</td>
+<td>DENY</td>
+</tr>
+<tr>
+<td>Outbound</td>
+<td>100</td>
+<td>All</td>
+<td>All</td>
+<td>All</td>
+<td>0.0.0.0/0</td>
+<td>ALLOW</td>
+</tr>
+<tr>
+<td>Outbound</td>
+<td>*</td>
+<td>All</td>
+<td>All</td>
+<td>All</td>
+<td>0.0.0.0/0</td>
+<td>DENY</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="custom-network-acl-examples">🟠 Custom Network ACL Examples</h3>
+<p>Custom ACLs deny all traffic by default until you add rules.
+Rules are evaluated in <strong>ascending order</strong>, starting from the lowest number.</p>
+<h4 id="example-configuration">✅ Example Configuration:</h4>
+<table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Rule #</th>
+<th>Type</th>
+<th>Protocol</th>
+<th>Port</th>
+<th>Source/Destination</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inbound</td>
+<td>100</td>
+<td>HTTPS</td>
+<td>TCP</td>
+<td>443</td>
+<td>0.0.0.0/0</td>
+<td>ALLOW</td>
+</tr>
+<tr>
+<td>Inbound</td>
+<td>120</td>
+<td>SSH</td>
+<td>TCP</td>
+<td>22</td>
+<td>192.0.2.0/24</td>
+<td>ALLOW</td>
+</tr>
+<tr>
+<td>Inbound</td>
+<td>*</td>
+<td>All</td>
+<td>All</td>
+<td>All</td>
+<td>0.0.0.0/0</td>
+<td>DENY</td>
+</tr>
+<tr>
+<td>Outbound</td>
+<td>100</td>
+<td>HTTPS</td>
+<td>TCP</td>
+<td>443</td>
+<td>0.0.0.0/0</td>
+<td>ALLOW</td>
+</tr>
+<tr>
+<td>Outbound</td>
+<td>120</td>
+<td>SSH</td>
+<td>TCP</td>
+<td>22</td>
+<td>192.0.2.0/24</td>
+<td>ALLOW</td>
+</tr>
+<tr>
+<td>Outbound</td>
+<td>*</td>
+<td>All</td>
+<td>All</td>
+<td>All</td>
+<td>0.0.0.0/0</td>
+<td>DENY</td>
+</tr>
+</tbody>
+</table>
+<p>💡 <strong>Rule numbering tip:</strong> Use increments of <strong>10 or 100</strong> so new rules can be inserted easily later.</p>
+<p>📚 Learn more: <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html">Network ACLs Documentation</a></p>
+<hr />
+<h3 id="security-groups-vs-network-acls">🟠 Security Groups vs Network ACLs</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Security Groups</th>
+<th>Network ACLs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Instance level</td>
+<td>Subnet level</td>
+</tr>
+<tr>
+<td><strong>Rules Supported</strong></td>
+<td>Allow rules only</td>
+<td>Allow <strong>and</strong> deny rules</td>
+</tr>
+<tr>
+<td><strong>State</strong></td>
+<td>Stateful</td>
+<td>Stateless</td>
+</tr>
+<tr>
+<td><strong>Evaluation</strong></td>
+<td>All rules evaluated together</td>
+<td>Rules evaluated by number order</td>
+</tr>
+</tbody>
+</table>
+<p>💡 <strong>Summary:</strong></p>
+<ul>
+<li>Security groups = micro-level protection (instances).</li>
+<li>Network ACLs = macro-level protection (subnets).</li>
+</ul>
+<hr />
+<h3 id="activity-design-a-secure-vpc">🧩 Activity: Design a Secure VPC</h3>
+<p><strong>Scenario:</strong>
+You are a small business owner hosting a website on an EC2 instance. Customer data is stored on a backend database that must remain private.</p>
+<h4 id="requirements">🧱 <strong>Requirements:</strong></h4>
+<ul>
+<li>Separate web and database servers into different subnets.</li>
+<li>Network must start at <strong>10.0.0.0</strong>, with <strong>256 IPv4 addresses per subnet</strong>.</li>
+<li>Customers must always have access to the web server.</li>
+<li>Database server must access the internet for patch updates.</li>
+<li>Architecture must be <strong>highly available</strong> and include <strong>at least one custom firewall layer</strong>.</li>
+</ul>
+<p>🧠 <strong>Hint:</strong> Combine security groups for instance-level protection with network ACLs for subnet-level protection.</p>
+<hr />
+<h3 id="key-takeaways_3">🟢 Key Takeaways</h3>
+<p>✅ Build <strong>security into every layer</strong> of your VPC architecture.
+✅ <strong>Isolate subnets</strong> when possible for better protection.
+✅ Use the <strong>appropriate gateway or VPN connection</strong> for your needs.
+✅ Apply <strong>firewall rules</strong> through <strong>security groups</strong> and <strong>network ACLs</strong> to safeguard traffic.</p>
+<hr />
+<h2 id="5-section-5-amazon-route-53">5️⃣ Section 5: Amazon Route 53</h2>
+<hr />
+<h3 id="what-is-amazon-route-53">🟠 What is Amazon Route 53?</h3>
+<p><strong>Amazon Route 53</strong> is a <strong>highly available and scalable Domain Name System (DNS) web service</strong> designed to route end users to internet applications by translating <strong>domain names</strong> (like <code>www.example.com</code>) into <strong>IP addresses</strong> (like <code>192.0.2.1</code>).</p>
+<p>🔹 <strong>Key features:</strong></p>
+<ul>
+<li>Fully compliant with <strong>IPv4 and IPv6</strong>.</li>
+<li>Connects user requests to infrastructure running <strong>inside or outside AWS</strong>.</li>
+<li>Supports <strong>DNS health checks</strong> for routing traffic to healthy endpoints.</li>
+<li>Includes <strong>Traffic Flow</strong>, which allows global traffic management through various routing policies.</li>
+<li>Provides <strong>Domain Name Registration</strong> — you can register, purchase, and manage domains directly in Route 53.</li>
+</ul>
+<p>📚 Learn more: <a href="https://aws.amazon.com/route53/what-is-dns/">What is DNS?</a></p>
+<p>💡 <strong>Example:</strong> Route 53 can route traffic to Amazon EC2 instances, Elastic Load Balancing load balancers, Amazon S3 buckets, or even on-premises servers.</p>
+<hr />
+<h3 id="how-route-53-dns-resolution-works">🟠 How Route 53 DNS Resolution Works</h3>
+<p>When a user initiates a DNS request, Route 53 performs the following steps:</p>
+<ol>
+<li>The <strong>user</strong> enters a domain name (e.g., <code>www.example.com</code>).</li>
+<li>The <strong>DNS resolver</strong> queries <strong>Amazon Route 53</strong> for the corresponding IP address.</li>
+<li>Route 53 returns the <strong>IP address</strong> (e.g., <code>192.0.2.0</code>).</li>
+<li>The user’s browser connects to that IP address to load the application.</li>
+</ol>
+<p>📘 This process ensures <strong>fast and reliable name resolution</strong> for your applications.</p>
+<hr />
+<h3 id="amazon-route-53-supported-routing-policies">🟠 Amazon Route 53 Supported Routing Policies</h3>
+<p>Amazon Route 53 supports multiple <strong>routing types</strong> that define how traffic is directed to resources.</p>
+<table>
+<thead>
+<tr>
+<th>Routing Type</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simple Routing</strong></td>
+<td>Maps a single resource to a domain.</td>
+<td>Single web server or basic setup.</td>
+</tr>
+<tr>
+<td><strong>Weighted Routing</strong></td>
+<td>Distributes traffic based on assigned weights.</td>
+<td>A/B testing or gradual deployments.</td>
+</tr>
+<tr>
+<td><strong>Latency-Based Routing (LBR)</strong></td>
+<td>Routes users to the region with the <strong>lowest latency</strong>.</td>
+<td>Global apps where performance matters.</td>
+</tr>
+<tr>
+<td><strong>Geolocation Routing</strong></td>
+<td>Routes traffic based on the <strong>user’s geographic location</strong>.</td>
+<td>Deliver localized content or regional compliance.</td>
+</tr>
+<tr>
+<td><strong>Geoproximity Routing</strong></td>
+<td>Routes traffic based on the <strong>location of resources</strong>, optionally shifting traffic between locations.</td>
+<td>Move or balance traffic between regions.</td>
+</tr>
+<tr>
+<td><strong>Failover Routing</strong></td>
+<td>Enables <strong>active-passive failover</strong>; routes traffic to a backup site if the primary becomes unavailable.</td>
+<td>High availability and disaster recovery.</td>
+</tr>
+<tr>
+<td><strong>Multivalue Answer Routing</strong></td>
+<td>Returns up to <strong>eight healthy records</strong>, selected randomly.</td>
+<td>Basic load balancing and redundancy.</td>
+</tr>
+</tbody>
+</table>
+<p>📘 <strong>Example: Weighted Routing</strong>
+If two record sets share the same domain, one with weight <strong>3</strong> and another with weight <strong>1</strong>, Route 53 will serve:</p>
+<ul>
+<li>75% of traffic → record with weight 3</li>
+<li>25% of traffic → record with weight 1</li>
+</ul>
+<p>💡 You can combine routing types (e.g., <strong>Latency + Failover</strong>) for complex global architectures.</p>
+<hr />
+<h3 id="use-case-multi-region-deployment">🟠 Use Case: Multi-Region Deployment</h3>
+<p>In a <strong>multi-region deployment</strong>, Route 53 directs users to the nearest AWS Region to reduce latency.</p>
+<table>
+<thead>
+<tr>
+<th>Domain Name</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>example.com</td>
+<td>ALIAS</td>
+<td>some-elb-name.us-west-2.elb.amazonaws.com</td>
+</tr>
+<tr>
+<td>example.com</td>
+<td>ALIAS</td>
+<td>some-elb-name.ap-southeast-2.elb.amazonaws.com</td>
+</tr>
+</tbody>
+</table>
+<p>🧩 <strong>Benefits:</strong></p>
+<ul>
+<li><strong>Latency-based routing</strong> → users connect to the region offering the best performance.</li>
+<li><strong>Load balancing</strong> across regions and Availability Zones.</li>
+</ul>
+<p>💡 This setup improves <strong>global availability</strong> and <strong>user experience</strong>.</p>
+<hr />
+<h3 id="amazon-route-53-dns-failover">🟠 Amazon Route 53 DNS Failover</h3>
+<p>You can improve the <strong>availability</strong> of your applications with Route 53 by configuring <strong>DNS failover and health checks</strong>.</p>
+<h4 id="capabilities">⚙️ Capabilities:</h4>
+<ul>
+<li>Configure <strong>backup and failover</strong> scenarios for your own applications.</li>
+<li>Enable <strong>multi-region, highly available architectures</strong> on AWS.</li>
+<li>Create <strong>health checks</strong> to monitor the health and performance of web servers or other endpoints.</li>
+</ul>
+<h4 id="health-checks-can-monitor">🧩 Health checks can monitor:</h4>
+<ol>
+<li>The <strong>health of a specific resource</strong> (e.g., a web server).</li>
+<li>The <strong>status of other health checks</strong> (for complex dependencies).</li>
+<li>The <strong>state of an Amazon CloudWatch alarm</strong>.</li>
+</ol>
+<p>📚 Learn more: <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html">Route 53 Health Checks</a></p>
+<hr />
+<h3 id="key-takeaways_4">🟢 Key Takeaways</h3>
+<p>✅ <strong>Amazon Route 53</strong> provides scalable, reliable, and cost-effective DNS management.
+✅ It supports multiple <strong>routing policies</strong> for flexibility in directing user traffic.
+✅ Use <strong>Latency</strong>, <strong>Geolocation</strong>, and <strong>Failover routing</strong> for high availability and performance.
+✅ Enable <strong>health checks</strong> to ensure traffic is only routed to healthy endpoints.
+✅ Route 53 can be used for <strong>domain registration, DNS routing, and application health monitoring</strong> in one service.</p>
+<hr />
+<h2 id="6-section-6-amazon-cloudfront">6️⃣ Section 6: Amazon CloudFront</h2>
+<hr />
+<h3 id="introduction">🟠 Introduction</h3>
+<p>The purpose of networking is to <strong>share information between connected resources</strong>.
+In this section, you’ll learn about <strong>Amazon CloudFront</strong>, AWS’s <strong>Content Delivery Network (CDN)</strong> service, which helps deliver content to users worldwide with <strong>low latency and high transfer speeds</strong>.</p>
+<hr />
+<h3 id="network-latency-and-content-delivery">🟠 Network Latency and Content Delivery</h3>
+<p>When users access a website or stream a video, their requests pass through multiple routers across different networks before reaching the <strong>origin server</strong> — the source where the original data (HTML, CSS, JavaScript, media files) is stored.</p>
+<h4 id="challenges">⚠️ <strong>Challenges:</strong></h4>
+<ul>
+<li>Each <strong>network hop</strong> increases latency.</li>
+<li>Performance varies across <strong>geographic locations</strong>.</li>
+</ul>
+<p>💡 <strong>Solution:</strong> A <strong>Content Delivery Network (CDN)</strong> reduces latency by caching and serving content from <strong>locations closer to the user</strong>.</p>
+<hr />
+<h3 id="what-is-a-content-delivery-network-cdn">🟠 What is a Content Delivery Network (CDN)?</h3>
+<p>A <strong>CDN</strong> is a <strong>globally distributed system of caching servers</strong> that deliver both static and dynamic content faster to end users.</p>
+<h4 id="key-features">⚙️ <strong>Key Features:</strong></h4>
+<ul>
+<li><strong>Caches copies</strong> of commonly requested files (static content like HTML, CSS, JavaScript, and images).</li>
+<li>Delivers content from the <strong>nearest Point of Presence (PoP)</strong> to the user.</li>
+<li><strong>Accelerates dynamic content</strong> that cannot be cached by routing requests efficiently.</li>
+<li><strong>Improves performance</strong> and scalability of applications.</li>
+<li>Establishes <strong>secure, low-latency connections</strong> closer to users.</li>
+</ul>
+<p>💡 <strong>Result:</strong> Faster response times, reduced load on origin servers, and improved user experience.</p>
+<hr />
+<h3 id="amazon-cloudfront-overview">🟠 Amazon CloudFront Overview</h3>
+<p><strong>Amazon CloudFront</strong> is a <strong>fast, secure, and globally distributed CDN service</strong> that delivers <strong>data, videos, applications, and APIs</strong> to users worldwide.</p>
+<h4 id="key-highlights">⚙️ <strong>Key Highlights:</strong></h4>
+<ul>
+<li><strong>Global network</strong> of edge locations and regional caches.</li>
+<li><strong>Self-service model</strong> with <strong>pay-as-you-go pricing</strong>.</li>
+<li><strong>Delivers files over HTTP/HTTPS</strong> to ensure security and reliability.</li>
+</ul>
+<p>💡 Unlike traditional CDN contracts, CloudFront requires <strong>no upfront commitments</strong> or minimum fees — it scales automatically with your needs.</p>
+<p>📚 Learn more: <a href="https://aws.amazon.com/cloudfront/">Amazon CloudFront Documentation</a></p>
+<hr />
+<h3 id="amazon-cloudfront-infrastructure">🟠 Amazon CloudFront Infrastructure</h3>
+<p>Amazon CloudFront delivers content through a <strong>worldwide network of edge locations</strong> and <strong>regional edge caches</strong>.</p>
+<h4 id="components">📦 <strong>Components:</strong></h4>
+<ul>
+<li>
+<p><strong>Edge Locations:</strong></p>
+</li>
+<li>
+<p>Network of data centers located around the world.</p>
+</li>
+<li>Serve popular content <strong>immediately</strong> and with <strong>low latency</strong>.</li>
+<li>
+<p><strong>Regional Edge Caches:</strong></p>
+</li>
+<li>
+<p>Larger cache capacity than edge locations.</p>
+</li>
+<li>Store <strong>less popular content longer</strong> to reduce origin fetches.</li>
+<li>Positioned <strong>between the origin server and global edge locations</strong>.</li>
+</ul>
+<p>💡 <strong>Performance Benefit:</strong>
+By caching content at multiple layers, CloudFront ensures faster delivery and fewer trips to the origin server.</p>
+<p>📘 Learn more: <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html#HowCloudFrontWorksContentDelivery">How CloudFront Delivers Content</a></p>
+<hr />
+<h3 id="amazon-cloudfront-benefits">🟠 Amazon CloudFront Benefits</h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fast and Global</strong></td>
+<td>CloudFront’s global infrastructure reduces latency using edge locations and regional caches.</td>
+</tr>
+<tr>
+<td><strong>Security at the Edge</strong></td>
+<td>Built-in network and application protection (e.g., <strong>AWS Shield Standard</strong>) and support for <strong>custom SSL/TLS certificates</strong> via AWS Certificate Manager.</td>
+</tr>
+<tr>
+<td><strong>Highly Programmable</strong></td>
+<td>Supports customization using <strong>Lambda@Edge</strong>, allowing you to run code close to users for improved responsiveness. Integrates with DevOps and CI/CD pipelines.</td>
+</tr>
+<tr>
+<td><strong>Deep AWS Integration</strong></td>
+<td>Seamlessly integrates with AWS services (like S3, EC2, and Elastic Load Balancing) and shares the same global network backbone.</td>
+</tr>
+<tr>
+<td><strong>Cost-Effective</strong></td>
+<td>No minimum fees or long-term commitments. You pay only for what you use. Efficient caching reduces load on origin servers and operational costs.</td>
+</tr>
+</tbody>
+</table>
+<p>💡 <strong>Example:</strong> CloudFront collapses multiple simultaneous viewer requests for the same file into a single origin request, further reducing costs and latency.</p>
+<hr />
+<h3 id="amazon-cloudfront-pricing">🟠 Amazon CloudFront Pricing</h3>
+<p>You pay for <strong>what you use</strong>, based on four primary metrics:</p>
+<ol>
+<li>
+<p><strong>Data Transfer Out</strong></p>
+</li>
+<li>
+<p>Charged per GB for data transferred from CloudFront edge locations to the internet or your origin.</p>
+</li>
+<li>
+<p>Pricing varies by geographic region.</p>
+</li>
+<li>
+<p><strong>HTTP(S) Requests</strong></p>
+</li>
+<li>
+<p>Charged per request made to CloudFront for content delivery.</p>
+</li>
+<li>
+<p><strong>Invalidation Requests</strong></p>
+</li>
+<li>
+<p>First <strong>1,000 paths per month</strong> are free.</p>
+</li>
+<li>
+<p>Beyond that, $0.005 per invalidation path.</p>
+</li>
+<li>
+<p><strong>Dedicated IP Custom SSL</strong></p>
+</li>
+<li>
+<p>$600 per month per SSL certificate used for Dedicated IP mode.</p>
+</li>
+<li>Charges are prorated by the hour.</li>
+</ol>
+<p>📘 Example: If an SSL certificate is active for one day, the cost is <code>(1/30) × $600 = $20</code>.</p>
+<p>📚 Learn more: <a href="https://aws.amazon.com/cloudfront/pricing/">Amazon CloudFront Pricing</a></p>
+<hr />
+<h3 id="key-takeaways_5">🟢 Key Takeaways</h3>
+<p>✅ A <strong>CDN</strong> is a globally distributed network of caching servers that accelerates content delivery.
+✅ <strong>Amazon CloudFront</strong> delivers data, videos, apps, and APIs securely with <strong>low latency and high speeds</strong>.
+✅ It provides major benefits:</p>
+<ul>
+<li>🌎 Fast and global</li>
+<li>🛡️ Security at the edge</li>
+<li>⚙️ Highly programmable</li>
+<li>🔗 Deep AWS integration</li>
+<li>💸 Cost-effective</li>
+</ul>
 
 
 
