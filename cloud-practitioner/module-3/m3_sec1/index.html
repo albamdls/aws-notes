@@ -1,876 +1,2301 @@
-<!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!--
-    The page_title contains the title for a page as shown in the navigation.
-    Site name contains the name as defined in the mkdocs.yml
-  -->
-  <title>◽️ Section 1 - AWS Global Infrastructure - AWS Cloud Practitioner Notes</title>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️">
+      
+      
+        <meta name="author" content="Alba | @jalando.code">
+      
+      
+        <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module-3/m3_sec1/">
+      
+      
+        <link rel="prev" href="../../module-2/m2_sec5/">
+      
+      
+        <link rel="next" href="../m3_sec2/">
+      
+      
+      <link rel="icon" href="../../../images/icons/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>◽️ Section 1 - AWS Global Infrastructure - AWS Cloud Practitioner Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+      
 
-  <!-- Page description -->
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
   
-    <meta name="description" content="Apuntes visuales del curso AWS Cloud Practitioner ☁️" />
   
-
-  <!-- Redirect -->
+    <body dir="ltr">
   
-    <link rel="canonical" href="https://jalando-code.github.io/aws-notes/cloud-practitioner/module-3/m3_sec1/" />
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-3-aws-global-infrastructure-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AWS Cloud Practitioner Notes" class="md-header__button md-logo" aria-label="AWS Cloud Practitioner Notes" data-md-component="logo">
+      
+  <img src="../../../images/icons/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Cloud Practitioner Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ◽️ Section 1 - AWS Global Infrastructure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
   
-
-  <!-- Page author -->
-  
-    <meta name="author" content="Alba | @jalando.code" />
-  
-  <!--
-    Just add a favicon.ico image to the docs.
-  -->
-  <link rel="shortcut icon" href="../../../img/favicon.ico">
-
-  <link rel="stylesheet" href="../../../css/colors.css">
-  <link rel="stylesheet" href="../../../css/bundle.css">
-  <link rel="stylesheet" href="../../../css/theme.css">
-  <link media="print" onload="this.media='all'" rel="stylesheet" href="../../../css/atom-dark-one.min.css">
-  <!--
-    extra_ess contains paths to CSS files in the users
-    documentation directory or a list of CSS files defined in
-    their mkdocs.yml.
-
-    http://www.mkdocs.org/user-guide/configuration/#extra_css
-  -->
-  
-
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
   
   
-
-  <!--
-    Include Google Analytics tracking code.
-
-    http://www.mkdocs.org/user-guide/configuration/#google_analytics
-  -->
   
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
 
-</head>
-
-<body>
-<input id="dark-mode" type="checkbox" />
-<!--
-  The JS has to be loaded here for maximum performance, right after the #dark-mode
--->
-<script src="../../../js/theme.js"></script>
-<div class="app-body">
-  <!-- KPN STYLE Beginning -->
-  <div class="app-layout ">
-    <!-- Top Bar -->
-    <nav class="app-layout__top-bar top-bar">
-      <a class="top-bar__logo">
-        <img alt="KPN Logo" src="../../../img/logo-kpn.svg" />
       </a>
-      <div class="top-bar__title">AWS Cloud Practitioner Notes</div>
-      <ul class="top-bar__menu">
-        <!--
-          Create a search form that sends the user to the search.html file - this is
-          the other file in the template which adds search to the theme. The only
-          requirement here is that there is a text input with the name 'q' and the
-          action and methods match below.
-        -->
-          <li class="top-bar__item">
+    </li>
+  
 
-            <span role="search" id="search-input-wrapper">
-              <form action="../../../search.html" method="get">
-                <input type="text" class="input" id="search-input" name="q" placeholder="Search..." />
-              </form>
-            </span >
-          </li>
-        <!--
-          Versioning support
-        -->
+      
         
-        <!--
-          Support repo URL
-        -->
-        <li class="top-bar__item">
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-1/m1_sec1/" class="md-tabs__link">
           
-        </li>
+  
+  
+  📌 Module 1 - Cloud Concepts Overview
 
-        <li class="top-bar__item">
-            <label class="top-bar__link" id="label-dark-mode" for="dark-mode" title="Dark mode">
-              <svg alt="dark mode" width="24" height="24">
-                <image xlink:href="../../../img/ui-bulb.svg" width="24" height="24"/>
-            </svg>
-            </label>
-        </li>
-        <li class="top-bar__item top-bar__item--trigger"></li>
+        </a>
+      </li>
+    
+  
 
-        <!-- <li class="top-bar__item">
-
-          <a class="top-bar__link top-bar__link--active">Home</a>
-        </li>
-        <li class="top-bar__item"><a class="top-bar__link">Information</a></li>
-        <li class="top-bar__item">
-          <a class="top-bar__link top-bar__link--collapsed">Getting Started</a>
-
-        </li>
-        <li class="top-bar__item top-bar__item--trigger">Menu</li> -->
-      </ul>
-    </nav>
-
-    <!--
-      Create the navigation for the documentation.
-
-      Because we don't know how many levels deep the navigation is, it needs to
-      be included in it's own file so it can be recursive. Otherwise the theme
-      can also only support a specific number of levels.
-
-      See the nav.html file for more details about how this works.
-    -->
-    <nav class="app-layout__side-bar side-bar">
-      <div class="side-bar__action-bar">
-        <a class="side-bar__link" href="/">AWS Cloud Practitioner Notes</a>
-        <!--
-          Versioning support
-        -->
+      
         
-        <button class="side-bar__close"></button>
-      </div>
-      <ul class="side-bar__menu">
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-2/m2_sec1/" class="md-tabs__link">
+          
+  
+  
+  📌 Module 2 - Cloud Economics and Billing
+
+        </a>
+      </li>
+    
+  
+
+      
         
-          <!--
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  📌  Module 3 - AWS Global Infrastructure Overview
 
--->
+        </a>
+      </li>
+    
+  
 
-<li>
-  <a href="../../.." class="side-bar__link ">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-4/m4_sec1/" class="md-tabs__link">
+          
+  
+  
+  📌 Module 4 - AWS Cloud Security
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-5/m5_sec1/" class="md-tabs__link">
+          
+  
+  
+  📌 Module 5 - Networking and Content Delivery
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-6/m6_sec1/" class="md-tabs__link">
+          
+  
+  
+  📌 Module 6 - Compute
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-7/m7_sec1/" class="md-tabs__link">
+          
+  
+  
+  📌 Module 7 - Storage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-8/m8_sec1/" class="md-tabs__link">
+          
+  
+  
+  📌 Module 8 - Databases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-9/m9_sec1/" class="md-tabs__link">
+          
+  
+  
+  📌 Module 9 - Cloud Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../module-10/m10_sec1/" class="md-tabs__link">
+          
+  
+  
+  📌 Module 10 - Automatic Scaling and Monitoring
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AWS Cloud Practitioner Notes" class="md-nav__button md-logo" aria-label="AWS Cloud Practitioner Notes" data-md-component="logo">
+      
+  <img src="../../../images/icons/favicon.png" alt="logo">
+
+    </a>
+    AWS Cloud Practitioner Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     🏠 Home
-  </a>
-</li>
+    
+  </span>
+  
 
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 1 - Cloud Concepts Overview
-    </span>
-    <ul class="side-bar__sub-menu ">
         
-            <!--
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 1 - Cloud Concepts Overview
+    
+  </span>
+  
 
--->
-
-<li>
-  <a href="../../module-1/m1_sec1/" class="side-bar__link ">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 1 - Cloud Concepts Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/m1_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     ◽️ Section 1 - What is Cloud Computing?
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-1/m1_sec2/" class="side-bar__link ">
-    ◽ Section 2 - Advantages of Cloud Computing
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-1/m1_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - Introduction to Amazon Web Services (AWS)
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-1/m1_sec4/" class="side-bar__link ">
-    ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 2 - Cloud Economics and Billing
-    </span>
-    <ul class="side-bar__sub-menu ">
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-2/m2_sec1/" class="side-bar__link ">
-    ◽️ Section 1 - Fundamentals of pricing
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-2/m2_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - Total Cost of Ownership
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-2/m2_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - AWS Organizations
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-2/m2_sec4/" class="side-bar__link ">
-    ◽️ Section 4 - AWS Billing and Cost Management
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-2/m2_sec5/" class="side-bar__link ">
-    ◽️ Section 5 - Technical support
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--expanded side-bar__link--active">
-      📌  Module 3 - AWS Global Infrastructure Overview
-    </span>
-    <ul class="side-bar__sub-menu side-bar__sub-menu--visible">
-        
-            <!--
-
--->
-
-<li>
-  <a href="./" class="side-bar__link side-bar__link--active">
-    ◽️ Section 1 - AWS Global Infrastructure
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../m3_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - AWS services and service category overview
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 4 - AWS Cloud Security
-    </span>
-    <ul class="side-bar__sub-menu ">
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-4/m4_sec1/" class="side-bar__link ">
-    ◽️ Section 1 - AWS Shared Responsibility Model
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-4/m4_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - AWS Identity and Access Management (IAM)
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-4/m4_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - Securing a New AWS Account
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-4/m4_sec4/" class="side-bar__link ">
-    ◽️ Section 4 - Securing Accounts
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-4/m4_sec5/" class="side-bar__link ">
-    ◽️ Section 5 - Securing Data on AWS
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-4/m4_sec6/" class="side-bar__link ">
-    ◽️ Section 6 - Working to Ensure Compliance
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 5 - Networking and Content Delivery
-    </span>
-    <ul class="side-bar__sub-menu ">
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-5/m5_sec1/" class="side-bar__link ">
-    ◽️ Section 1 - Networking Basics
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-5/m5_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC)
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-5/m5_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - VPC Connectivity Options
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-5/m5_sec4/" class="side-bar__link ">
-    ◽️ Section 4 - Securing Your VPC
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-5/m5_sec5/" class="side-bar__link ">
-    ◽️ Section 5 - Amazon Route 53
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-5/m5_sec6/" class="side-bar__link ">
-    ◽️ Section 6 - Amazon CloudFront
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 6 - Compute
-    </span>
-    <ul class="side-bar__sub-menu ">
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-6/m6_sec1/" class="side-bar__link ">
-    ◽️ Section 1 - Compute Services Overview
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-6/m6_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-6/m6_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - Amazon EC2 Cost Optimization
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-6/m6_sec4/" class="side-bar__link ">
-    ◽️ Section 4 - Container Services
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-6/m6_sec5/" class="side-bar__link ">
-    ◽️ Section 5 - AWS Lambda (Serverless Compute)
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-6/m6_sec6/" class="side-bar__link ">
-    ◽️ Section 6 - AWS Elastic Beanstalk
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 7 - Storage
-    </span>
-    <ul class="side-bar__sub-menu ">
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-7/m7_sec1/" class="side-bar__link ">
-    ◽️ Section 1 - AWS Storage Overview
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-7/m7_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3)
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-7/m7_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-7/m7_sec4/" class="side-bar__link ">
-    ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-7/m7_sec5/" class="side-bar__link ">
-    ◽️ Section 5 - Hybrid and Data Transfer Services
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-7/m7_sec6/" class="side-bar__link ">
-    ◽️ Section 6 - Backup, Archive, and Data Protection
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-7/m7_sec7/" class="side-bar__link ">
-    ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 8 - Databases
-    </span>
-    <ul class="side-bar__sub-menu ">
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-8/m8_sec1/" class="side-bar__link ">
-    ◽️ Section 1 - Introduction to Databases on AWS
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-8/m8_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora)
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-8/m8_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - Nonrelational Databases on AWS
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-8/m8_sec4/" class="side-bar__link ">
-    ◽️ Section 4 - Database Migration and Integration on AWS
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 9 - Cloud Architecture
-    </span>
-    <ul class="side-bar__sub-menu ">
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-9/m9_sec1/" class="side-bar__link ">
-    ◽️ Section 1 - Introduction to Cloud Architecture Design Principles
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-9/m9_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - High Availability and Fault Tolerance
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-9/m9_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - Elasticity and Scalability in the Cloud
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-9/m9_sec4/" class="side-bar__link ">
-    ◽️ Section 4 - Loose Coupling and Microservices Architecture
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-9/m9_sec5/" class="side-bar__link ">
-    ◽️ Section 5 - AWS Global Infrastructure and Edge Services
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-9/m9_sec6/" class="side-bar__link ">
-    ◽️ Section 6 - Designing for Security and Compliance in the Cloud
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-          <!--
-
--->
-
-  <li>
-    <span class="side-bar__link side-bar__link--collapsed">
-      📌 Module 10 - Automatic Scaling and Monitoring
-    </span>
-    <ul class="side-bar__sub-menu ">
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-10/m10_sec1/" class="side-bar__link ">
-    ◽️ Section 1 - Elastic Load Balancing (ELB)
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-10/m10_sec2/" class="side-bar__link ">
-    ◽️ Section 2 - Amazon CloudWatch
-  </a>
-</li>
-
-        
-            <!--
-
--->
-
-<li>
-  <a href="../../module-10/m10_sec3/" class="side-bar__link ">
-    ◽️ Section 3 - Amazon EC2 Auto Scaling
-  </a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-      </ul>
-    </nav>
-
-    <!-- MAIN BLOCK -->
-    <main class="app-layout__main main">
-      <div class="app-layout__title-bar title-bar">
-        <div class="title-bar__title">◽️ Section 1 - AWS Global Infrastructure</div>
-      </div>
-      
-      <div class="sidebar--secondary hidden-s hidden-xs">
-        <h4>Table of contents</h4>
-        <ul>
-        
-          
-            
-                <li><a class="a" href="#1-section-1-aws-global-infrastructure">1️⃣ Section 1: AWS Global Infrastructure</a></li>
-                
-                    <li class="child-li"><a class="a child" href="#aws-global-infrastructure">🟠 AWS Global Infrastructure</a></li>
-                
-                    <li class="child-li"><a class="a child" href="#aws-regions">🟠 AWS Regions</a></li>
-                
-                    <li class="child-li"><a class="a child" href="#selecting-a-region">🟠 Selecting a Region</a></li>
-                
-                    <li class="child-li"><a class="a child" href="#availability-zones">🟠 Availability Zones</a></li>
-                
-                    <li class="child-li"><a class="a child" href="#aws-data-centers">🟠 AWS data centers</a></li>
-                
-                    <li class="child-li"><a class="a child" href="#points-of-presence">🟠 Points of Presence</a></li>
-                
-                    <li class="child-li"><a class="a child" href="#aws-infrastructure-features">🟠 AWS infrastructure features</a></li>
-                
-            
-          
-        
-        </ul>
-      </div>
-      
-      <div class="container content-block">
-        <div class="kpn-style">
-          <div class="card">
-            <div class="card__body">
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
 
               
-              <h1 id="module-3-aws-global-infrastructure-overview">🌎 Module 3 - AWS Global Infrastructure Overview</h1>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/m1_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽ Section 2 - Advantages of Cloud Computing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/m1_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - Introduction to Amazon Web Services (AWS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-1/m1_sec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 4 - AWS Cloud Adoption Framework (AWS CAF)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 2 - Cloud Economics and Billing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 2 - Cloud Economics and Billing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/m2_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - Fundamentals of pricing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/m2_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - Total Cost of Ownership
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/m2_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - AWS Organizations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/m2_sec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 4 - AWS Billing and Cost Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-2/m2_sec5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 5 - Technical support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌  Module 3 - AWS Global Infrastructure Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📌  Module 3 - AWS Global Infrastructure Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - AWS Global Infrastructure
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - AWS Global Infrastructure
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-section-1-aws-global-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Section 1: AWS Global Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Section 1: AWS Global Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-global-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Global Infrastructure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-a-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Selecting a Region
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Availability Zones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS data centers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#points-of-presence" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Points of Presence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-infrastructure-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS infrastructure features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m3_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - AWS services and service category overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 4 - AWS Cloud Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 4 - AWS Cloud Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-4/m4_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - AWS Shared Responsibility Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-4/m4_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - AWS Identity and Access Management (IAM)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-4/m4_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - Securing a New AWS Account
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-4/m4_sec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 4 - Securing Accounts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-4/m4_sec5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 5 - Securing Data on AWS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-4/m4_sec6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 6 - Working to Ensure Compliance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 5 - Networking and Content Delivery
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 5 - Networking and Content Delivery
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-5/m5_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - Networking Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-5/m5_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - Amazon Virtual Private Cloud (Amazon VPC)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-5/m5_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - VPC Connectivity Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-5/m5_sec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 4 - Securing Your VPC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-5/m5_sec5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 5 - Amazon Route 53
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-5/m5_sec6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 6 - Amazon CloudFront
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 6 - Compute
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 6 - Compute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-6/m6_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - Compute Services Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-6/m6_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - Amazon Elastic Compute Cloud (Amazon EC2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-6/m6_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - Amazon EC2 Cost Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-6/m6_sec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 4 - Container Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-6/m6_sec5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 5 - AWS Lambda (Serverless Compute)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-6/m6_sec6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 6 - AWS Elastic Beanstalk
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 7 - Storage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 7 - Storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-7/m7_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - AWS Storage Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-7/m7_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - Amazon Simple Storage Service (Amazon S3)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-7/m7_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - Amazon Elastic Block Store (Amazon EBS) and Instance Store
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-7/m7_sec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 4 - File Storage – Amazon EFS and Amazon FSx
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-7/m7_sec5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 5 - Hybrid and Data Transfer Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-7/m7_sec6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 6 - Backup, Archive, and Data Protection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-7/m7_sec7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 7 - Security, Compliance, and Cost Optimization in Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 8 - Databases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 8 - Databases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-8/m8_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - Introduction to Databases on AWS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-8/m8_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - Relational Databases on AWS (Amazon RDS and Amazon Aurora)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-8/m8_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - Nonrelational Databases on AWS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-8/m8_sec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 4 - Database Migration and Integration on AWS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 9 - Cloud Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 9 - Cloud Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-9/m9_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - Introduction to Cloud Architecture Design Principles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-9/m9_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - High Availability and Fault Tolerance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-9/m9_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - Elasticity and Scalability in the Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-9/m9_sec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 4 - Loose Coupling and Microservices Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-9/m9_sec5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 5 - AWS Global Infrastructure and Edge Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-9/m9_sec6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 6 - Designing for Security and Compliance in the Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📌 Module 10 - Automatic Scaling and Monitoring
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            📌 Module 10 - Automatic Scaling and Monitoring
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-10/m10_sec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 1 - Elastic Load Balancing (ELB)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-10/m10_sec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 2 - Amazon CloudWatch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module-10/m10_sec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ◽️ Section 3 - Amazon EC2 Auto Scaling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-section-1-aws-global-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Section 1: AWS Global Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Section 1: AWS Global Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-global-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Global Infrastructure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-a-region" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Selecting a Region
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Availability Zones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS data centers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#points-of-presence" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 Points of Presence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-infrastructure-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟠 AWS infrastructure features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="module-3-aws-global-infrastructure-overview">🌎 Module 3 - AWS Global Infrastructure Overview</h1>
 <h2 id="1-section-1-aws-global-infrastructure">1️⃣ Section 1: AWS Global Infrastructure</h2>
 <h3 id="aws-global-infrastructure">🟠 AWS Global Infrastructure</h3>
 <ul>
@@ -997,104 +2422,86 @@
 <li><strong>Fault Tolerant</strong> → redundancy ensures continued operation despite failures.</li>
 <li><strong>Highly Available &amp; Automated</strong> → minimal downtime, minimal human intervention.</li>
 </ul>
-              
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer__body">
-        
-        <div class="row">
-          <div class="col col--s-4 col--m-3 col--l-2">
-          </div>
-          <div class="col col--s-4 col--m space-between">
-            
-              <a class="footer__link padding-top-0 navigation-prev"
-                href="../../module-2/m2_sec5/"
-                title="◽️ Section 5 - Technical support">
-                &#8592; Previous Page
-              </a>
-            
-            
-            
-              <a class="footer__link padding-top-0 navigation-next"
-                href="../m3_sec2/"
-                title="◽️ Section 2 - AWS services and service category overview"/>
-                Next Page &#8594;
-              </a>
-            
-          </div>
-          <div class="col col--s-4 col--m-3 ">
-          </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-      </div>
-    </footer>
-  </div>
-
-
-  <!--
-  MkDocs version      : 1.6.1
-  Docs Build Date UTC : 2025-11-01 12:57:39.353776+00:00
-  -->
-
-  <!--
-    To include static assets from our theme, just add
-    ../../.. beforehand which will be the relative path to
-    the root of the documentation.
-  -->
-  <script src="../../../js/highlight.min.js"></script>
-  <script src="../../../js/languages/groovy.min.js"></script>
-  <script src="../../../js/languages/asciidoc.min.js"></script>
-  <script src="../../../js/languages/nix.min.js"></script>
-
-  <script>
-    hljs.highlightAll();
-  </script>
-  <script async src="../../../js/detail.js"></script>
-  <!--
-    extra_javascript contains paths to JavaScript files in the
-    users documentation directory or a list of JavaScript files
-    defined in their mkdocs.yml.
-
-    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
-  -->
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-    <script src="../../../search/main.js"></script>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
   
-
-
-  <script>
-  function getMermaidTheme() {
-    if (document.getElementById("dark-mode").checked) {
-      return 'dark'
-    }
-    return 'forest'
-  }
-
-  function initMermaid() {
-    mermaid.initialize({
-      theme: getMermaidTheme(),
-      logLevel: 1,
-    });
-  }
-  var mermaidClass = document.getElementsByClassName('mermaid');
-  if (mermaidClass.length > 0) {
-
-    var mermaidScript = document.createElement('script');
-    mermaidScript.setAttribute("src", "../../../js/mermaid.min.js");
-    mermaidScript.setAttribute("async", "false");
-    mermaidScript.setAttribute("type", "text/javascript");
-    mermaidScript.onload = initMermaid;
-    document.body.appendChild(mermaidScript)
-
-  }
-  </script>
-
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-</body>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/jalando.code" target="_blank" rel="noopener" title="@jalando.code" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/albamdls" target="_blank" rel="noopener" title="albamdls" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.highlight"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
 </html>
